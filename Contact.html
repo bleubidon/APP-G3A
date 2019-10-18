@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Stylesheet.css" />
+    <title>Contact</title>
+</head>
+
+<body>
+    <aside><img src="contact.jpg" id="icon_contact"></aside>
+
+    <section1>
+        <h1>Un souci ? Envoyez nous un message !</h1>
+
+        <p>
+            <form action="traitement.php" method="post">
+    <p1>
+        <label for="nom">Nom</label>
+        <br>
+        <input type="text" name="nom" id="nom" placeholder=" Votre nom" size="40"/>
+    </p1> </form>
+
+            <form action="traitement.php" method="post">
+    <p>
+        <label for="mail">Adresse Mail</label>
+        <br>
+        <input type="text" name="mail" id="mail" placeholder=" Votre adresse mail" size="40"/>
+    </p>
+</form>
+
+            <form action="traitement.php" method="post">
+    <p>
+        <label for="num.">Numéro de téléphone</label>
+        <br>
+        <input type="text" name="numéro" id="num." placeholder=" Votre numéro de téléphone" size="40" maxlength="10"  />
+    </p>
+</form>
+
+            <form action="traitement.php" method="post">
+    <p>
+        <label for="message">Message</label>
+        <br>
+        <textarea name="message" id="message" rows="7" cols="60"></textarea>
+    </p>
+</form>
+        </p>
+
+        <button1><a href="javascript:ouvre_popup('popup.html')">Envoyer le message</a>
+            <script type="text/javascript">
+            function ouvre_popup(page) {
+            window.open(page,"nom_popup","menubar=no, status=no, scrollbars=no, menubar=no, width=400, height=350, directories=no, location=no, resizable=no");}
+            </script>
+        </button1>
+
+        <br><br><br>
+
+        <button2 onclick="window.location.href = 'https://www.youtube.com/watch?v=n__qinZwSVw&list=RDn__qinZwSVw&start_radio=1';">Retour</button2>
+
+    </section1>
+
+</body>
+
+</html>
