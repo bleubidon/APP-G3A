@@ -13,6 +13,7 @@ catch (Exception $e) { die('Erreur : ' . $e->getMessage()); }  ?>
 $row = $Mdp -> fetch();?>
 
 
+
 <?php if (isset($_POST['Password']) AND $_POST['Password'] == $row[0]) {
         include("Mise_en_page.php");
     }
