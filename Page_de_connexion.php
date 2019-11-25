@@ -10,7 +10,6 @@
 <section id="sec1">
     <img id="imgPageDeCo" src="imgPageDeCo.png"></section>
 <section id="sec2">
-    <div id="divsec2">
     <br><br>
     <div1>
         <form action="Page1.php" method="post">
@@ -44,7 +43,6 @@
     <div3>
         <img id="logo" src="infinite_mesure.png">
     </div3>
-    </div>
 </section>
 
 </body>
