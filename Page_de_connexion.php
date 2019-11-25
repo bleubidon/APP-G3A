@@ -8,7 +8,7 @@
 <body>
 
 <section id="sec1">
-    <img id="imgPageDeCo" src="imgPageDeCo.png"></section>
+    <img id="imgPageDeCo" src="images/imgPageDeCo.png"></section>
 <section id="sec2">
     <br><br>
     <div1>
@@ -41,7 +41,7 @@
         <button id="mdp" onclick="window.location.href = 'Récupération_Mdp.php';">Mot de passe oublié ?</button>
     </div2>
     <div3>
-        <img id="logo" src="infinite_mesure.png">
+        <img id="logo" src="images/infinite_mesure.png">
     </div3>
 </section>
 

@@ -8,7 +8,7 @@
 <body>
 
 <section id="sec1">
-    <img id="imgAirplane" src="imgAirplane1.jpg">
+    <img id="imgAirplane" src="images/imgAirplane1.jpg">
 </section>
 <section id="sec2">
     <br><br>

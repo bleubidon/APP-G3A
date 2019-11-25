@@ -42,7 +42,7 @@
             <p><a id="CGU" href="CGU.html">CGU et mentions légales</a></p>
         </section3>
         <section4>
-            <img id="logoinf" src="infinite_mesure.png">
+            <img id="logoinf" src="images/infinite_mesure.png">
         </section4>
     </div>
 </nav>

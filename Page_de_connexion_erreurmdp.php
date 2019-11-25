@@ -8,7 +8,7 @@
 <body>
 
 <section id="sec1">
-    <img id="imgPageDeCo" src="imgPageDeCo.png">
+    <img id="imgPageDeCo" src="images/imgPageDeCo.png">
 </section>
 
 <section id="sec2">
@@ -50,7 +50,7 @@
     </div2>
 
     <div3>
-        <img id="logo" src="infinite_mesure.png">
+        <img id="logo" src="images/infinite_mesure.png">
     </div3>
 
 </section>
