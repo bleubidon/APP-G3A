@@ -1,0 +1,55 @@
+@font-face {font-family: "basicsans";
+    src: url("basicsanssf.ttf");}
+
+html {height: 100%;}
+
+body {background-color: white;
+    height: 100%;
+    font-family: "Basicsans";
+    font-weight: bold;
+    margin: 0; bottom: 0;
+    overflow: hidden;}
+
+button:hover {cursor: pointer;}
+
+label {color: #545871;}
+input { border: 1px solid darkgray;
+    border-radius: 4px;
+    height: 30px;
+    color: gray;
+    display: inline-block;}
+
+#imgPageDeCo , #imgAirplane {width:50%; height: 100%;}
+#logo {width: 30px; height: 30px;}
+
+#error {text-align: center; color: red; font-size: 9px;}
+
+#con, #cree { border: 1px solid darkgray;
+    background-color: White;
+    border-radius: 100px;
+    text-align: center;
+    width: 275px;
+    height: 45px;
+    color: darkgrey;}
+#con { border: 1px solid #545871; background-color: #545871; color: white;}
+#mdp { background-color: white; color: #545871; text-decoration: underline; border: none; font-size: 12px;}
+#Retour{border: 1px solid darkgray;
+    background-color: White;
+    border-radius: 100px;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    color: darkgrey;}
+
+div1 { text-align: center;}
+div2 { text-align: center; width: 100%;}
+div3 { float: right; width: 7%;}
+div2 , div3 { display: inline-block; float: bottom;}
+div4 {text-align: left; display: inline-block;}
+#divRet{ text-align: center; width: 100%; float: bottom;}
+
+#container { vertical-align: center; display: inline-block;}
+
+#sec1 { font-size: 15px; display: inline;}
+
+#sec2 { font-size: 15px; float: right; width: 50%; height: 100%;}
