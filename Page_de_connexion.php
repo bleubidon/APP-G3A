@@ -8,7 +8,9 @@
 <body>
 
 <section id="sec1">
-    <img id="imgPageDeCo" src="images/imgPageDeCo.png"></section>
+    <img id="imgPageDeCo" src="images/imgPageDeCo.png">
+</section>
+
 <section id="sec2">
     <br><br>
     <div1>

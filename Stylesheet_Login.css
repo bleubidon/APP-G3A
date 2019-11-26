@@ -46,6 +46,7 @@ div2 { text-align: center; width: 100%;}
 div3 { float: right; width: 7%;}
 div2 , div3 { display: inline-block; float: bottom;}
 div4 {text-align: left; display: inline-block;}
+div5 {text-align: left; display: inline-block;}
 #divRet{ text-align: center; width: 100%; float: bottom;}
 
 #container { vertical-align: center; display: inline-block;}
