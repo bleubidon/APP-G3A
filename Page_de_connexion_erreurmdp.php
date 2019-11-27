@@ -15,7 +15,7 @@
     <br><br>
     <div1>
 
-        <form action="Page1.php" method="post">
+        <form action="page_accueil.php" method="post">
             <p>
                 <div4>
                     <label for="nom">Identifiant</label>
@@ -25,7 +25,7 @@
             </p>
         </form>
 
-        <form action="Page1.php" method="post">
+        <form action="page_accueil.php" method="post">
             <p>
                 <div4>
                     <label for="mail">Mot de passe</label>

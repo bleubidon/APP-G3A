@@ -13,7 +13,7 @@
 <section id="sec2">
     <br><br>
     <div1>
-        <form action="Page1.php" method="post">
+        <form action="page_accueil.php" method="post">
             <p>
                 <div4>
                     <label for="Poid">Poid</label>
@@ -23,7 +23,7 @@
             </p>
         </form>
 
-        <form action="Page1.php" method="post">
+        <form action="page_accueil.php" method="post">
             <p>
                 <div4>
                     <label for="mail">Taille</label>
@@ -34,7 +34,7 @@
         </form>
         <br>
 
-        <form action="Page1.php" method="post">
+        <form action="page_accueil.php" method="post">
             <p>
                 <div5>
                     <label for="mail">Groupe sanguin</label>
@@ -44,7 +44,7 @@
             </p>
         </form>
 
-        <form action="Page1.php" method="post">
+        <form action="page_accueil.php" method="post">
             <p>
                 <div5>
                     <label for="mail">Sommeil moyen</label>
@@ -55,7 +55,7 @@
         </form>
         <br>
 
-        <form action="Page1.php" method="post">
+        <form action="page_accueil.php" method="post">
             <p>
                 <div6>
                     <label for="mail">Taille</label>
@@ -65,7 +65,7 @@
             </p>
         </form>
 
-        <form action="Page1.php" method="post">
+        <form action="page_accueil.php" method="post">
             <p>
                 <div6>
                     <label for="mail">Taille</label>
