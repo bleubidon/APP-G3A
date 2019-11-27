@@ -60,7 +60,17 @@
                 <div6>
                     <label for="mail">Taille</label>
                     <br>
-                    <textarea name="taille" id="taille" placeholder=" Votre taille" rows="5" cols="50"></textarea>
+                    <input name="taille" id="taille" placeholder=" Votre taille" rows="5" cols="50"></input>
+                </div6>
+            </p>
+        </form>
+
+        <form action="Page1.php" method="post">
+            <p>
+                <div6>
+                    <label for="mail">Taille</label>
+                    <br>
+                    <input name="taille" id="taille" placeholder=" Votre taille" rows="5" cols="50"></input>
                 </div6>
             </p>
         </form>
