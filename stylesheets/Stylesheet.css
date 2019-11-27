@@ -84,3 +84,5 @@ button:hover { cursor : pointer;}
 #stat { text-align: center; font-size: 10px;}
 #profImg {border: 1px solid white; border-radius: 100%; width: 60px; height: 60px; margin: 0 auto;}
 #snake { width: 100%; height: 100%; border-radius: 100%;}
+#CAPTEST_HEADER {font-size: large ; color: #545871 }
+#CAPTEST_HEADER {font-size: small ; color: #545871 }

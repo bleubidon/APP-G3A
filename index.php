@@ -7,6 +7,11 @@
 </head>
 <body>
 
+<header>
+    <p><span class="CAPTEST_HEADER"> CAPTEST </span></p><br>
+    <img id="logo" src="images/infinite_mesure.png">
+</header>
+
 <section id="sec1">
     <img id="imgPageDeCo" src="images/imgPageDeCo.png">
 </section>
@@ -32,7 +37,7 @@
             <input id="con" type="submit" value="Se connecter"></input>
         </form>
         <p>
-            <button id="cree" onclick="window.location.href = '';">Crée un compte</button>
+            <button id="cree" onclick="window.location.href = '';">Créer un compte</button>
         </p>
     </div1>
     <div2>
@@ -44,3 +49,12 @@
 </section>
 
 </body>
+
+<footer>
+    <input type = "checkbox" name="Se souvenir de moi ?" />
+
+    <p><span class="CAPTEST_FOOTER">CAPTEST</span></p>
+
+
+
+</footer>
