@@ -1,5 +1,5 @@
 @font-face {font-family: "basicsans";
-    src: url("basicsanssf.ttf");}
+    src: url("../fonts/basicsanssf.ttf");}
 
 html { height: 100%;}
 
@@ -62,7 +62,7 @@ section3 { text-align: center; line-height: 1px; text-indent: 33px; font-size: 1
     border: 1px solid darkgrey;
     border-radius: 30px;}
 #Recherche[type=search] {
-    background-image: url("images/searchIcon.png");
+    background-image: url("../images/searchIcon.png");
     background-color: white;
     background-position: 10px 7px;
     background-repeat: no-repeat;
@@ -75,9 +75,9 @@ button {padding: 15px 15px;
     border: none;
     background-size: 100%;}
 button:hover { cursor : pointer;}
-#home { background-image: url("images/homeIcon.png");}
-#settings { background-image: url("images/settingsIcon.png");}
-#Logout { background-image: url("images/logoutIcon.png");}
+#home { background-image: url("../images/homeIcon.png");}
+#settings { background-image: url("../images/settingsIcon.png");}
+#Logout { background-image: url("../images/logoutIcon.png");}
 
 
 #util { text-align: center; font-size: 13px;}

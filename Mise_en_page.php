@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="Stylesheet" href="Stylesheet.css" />
+    <link rel="Stylesheet" href="stylesheets/Stylesheet.css" />
     <title>Mise en page</title>
 </head>
 <body>
 <nav>
     <section id="profil">
         <br>
-        <div class="container" id="profImg"><img id="snake" src="snake2.jpg"></div>
+        <div class="container" id="profImg"><img id="snake" src="images/snake2.jpg"></div>
         <?php try { $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '' , array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));}
         catch (Exception $e) { die('Erreur : ' . $e->getMessage()); }  ?>
 

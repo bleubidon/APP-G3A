@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19e41226-9333-4225-9f71-5e029d8b2291" name="Default Changelist" comment="" />
+    <list default="true" id="19e41226-9333-4225-9f71-5e029d8b2291" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Main_Stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheets/Main_Stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mise_en_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/Mise_en_page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Page_de_connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Page_de_connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Page_de_connexion_erreurmdp.php" beforeDir="false" afterPath="$PROJECT_DIR$/Page_de_connexion_erreurmdp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Récupération_Mdp.php" beforeDir="false" afterPath="$PROJECT_DIR$/Récupération_Mdp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheets/Stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stylesheet_Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheets/Stylesheet_Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basicsanssf.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/basicsanssf.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basicsanssfbold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/basicsanssfbold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basicsanssfitalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/basicsanssfitalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/snake2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/snake2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,10 +67,22 @@
       <option name="presentableId" value="Default" />
       <updated>1571842597674</updated>
       <workItem from="1571842598819" duration="948000" />
+      <workItem from="1574847406460" duration="283000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="Stylesheet" href="Stylesheet_Login.css" />
+    <link rel="Stylesheet" href="stylesheets/Stylesheet_Login.css" />
     <title>Captest</title>
 </head>
 <body>
