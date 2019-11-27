@@ -18,7 +18,7 @@
                 <div4>
                     <label for="Poid">Poid</label>
                     <br>
-                    <input type="text" name="poid" id="poid" placeholder=" Votre Poid (kg)" size="20"/>
+                    <input type="number" name="poid" id="poid" placeholder=" Votre Poid (kg)" size="20"/>
                 </div4>
             </p>
         </form>
