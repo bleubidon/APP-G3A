@@ -19,7 +19,7 @@ input { border: 1px solid darkgray;
     color: gray;
     display: inline-block;}
 
-#imgPageDeCo , #imgAirplane {width:50%; height: 100%;}
+#imgPageDeCo , #imgAirplane, #imgCreaProfil2 {width:50%; height: 100%;}
 #logo {width: 30px; height: 30px;}
 
 #error {text-align: center; color: red; font-size: 9px;}
