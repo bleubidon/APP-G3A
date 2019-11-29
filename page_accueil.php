@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <link rel="Stylesheet" href="stylesheets/Stylesheet_page_accueil.css" />
     <title>Captest</title>
 </head>
 
@@ -20,6 +21,38 @@ $row = $Mdp -> fetch();?>
         include("Page_de_connexion_erreurmdp.php");
     }
 ?>
+<div id='global'>
+<div id ='enonce'>
+    <ul id='enoncebis'>
+    <h>Mon compte :</h><br><br>
+    <li>Prénom :</li>
+    <li>Nom :</li>
+    <li>Age :</li>
+    <li>Catégorie </li>
+    <li>Poids :</li>
+    <li>Taille :</li>
+    <li>Genre :</li>
+    <li>Email :</li>
+    <li>Groupe Sanguin :</li>
+    <li>Adresse :</li>
+</ul>
+</div>
+<div id ='information'>
+        <ul id='informationbis'>
+        <h>Mon compte :</h><br><br>
+        <li>Prénom :</li>
+        <li>Nom :</li>
+        <li>Age :</li>
+        <li>Catégorie </li>
+        <li>Poids :</li>
+        <li>Taille :</li>
+        <li>Genre :</li>
+        <li>Email :</li>
+        <li>Groupe Sanguin :</li>
+        <li>Adresse :</li>
+    </ul>
+</div>
+</div>
 
 </body>
 </html>
