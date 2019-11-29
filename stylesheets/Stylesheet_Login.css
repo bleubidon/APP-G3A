@@ -19,7 +19,7 @@ input, textarea { border: 1px solid darkgray;
     color: gray;
     display: inline-block;}
 
-#imgPageDeCo , #imgAirplane {width:50%; height: 100%;}
+#imgPageDeCo , #imgAirplane, #imgConctactAdmin {width:50%; height: 100%;}
 #imgCreaProfil2 {width: 40%; height: 100%;}
 #logo {width: 30px; height: 30px;}
 
