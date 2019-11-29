@@ -47,9 +47,12 @@ div1 { text-align: center;}
 div2 { text-align: center; width: 100%;}
 div3 { float: right; width: 7%;}
 div2 , div3 { display: inline-block; float: bottom;}
-div4 {text-align: left; display: inline-block;}
-div5 {text-align: left; display: inline-block;}
+div4, div5 {text-align: left; display: inline-block;}
+div6, div7 {text-align: left; display: inline-block;}
+div8 {text-align: left;}
 #divRet{ text-align: center; width: 100%; float: bottom;}
+h1 {text-align: center;}
+
 
 #container { vertical-align: center; display: inline-block;}
 
