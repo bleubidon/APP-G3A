@@ -19,7 +19,7 @@ input, textarea { border: 1px solid darkgray;
     color: gray;
     display: inline-block;}
 
-#imgPageDeCo , #imgAirplane {width:50%; height: 100%;}
+#imgPageDeCo , #imgAirplane, #imgConctactAdmin {width:50%; height: 100%;}
 #imgCreaProfil2 {width: 40%; height: 100%;}
 #logo {width: 30px; height: 30px;}
 
@@ -34,6 +34,7 @@ input, textarea { border: 1px solid darkgray;
     color: darkgrey;}
 #con { border: 1px solid #545871; background-color: #545871; color: white;}
 #mdp { background-color: white; color: #545871; text-decoration: underline; border: none; font-size: 12px;}
+
 #Retour{border: 1px solid darkgray;
     background-color: White;
     border-radius: 100px;
@@ -46,9 +47,12 @@ div1 { text-align: center;}
 div2 { text-align: center; width: 100%;}
 div3 { float: right; width: 7%;}
 div2 , div3 { display: inline-block; float: bottom;}
-div4 {text-align: left; display: inline-block;}
-div5 {text-align: left; display: inline-block;}
+div4, div5 {text-align: left; display: inline-block;}
+div6, div7 {text-align: left; display: inline-block;}
+div8 {text-align: left;}
 #divRet{ text-align: center; width: 100%; float: bottom;}
+h1 {text-align: center;}
+
 
 #container { vertical-align: center; display: inline-block;}
 
