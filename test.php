@@ -16,9 +16,9 @@
         <form action="page_accueil.php" method="post">
             <p>
                 <div4>
-                    <label for="Poid">Poid</label>
+                    <label for="Poids">Poids</label>
                     <br>
-                    <input type="number" name="poid" id="poid" placeholder=" Votre Poid (kg)" size="20"/>
+                    <input type="number" name="poids" id="poids" placeholder=" Votre Poids (kg)" size="20"/>
                 </div4>
             </p>
         </form>

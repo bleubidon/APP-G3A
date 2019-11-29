@@ -35,12 +35,12 @@
             </p>
         </form>
 
-        <p id="error">Mot de passe ou Identifiant Incorrect veuillez réessayer</p>
+        <p id="error">Mot de passe ou Identifiant Incorrect veuillez rééssayer</p>
 
         <p>
             <button id="con" onclick="window.location.href = 'Page1.php';">Se connecter</button>
             <br><br>
-            <button id="cree" onclick="window.location.href = '';">Crée un compte</button>
+            <button id="cree" onclick="window.location.href = '';">Créer un compte</button>
         </p>
 
     </div1>

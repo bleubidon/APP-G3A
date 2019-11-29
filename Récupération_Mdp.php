@@ -23,7 +23,7 @@
             </p>
         </form>
         <p>
-            <button id="con" onclick="window.location.href = '';">Récuperer mon mot de passe</button>
+            <button id="con" onclick="window.location.href = '';">Récupérer mon mot de passe</button>
             <br><br>
             <button id="cree" onclick="window.location.href = '';">Contacter un Administrateur</button>
         </p>

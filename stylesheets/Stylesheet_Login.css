@@ -34,6 +34,7 @@ input, textarea { border: 1px solid darkgray;
     color: darkgrey;}
 #con { border: 1px solid #545871; background-color: #545871; color: white;}
 #mdp { background-color: white; color: #545871; text-decoration: underline; border: none; font-size: 12px;}
+
 #Retour{border: 1px solid darkgray;
     background-color: White;
     border-radius: 100px;
@@ -55,3 +56,4 @@ div5 {text-align: left; display: inline-block;}
 #sec1 { font-size: 15px; display: inline;}
 
 #sec2 { font-size: 15px; float: right; width: 50%; height: 100%;}
+

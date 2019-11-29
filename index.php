@@ -5,8 +5,9 @@
     <link rel="Stylesheet" href="stylesheets/Stylesheet_Login.css" />
     <title>Captest</title>
 </head>
-<body>
 
+
+<body>
 
 <section id="sec1">
     <img id="imgPageDeCo" src="images/imgPageDeCo.png">
