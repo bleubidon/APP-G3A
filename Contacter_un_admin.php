@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="Stylesheet" href="stylesheets/Stylesheet_Contacter_un_admin.css" />
+    <link rel="Stylesheet" href="ressources/stylesheets/Stylesheet_Contacter_un_admin.css" />
     <title>Contacter un administrateur</title>
 </head>
 
@@ -12,7 +12,7 @@
     <br><br>
     <br><br>
     <br><br>
-    <img id="imgConctactAdmin" src="images/contact.jpg">
+    <img id="imgConctactAdmin" src="ressources/images/contact.jpg">
 </section>  <!-- place l'image contacter un admin dans une section -->
 
 <section id="section2"> <!-- place le texte associé à droite, dans une 2e section -->

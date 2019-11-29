@@ -1,0 +1,7 @@
+{
+  "index.php": "Stylesheet_Login.css",
+  "Mise_en_page.php":  "Stylesheet.css",
+  "Page_de_connexion_erreurmdp.php":  "Stylesheet.css",
+  "Récupération_Mdp.php":  "Stylesheet.css",
+  "test.php":  "Stylesheet.css"
+}

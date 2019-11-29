@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="Stylesheet" href="stylesheets/Stylesheet_page_accueil.css" />
+    <link rel="Stylesheet" href="ressources/stylesheets/Stylesheet_page_accueil.css" />
     <title>Captest</title>
 </head>
 
