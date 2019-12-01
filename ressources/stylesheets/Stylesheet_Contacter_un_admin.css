@@ -10,10 +10,13 @@ body {background-color: white;
     margin: 0; bottom: 0;
     overflow: hidden;}
 
+h1 {text-align: center;}
+
 label {color: #545871;}
 
 button:hover {cursor: pointer;}
 
+#imgContactAdmin {width:50%; height: 100%;}
 
 input, textarea { border: 1px solid darkgray;
     border-radius: 4px;
@@ -22,3 +25,17 @@ input, textarea { border: 1px solid darkgray;
     display: inline-block;}
 
 div1 {text-align: center;}
+div2,div3,div4,div5 {text-align: left; display: inline-block;}
+
+#section1 { font-size: 15px; display: inline;}
+
+#section2 { font-size: 15px; float: right; width: 50%; height: 100%;}
+
+#bouton_envoi, #bouton_retour { border: 1px solid darkgray;
+    background-color: White;
+    border-radius: 100px;
+    text-align: center;
+    width: 275px;
+    height: 45px;
+    color: darkgrey;}
+#bouton_envoi { border: 1px solid #545871; background-color: #545871; color: white;}

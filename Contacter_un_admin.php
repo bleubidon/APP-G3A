@@ -8,49 +8,63 @@
 
 <body>
 
-<section id="Section1">
+<section id="Section1">  <!-- place l'image contacter un admin dans une section -->
     <br><br>
     <br><br>
     <br><br>
-    <img id="imgConctactAdmin" src="ressources/images/contact.jpg">
-</section>  <!-- place l'image contacter un admin dans une section -->
+</section>
 
 <section id="section2"> <!-- place le texte associé à droite, dans une 2e section -->
+    <br>
     <div1>
-        <h2>Vous voulez qu’on jette un oeil sur vous préoccupations?</h2>
-        <form>
-            <p>
-                <div2>
-                    <label for="nom">Nom Prénom</label>
-                    <br>
-                    <input type="text" name="nom_prenom" id="nom_prenom" placeholder=" Votre prénom , nom" size="35"/>
-                </div2>
-            </p>
-            <p>
-                <div3>
-                    <label for="mail">Mail</label>
-                    <br>
-                    <input type="mail" name="mail" id="Password" placeholder="Votre mail" size="35"/>
-                </div3>
-            </p>
-            <input id="con" type="submit" value="Se connecter">
+        <h1>Vous voulez qu’on jette un oeil sur vous préoccupations?</h1>
+        <br>
+            <div2>
+                <form action="" method="">
+                    <p>
+                        <label for="nom">Nom Prénom</label>
+                        <br>
+                        <input type="text" name="nom_prenom" id="nom_prenom" placeholder=" Votre prénom , nom" size="35"/>
+                    </p>
+                </form>
+            </div2>
+
+            <div3>
+                <form action="" method="">
+                    <p>
+                        <label for="mail">Mail</label>
+                        <br>
+                        <input type="mail" name="mail" id="mail" placeholder="Votre mail" size="35"/>
+                    </p>
+                </form>
+            </div3>
+
+            <div4>
+                <form action="" method="">
+                    <p>
+                        <label for="numero">Numéro</label>
+                        <br>
+                        <input type="text" name="numero" id="numero" placeholder="Votre numéro" size="35"/>
+                    </p>
+                </form>
+            </div4>
+
+            <div5>
+                <form action="" method="">
+                    <p>
+                        <label for="message">Message</label>
+                        <br>
+                        <textarea name="message" id="message" placeholder=" Votre message" cols="55" rows="5"></textarea>
+                    </p>
+                </form>
+            </div5>
+
+
+        <form action="" method="">
+            <input id="bouton_envoi" type="submit" value="Envoyer l'email">
         </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-     </form>
-
+        <input id="bouton_retour" type="submit" value="Retour">
 
     </div1>
 </section>
