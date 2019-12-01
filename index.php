@@ -43,7 +43,7 @@ include("views/header.php");
         </p>
     </div1>
     <div2>
-        <a id="mdp" href="recuperation_mdp.php">Mot de passe oublié ?</a>
+        <a id="mdp" href="controllers/mot_de_passe_oublie.php">Mot de passe oublié ?</a>
     </div2>
     <div3>
         <img id="logo" src="ressources/images/infinite_mesure.png">
