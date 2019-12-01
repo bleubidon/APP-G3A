@@ -17,7 +17,7 @@
 <section id="section2"> <!-- place le texte associé à droite, dans une 2e section -->
     <br>
     <div1>
-        <h1>Vous voulez qu’on jette un oeil sur vous préoccupations?</h1>
+        <h1>Vous voulez qu’on jette un oeil sur vos préoccupations ?</h1>
         <br>
             <div2>
                 <form action="" method="">
