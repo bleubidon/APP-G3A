@@ -29,7 +29,7 @@
         </p>
     </div1>
     <div id="divRet">
-        <button id="Retour" onclick="window.location.href = 'index.php';">Retour</button>
+        <button id="Retour" onclick="window.location.href = index.php;">Retour</button>
     </div>
 </section>
 
