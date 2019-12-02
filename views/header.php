@@ -13,7 +13,7 @@ if (isset($json_all[$parent_filename])) {
     <meta charset="UTF-8">
     <?php
     if (isset($stylesheet)) {
-        echo "<link rel=\"Stylesheet\" href=\"stylesheets/$stylesheet\">";
+        echo "<link rel=\"Stylesheet\" href=\"ressources/stylesheets/$stylesheet\">";
     }
     ?>
 

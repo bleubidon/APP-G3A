@@ -12,15 +12,12 @@
     <br><br>
     <br><br>
     <br><br>
-    <p class="h1">
-        <img id= "imgContactAdmin" src="ressources/images/contact.jpg">
-    </p>
 </section>
 
 <section id="section2"> <!-- place le texte associé à droite, dans une 2e section -->
     <br>
     <div1>
-        <h1 id="h1">Vous voulez qu’on jette un oeil sur vos préoccupations?</h1>
+        <h1>Vous voulez qu’on jette un oeil sur vos préoccupations ?</h1>
         <br>
             <div2>
                 <form action="" method="">
@@ -30,9 +27,7 @@
                         <input type="text" name="nom_prenom" id="nom_prenom" placeholder=" Votre prénom , nom" size="35"/>
                     </p>
                 </form>
-            </div2> <br>
-
-
+            </div2>
 
             <div3>
                 <form action="" method="">
@@ -42,7 +37,7 @@
                         <input type="mail" name="mail" id="mail" placeholder="Votre mail" size="35"/>
                     </p>
                 </form>
-            </div3> <br>
+            </div3>
 
             <div4>
                 <form action="" method="">
@@ -52,7 +47,7 @@
                         <input type="text" name="numero" id="numero" placeholder="Votre numéro" size="35"/>
                     </p>
                 </form>
-            </div4> <br>
+            </div4>
 
             <div5>
                 <form action="" method="">
