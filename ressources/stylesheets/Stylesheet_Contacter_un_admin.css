@@ -10,7 +10,8 @@ body {background-color: white;
     margin: 0; bottom: 0;
     overflow: hidden;}
 
-h1 {text-align: center;}
+h1 {text-align: left;}
+.h1 {float: left;}
 
 label {color: #545871;}
 
@@ -27,15 +28,20 @@ input, textarea { border: 1px solid darkgray;
 div1 {text-align: center;}
 div2,div3,div4,div5 {text-align: left; display: inline-block;}
 
-#section1 { font-size: 15px; display: inline;}
+#section1 { font-size: 15px; display: inline; float: left;}
 
-#section2 { font-size: 15px; float: right; width: 50%; height: 100%;}
+#section2 { font-size: 15px; float: right; width: 50%; height: 100%; float: right;}
 
-#bouton_envoi, #bouton_retour { border: 1px solid darkgray;
+#bouton_envoi, #bouton_retour
+{
+    border: 1px solid darkgray;
     background-color: White;
     border-radius: 100px;
     text-align: center;
     width: 275px;
     height: 45px;
-    color: darkgrey;}
+    color: darkgrey;
+    font-size: 24px;
+}
+
 #bouton_envoi { border: 1px solid #545871; background-color: #545871; color: white;}
