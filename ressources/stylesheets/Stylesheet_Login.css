@@ -65,3 +65,8 @@ h1 {text-align: center;}
     display: flex;
     justify-content: center;
     flex-direction: column;}
+
+#name {display: flex; justify-content: center; flex-direction: row;}
+#phone {display: flex; justify-content: center; flex-direction: row;}
+#mail {display: flex; justify-content: center; flex-direction: row;}
+#mdp {display: flex; justify-content: center; flex-direction: row;}
