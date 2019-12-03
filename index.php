@@ -9,7 +9,8 @@ include("views/header.php");
 </section>
 
 <section id="sec2">
-    <br><br>
+    <h1>CAPTEST</h1>
+    <img id="logo" src="ressources/images/infinite_mesure.png">
     <div1>
         <form action="controllers/verif_auth_utilisateur.php" method="post">
             <p>
@@ -45,9 +46,6 @@ include("views/header.php");
     <div2>
         <a id="mdp" href="controllers/mot_de_passe_oublie.php">Mot de passe oublié ?</a>
     </div2>
-    <div3>
-        <img id="logo" src="ressources/images/infinite_mesure.png">
-    </div3>
 </section>
 </body>
 </html>
