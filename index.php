@@ -9,7 +9,9 @@ include("views/header.php");
 </section>
 
 <section id="sec2">
-    <h1>CAPTEST</h1>
+    <br><br>
+    <br><br>
+    <h1 class="header">CAPTEST</h1>
     <img id="logo" src="ressources/images/infinite_mesure.png">
     <div1>
         <form action="controllers/verif_auth_utilisateur.php" method="post">
@@ -43,9 +45,26 @@ include("views/header.php");
             <button id="cree" onclick="window.location.href = 'controllers/creation_compte_utilisateur.php'">Créer un compte</button>
         </p>
     </div1>
-    <div2>
-        <a id="mdp" href="controllers/mot_de_passe_oublie.php">Mot de passe oublié ?</a>
-    </div2>
+
+
+        <div2>
+             <a id="mdp" href="controllers/mot_de_passe_oublie.php">Mot de passe oublié ?</a>
+        </div2>
+    <br><br>
+    <br><br><br><br>
+    <br><br>
+
+
+    <div4 id="conteneur">
+        <div3>
+             <a id="languageFR" href="">Français(FR)</a>
+        </div3>
+        &nbsp; &nbsp; <!--rajoute des espaces -->
+        <div5>
+            <a id="languageUS" href="">English(US)</a>
+        </div5>
+    </div4>
+
 </section>
 </body>
 </html>
