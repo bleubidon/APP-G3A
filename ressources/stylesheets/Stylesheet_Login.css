@@ -21,7 +21,7 @@ input, textarea { border: 1px solid darkgray;
 
 #imgPageDeCo , #imgAirplane{width:50%; height: 100%;}
 #imgCreaProfil2 {width: 40%; height: 100%;}
-#logo {width: 30px; height: 30px;}
+#logo {width: 110px; height: 110px;display: block; margin-right: auto; margin-left: auto;}
 
 #error {text-align: center; color: red; font-size: 9px;}
 
@@ -58,4 +58,10 @@ h1 {text-align: center;}
 
 #sec1 { font-size: 15px; display: inline;}
 
-#sec2 { font-size: 15px; float: right; width: 50%; height: 100%;}
+#sec2 { font-size: 15px;
+    float: right;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;}
