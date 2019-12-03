@@ -36,7 +36,7 @@
             }
             ?>
 
-            <input id="con" type="submit" value="Récuperer mon mot de passe">
+            <input id="con" type="submit" value="Récupérer mon mot de passe">
         </form>
         <p>
             <button id="cree" onclick="window.location.href = '../controllers/contact_administrateur.php'">Contacter un Administrateur</button>
