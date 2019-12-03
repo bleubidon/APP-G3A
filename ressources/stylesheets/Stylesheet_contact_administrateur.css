@@ -1,0 +1,78 @@
+@font-face {font-family: "basicsans";
+    src: url("../fonts/basicsanssf.ttf");}
+
+html {height: 100%;}
+
+body
+{
+    background-color: white;
+    height: 100%;
+    font-family: "Basicsans";
+    font-weight: bold;
+    margin: 0; bottom: 0;
+    overflow: hidden;
+}
+
+h1 {text-align: left; color: #545871;}
+
+
+label {color: #545871;}
+
+button:hover {cursor: pointer;}
+
+#imgContactAdmin {width:50%; height: 100%;}
+
+input, textarea { border: 1px solid darkgray;
+    border-radius: 4px;
+    height: 30px;
+    color: gray;
+    display: inline-block;}
+
+div1 {text-align: center;}
+div2,div3,div4,div5 {text-align: left; display: inline-block;}
+
+/*#section1 { font-size: 15px;  width: 50%; height: 100%;}*/
+
+#section1 { font-size: 15px; display: inline;}
+
+/*#section2 { font-size: 15px;
+    float: right;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }*/
+
+#section2 { font-size: 15px;
+    float: right;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;}
+
+#bouton_envoi, #bouton_retour
+{
+    border: 1px solid darkgray;
+    background-color: White;
+    border-radius: 100px;
+    text-align: center;
+    width: 275px;
+    height: 45px;
+    color: darkgrey;
+    font-size: 24px;
+}
+
+#bouton_envoi { border: 1px solid #545871; background-color: #545871; color: white;}
+
+.footer
+{
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    color: #545871;
+    text-transform: uppercase;
+    opacity: 1;
+    display: flex;
+    justify-content: left;
+}
