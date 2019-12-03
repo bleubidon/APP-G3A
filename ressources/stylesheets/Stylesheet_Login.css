@@ -21,27 +21,41 @@ input, textarea { border: 1px solid darkgray;
 
 #imgPageDeCo , #imgAirplane{width:50%; height: 100%;}
 #imgCreaProfil2 {width: 40%; height: 100%;}
-#logo {width: 110px; height: 110px;display: block; margin-right: auto; margin-left: auto;}
+#logo {width: 222px; height: 224px;display: block; margin-right: auto; margin-left: auto;}
 
 #error {text-align: center; color: red; font-size: 9px;}
 
-#con, #cree { border: 1px solid darkgray;
+#con, #cree
+{
+    border: 1px solid darkgray;
     background-color: White;
     border-radius: 100px;
     text-align: center;
     width: 275px;
     height: 45px;
-    color: darkgrey;}
-#con { border: 1px solid #545871; background-color: #545871; color: white;}
-#mdp { background-color: white; color: #545871; text-decoration: underline; border: none; font-size: 12px;}
+    color: darkgrey;
+    font-size: 16px;
 
-#Retour{border: 1px solid darkgray;
+}
+#con { border: 1px solid #545871; background-color: #545871; color: white;}
+#mdp { text-align: left;
+    text-decoration: underline;
+    font-size: 12px;
+    letter-spacing: 0;
+    color: #545871;
+    opacity: 1;}
+
+#Retour
+{
+    border: 1px solid darkgray;
     background-color: White;
     border-radius: 100px;
     text-align: center;
     width: 150px;
     height: 40px;
-    color: darkgrey;}
+    color: darkgrey;
+    font-size: 16px;
+}
 
 div1 { text-align: center;}
 div2 { text-align: center; width: 100%;}
@@ -51,7 +65,12 @@ div4, div5 {text-align: left; display: inline-block;}
 div6, div7 {text-align: left; display: inline-block;}
 div8 {text-align: left;}
 #divRet{ text-align: center; width: 100%; float: bottom;}
-h1 {text-align: center;}
+
+h1
+{
+    text-align: center;
+
+}
 
 
 #container { vertical-align: center; display: inline-block;}
@@ -70,3 +89,27 @@ h1 {text-align: center;}
 #phone {display: flex; justify-content: center; flex-direction: row;}
 #mail {display: flex; justify-content: center; flex-direction: row;}
 #mdp {display: flex; justify-content: center; flex-direction: row;}
+
+.footer
+{
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    color: #545871;
+    text-transform: uppercase;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#conteneur { display: flex;}
+#languageFR,#languageUS
+{
+    text-align: left;
+    text-decoration: underline;
+    font-size: 12px;
+    letter-spacing: 0;
+    color: #545871;
+    opacity: 1;
+}
+

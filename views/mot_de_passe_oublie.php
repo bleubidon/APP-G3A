@@ -11,15 +11,23 @@
     <img id="imgAirplane" src="../ressources/images/imgAirplane1.jpg">
 </section>
 <section id="sec2">
-    <br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+
+
     <div1>
         <form action="../controllers/mot_de_passe_oublie.php" method="post">
             <p>
                 <div4>
                     <label for="nom">Adresse Mail</label>
                     <br>
+
                     <input type="email" name="Mail" id="Mail" placeholder=" Votre Mail" size="35"/>
                 </div4>
+                <br><br>
+
             </p>
 
             <?php
@@ -39,11 +47,21 @@
             <input id="con" type="submit" value="Récupérer mon mot de passe">
         </form>
         <p>
-            <button id="cree" onclick="window.location.href = '../contact_administrateur.php' ">Contacter un Administrateur</button>
+            <button id="cree" onclick="window.location.href = '../controllers/contact_administrateur.php' ">Contacter un Administrateur</button>
         </p>
     </div1>
     <div id="divRet">
         <button id="Retour" onclick="window.location.href = '../index.php'">Retour</button>
+
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+
+
+        <p class="footer">CAPTEST</p>
     </div>
 </section>
 
