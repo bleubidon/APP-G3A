@@ -1,9 +1,35 @@
 <?php
 include('connexion_bdd.php');
-// Stockage du mot de passe haché
-$mot_de_passe_hache = password_hash($_POST['password'], PASSWORD_ARGON2I);
-$query = "INSERT INTO temp_table(nom, mot_de_passe) VALUES(:nom, :mot_de_passe)";
+
+// Profil utilisateur
+$mot_de_passe_hache = password_hash($_SESSION['password'], PASSWORD_ARGON2I);  // Hachage du mot de passe
+$query = "INSERT INTO profil_utilisateur(nom, prenom, identifiant, date_de_naissance, telephone, email, mot_de_passe, type_emploi)
+            VALUES(:nom, :prenom, :identifiant, :date_de_naissance, :telephone, :email, :mot_de_passe, :type_emploi)";
+
 $sql = $bdd->prepare($query);
-$sql->bindParam(':nom', $_POST['identifiant']);
+
+$sql->bindParam(':nom', $_SESSION['Nom']);
+$sql->bindParam(':prenom', $_SESSION['Prenom']);
+$sql->bindParam(':identifiant', $_SESSION['identifiant']);
+$sql->bindParam(':date_de_naissance', $_SESSION['dateNaissance']);
+$sql->bindParam(':telephone', $_SESSION['numeroTel']);
+$sql->bindParam(':email', $_SESSION['email']);
 $sql->bindParam(':mot_de_passe', $mot_de_passe_hache);
-$sql->execute();
+$sql->bindParam(':type_emploi', $_SESSION['emplois']);
+
+$status = $sql->execute();
+
+// Santé utilisateur
+$query = "INSERT INTO sante_utilisateur(genre, poids, taille, groupe_sanguin, sommeil_moyen, pathologie)
+            VALUES(:genre, :poids, :taille, :groupe_sanguin, :sommeil_moyen, :pathologie)";
+
+$sql = $bdd->prepare($query);
+
+$sql->bindParam(':genre', $_SESSION['genre']);
+$sql->bindParam(':poids', $_SESSION['poids']);
+$sql->bindParam(':taille', $_SESSION['taille']);
+$sql->bindParam(':groupe_sanguin', $_SESSION['gsang']);
+$sql->bindParam(':sommeil_moyen', $_SESSION['sommeil']);
+$sql->bindParam(':pathologie', $_SESSION['pathologie']);
+
+$status = $sql->execute();

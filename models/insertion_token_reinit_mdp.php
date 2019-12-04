@@ -21,7 +21,7 @@ if ($id == null) {  // L'utilisateur n'a pas encore de token
     $sql->bindParam(':timestamp_creation', $timestamp_creation_token);
     $status = $sql->execute();
 }
-else {
+else {  // L'utilisateur a déjà un token
     // Modifier l'entrée existant déjà dans la table (id_utilisateur, token)
     $query = "UPDATE tokens_reinitialisation_mot_de_passe SET token=:token, timestamp_creation=:timestamp_creation WHERE id_utilisateur=:id_utilisateur";
     $sql = $bdd->prepare($query);

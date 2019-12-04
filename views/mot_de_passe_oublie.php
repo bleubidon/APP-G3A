@@ -18,7 +18,7 @@
 
 
     <div1>
-        <form action="../controllers/mot_de_passe_oublie.php" method="post">
+        <form action="" method="post">
             <p>
                 <div4>
                     <label for="nom">Adresse Mail</label>

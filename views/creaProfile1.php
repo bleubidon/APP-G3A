@@ -2,16 +2,19 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="Stylesheet" href="ressources/stylesheets/Stylesheet_Login.css" />
+        <link rel="Stylesheet" href="../ressources/stylesheets/Stylesheet_Login.css" />
         <title>Création de votre profil</title>
     </head>
 
     <body>
     <section id="sec1">
-        <img id="imgPageDeCo" src="ressources/images/creaProfile1.png">
+<!--        <img id="imgPageDeCo" src="../ressources/images/creaProfile1.png">-->
+        <img id="imgPageDeCo" src="../ressources/images/creaProfil2.png">
     </section>
     <section id="sec2">
-        <form method="post" action="t.php" enctype="multipart/form-data">
+        <h1>Création de votre profil</h1>
+
+        <form method="post" action="" enctype="multipart/form-data">
             <div id="name">
                 <p><label for="Prenom">Prénom :</label>
                 <br>
@@ -30,20 +33,23 @@
             </div>
                 <br />
             <div id="mail">
-                <label for="email">Email :</label><br>
-                <input type="email" name="email" id="email"placeholder="Votre adresse mail"/>
+                <p><label for="email">Email :</label><br>
+                    <input type="email" name="email" id="email"placeholder="Votre adresse mail"/></p>
+
+                <p><label for="identifiant">Identifiant :</label><br>
+                    <input type="text" name="identifiant" id="identifiant"placeholder="Identifiant"/></p>
             </div>
             <br>
             <div id="mdp">
-                <p><label for="passworld"><strong>Mot de passe :</strong></label><br>
-                <input type="password" name="passworld" id="passworld"/></p>
+                <p><label for="password"><strong>Mot de passe :</strong></label><br>
+                <input type="password" name="password" id="password"/></p>
 
-                <p><label for="validePassworld">Confirmation du mot de passe :</label><br>
-                <input type="password" name="validePassworld" id="validePassworld"/></p>
+                <p><label for="validePassword">Confirmation du mot de passe :</label><br>
+                <input type="password" name="validePassword" id="validePassword"/></p>
             </div>
 
             <p>
-                Type d'emplois : <br/>
+                Type d'emploi : <br/>
 
                 <input type="radio" name="emplois" value="Pilote" id="Pilote"/>
                 <label  for="Pilote">Pilote</label>
@@ -51,24 +57,21 @@
                 <input type="radio" name="emplois" value="PersonnelAuSol" id="PersonnelAuSol"/>
                 <label for="PersonnelAuSol">Personnel au sol</label>
 
-                <input type="radio" name="emplois" value="¨PersonnelNaviguant" id="PersonnelNaviguant"/>
+                <input type="radio" name="emplois" value="PersonnelNaviguant" id="PersonnelNaviguant"/>
                 <label for="PersonnelNaviguant">Personnel naviguant</label>
             </p>
 
             <p>
                 Upload a photo<br/>
-                <input type="file" name="PhotoProfil"/><br/>
+                    <input type="file" name="PhotoProfil"/><br/>
                 <input type="submit" value="Envoyer le fichier"/>
             </p>
 
             <p>
-                <a href="page_accueil.php">Retour</a>
+                <a href="../">Retour</a>
                 <input type="submit" value="Continuer"/>
             </p>
-
-
         </form>
     </section>
     </body>
 </html>
-

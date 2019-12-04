@@ -11,7 +11,7 @@ class Email
     private $adresse_email_emetteur = "bleubidon@hotmail.com";
     private $email_mdp = "Secretpass";
     private $port = 587;
-    private $nom_emetteur = "Support Captimove";
+    private $nom_emetteur = "Support Captest";
 
 
     function __construct($email_destinataire, $sujet, $message) {
