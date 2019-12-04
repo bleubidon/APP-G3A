@@ -10,15 +10,18 @@
     <section id="profil">
         <br>
         <div class="container" id="profImg"><img id="snake" src="ressources/images/snake2.jpg"></div>
-        <?php try { $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '' , array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));}
+        <?php
+        session_start();
+        try { $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '' , array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));}
         catch (Exception $e) { die('Erreur : ' . $e->getMessage()); }  ?>
 
-        <?php $rep = $bdd->query('SELECT * FROM client'); ?>
+        <?php $rep = $bdd->query("SELECT * FROM profil_utilisateur WHERE identifiant='" . $_SESSION['identifiant'] . "'"); ?>
         <?php $don = $rep->fetch() ?>
 
-        <?php echo $don['Nom'] .' '. $don['Prénom'] ?>
+        <?php echo $don['nom'] .' '. $don['prenom'] ?>
         <br>
-        <?php echo $don['Statut'] ?>
+<!--        --><?php //echo $don['Statut'] ?>
+        <?php echo "Utilisateur" ?>
 
         <?php $rep->closeCursor(); ?>
     </section>
@@ -49,9 +52,9 @@
 
 <header>
     <input type="search" name="Recherche" id="Recherche" placeholder=" Recherche" size="110"/>
-    <button id="Logout" title="Déconnexion" onclick="window.location.href = 'Page_de_connexion.php';"></button>
-    <button id="settings" title="Parametres" onclick="window.location.href = '';"></button>
-    <button id="home" title="Accueil" onclick="window.location.href = '';"></button>
+    <button id="Logout" title="Déconnexion" onclick="window.location.href = 'index.php'"></button>
+    <button id="settings" title="Parametres" onclick="window.location.href = 'modifier_parametres_compte.php'"></button>
+    <button id="home" title="Accueil" onclick="window.location.href = ''"></button>
 </header>
 
 </body>
