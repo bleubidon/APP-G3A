@@ -25,7 +25,8 @@ include('Mise_en_page.php');  // Pour utiliser Mise_en_page.php, inclure la styl
             <h> :</h><br><br>
             <li><?php echo $prenom?></li>
             <li><?php echo $nom?></li>
-            <li><?php echo age($date_de_naissance)?></li>
+            <?php $age = age($date_de_naissance) ?>
+            <li><?php echo "$age[0] ans $age[1] mois"?></li>
             <li><?php echo $type_emploi?></li>
             <li><?php echo $poids?></li>
             <li><?php echo $taille?></li>

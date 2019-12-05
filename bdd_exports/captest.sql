@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 05, 2019 at 12:41 PM
+-- Generation Time: Dec 05, 2019 at 08:44 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.5
 
@@ -30,8 +30,9 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `profil_utilisateur`;
 CREATE TABLE IF NOT EXISTS `profil_utilisateur` (
-  `nom` varchar(255) NOT NULL,
   `identifiant` varchar(255) NOT NULL,
+  `statut` varchar(255) NOT NULL DEFAULT 'utilisateur',
+  `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `date_de_naissance` date NOT NULL,
   `telephone` varchar(255) NOT NULL,
@@ -41,6 +42,13 @@ CREATE TABLE IF NOT EXISTS `profil_utilisateur` (
   `type_emploi` varchar(255) NOT NULL,
   UNIQUE KEY `identifiant` (`identifiant`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `profil_utilisateur`
+--
+
+INSERT INTO `profil_utilisateur` (`identifiant`, `statut`, `nom`, `prenom`, `date_de_naissance`, `telephone`, `email`, `photo`, `mot_de_passe`, `type_emploi`) VALUES
+('bleubidon', 'utilisateur', 'Barral', 'Armand', '2000-04-05', '0688382574', 'armand.barral@orange.fr', NULL, '$argon2i$v=19$m=1024,t=2,p=2$RHhmSmYvZ0ZXYUZYaWNVZQ$sTWIyCkNU7wgJmZmbDAeLCHbCYmyo9SZ8V8fvvAuCxE', 'Pilote');
 
 -- --------------------------------------------------------
 
@@ -60,6 +68,13 @@ CREATE TABLE IF NOT EXISTS `sante_utilisateur` (
   UNIQUE KEY `identifiant` (`identifiant`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `sante_utilisateur`
+--
+
+INSERT INTO `sante_utilisateur` (`identifiant`, `genre`, `poids`, `taille`, `groupe_sanguin`, `sommeil_moyen`, `pathologie`) VALUES
+('bleubidon', 'Homme', 60, 180, 'o', 7, '.');
+
 -- --------------------------------------------------------
 
 --
@@ -74,7 +89,14 @@ CREATE TABLE IF NOT EXISTS `tokens_reinitialisation_mot_de_passe` (
   `timestamp_creation` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `token` (`token`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tokens_reinitialisation_mot_de_passe`
+--
+
+INSERT INTO `tokens_reinitialisation_mot_de_passe` (`id`, `id_utilisateur`, `token`, `timestamp_creation`) VALUES
+(13, 'bleubidon', 'wf0149libm', 1575552577);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
