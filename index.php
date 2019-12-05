@@ -1,7 +1,4 @@
-<?php
-$parent_filename = basename($_SERVER['PHP_SELF']);
-include("views/header.php");
-?>
+<?php include("views/header.php") ?>
 
 <body>
 <section id="sec1">

@@ -2,7 +2,7 @@
 include('../views/mot_de_passe_oublie.php');
 
 if (isset($_POST['Mail'])) {
-    include('../models/recup_infos_utilisateur.php');
+    include('../models/recup_infos_utilisateur_mdp_oublie.php');
     if ($id_utilisateur != null) {  // L'adresse mail renseignée correspond à un utilisateur
         // Géné token et page de récupération de mot de passe
         $token_genere_valide = false;

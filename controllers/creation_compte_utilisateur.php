@@ -1,6 +1,5 @@
 <?php
 session_start();
-$parent_filename = basename($_SERVER['PHP_SELF']);
 include("../views/header.php");
 
 // Chargement de la vue correspondant à l'étape du formulaire de création de compte (1, 2 ou 3)
@@ -79,5 +78,21 @@ else if (isset($_POST['genre']) && isset($_POST['poids']) && isset($_POST['taill
 // Enregistrer l'utilisateur dans la bdd
 else if (isset($_GET['toutes_infos_collectees'])) {
     include('../models/insertion_compte_utilisateur.php');
+
+    unset($_SESSION['Prenom']);
+    unset($_SESSION['Nom']);
+    unset($_SESSION['identifiant']);
+    unset($_SESSION['dateNaissance']);
+    unset($_SESSION['numeroTel']);
+    unset($_SESSION['email']);
+    unset($_SESSION['password']);
+    unset($_SESSION['emplois']);
+    unset($_SESSION['genre']);
+    unset($_SESSION['poids']);
+    unset($_SESSION['taille']);
+    unset($_SESSION['gsang']);
+    unset($_SESSION['sommeil']);
+    unset($_SESSION['pathologie']);
+
     header('location:?etape=3&inscription_reussie');
 }

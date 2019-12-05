@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="Stylesheet" href="../ressources/stylesheets/Stylesheet_Login.css" />
-    <title>Captest</title>
-</head>
+<?php include("header.php") ?>
+
 <body>
 
 <section id="sec1">

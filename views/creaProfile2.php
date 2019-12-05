@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="Stylesheet" href="../ressources/stylesheets/Stylesheet_Login.css" />
-    <title>Captest</title>
-</head>
 <body>
-
 <section id="sec1">
     <img id="imgCreaProfil2" src="../ressources/images/creaProfil2.png">
 </section>
@@ -52,3 +44,4 @@
     </form>
 </section>
 </body>
+</html>

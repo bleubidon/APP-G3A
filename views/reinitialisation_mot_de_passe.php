@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Réinitialisation de votre mot de passe</title>
-    <link rel="Stylesheet" href="../ressources/stylesheets/Stylesheet_login.css" />
-</head>
+<?php include("header.php") ?>
+
 <body>
     <form action="" method="post">
         <p>
