@@ -23,47 +23,39 @@
     <br>
         <h1>Vous voulez qu’on jette un œil sur vos préoccupations ?</h1>
         <br>
+        <form action="" method="get">
             <div2>
-                <form action="" method="">
-                    <p>
-                        <label for="nom">Nom Prénom</label>
-                        <br>
-                        <input type="text" name="nom_prenom" id="nom_prenom" placeholder=" Votre prénom , nom" size="55"/>
-                    </p>
-                </form>
+                <p>
+                    <label for="nom">Nom Prénom</label>
+                    <br>
+                    <input type="text" name="nom_prenom" id="nom_prenom" placeholder=" Votre prénom , nom" size="55"/>
+                </p>
             </div2>
         <br>
 
             <div3>
-                <form action="" method="">
-                    <p>
-                        <label for="mail">Mail</label>
-                        <br>
-                        <input type="mail" name="mail" id="mail" placeholder="Votre mail" size="55"/>
+                <p>
+                    <label for="mail">Mail</label>
+                    <br><input type="mail" name="mail" id="mail" placeholder="Votre mail" size="55"/>
                     </p>
-                </form>
             </div3>
         <br>
 
             <div4>
-                <form action="" method="">
-                    <p>
-                        <label for="numero">Numéro</label>
-                        <br>
-                        <input type="text" name="numero" id="numero" placeholder="Votre numéro" size="55"/>
-                    </p>
-                </form>
+                <p>
+                    <label for="numero">Numéro</label>
+                    <br>
+                    <input type="text" name="numero" id="numero" placeholder="Votre numéro" size="55"/>
+                </p>
             </div4>
         <br>
 
             <div5>
-                <form action="" method="">
-                    <p>
-                        <label for="message">Message</label>
-                        <br>
-                        <textarea name="message" id="message" placeholder=" Votre message" cols="55" rows="5"></textarea>
-                    </p>
-                </form>
+                <p>
+                    <label for="message">Message</label>
+                    <br>
+                    <textarea name="message" id="message" placeholder=" Votre message" cols="55" rows="5"></textarea>
+                </p>
             </div5>
         <br><br>
         <br><br>
@@ -71,9 +63,7 @@
         <div8 id="conteneur2">
 
             <div9>
-            <form action="" method="">
                 <input id="bouton_envoi" type="submit" value="Envoyer l'email">
-            </form>
             </div9>
             <br>
 
@@ -82,7 +72,7 @@
             </div10>
 
         </div8>
-
+        </form>
 
         <br><br><br>
         <p class="footer">CAPTEST</p>
