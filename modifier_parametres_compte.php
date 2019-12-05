@@ -74,7 +74,7 @@
                 if (isset($_GET['modifs_enregistrees'])) {
             ?>
                 <h2 style="color:blue">Modifications enregistrées !</h2>
-                <a href="Mise_en_page.php">Retour à la page d'accueil</a>
+                <a href="page_principale_utilisateur.php">Retour à la page d'accueil</a>
             <?php
                 }
             ?>

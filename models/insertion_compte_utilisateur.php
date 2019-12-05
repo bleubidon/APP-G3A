@@ -1,7 +1,7 @@
 <?php
 include('connexion_bdd.php');
 
-// Profil utilisateur
+// Insertion du profil utilisateur
 $mot_de_passe_hache = password_hash($_SESSION['password'], PASSWORD_ARGON2I);  // Hachage du mot de passe
 $query = "INSERT INTO profil_utilisateur(nom, prenom, identifiant, date_de_naissance, telephone, email, mot_de_passe, type_emploi)
             VALUES(:nom, :prenom, :identifiant, :date_de_naissance, :telephone, :email, :mot_de_passe, :type_emploi)";
@@ -19,12 +19,13 @@ $sql->bindParam(':type_emploi', $_SESSION['emplois']);
 
 $status = $sql->execute();
 
-// Santé utilisateur
-$query = "INSERT INTO sante_utilisateur(genre, poids, taille, groupe_sanguin, sommeil_moyen, pathologie)
-            VALUES(:genre, :poids, :taille, :groupe_sanguin, :sommeil_moyen, :pathologie)";
+// Insertion des données de santé utilisateur
+$query = "INSERT INTO sante_utilisateur(identifiant, genre, poids, taille, groupe_sanguin, sommeil_moyen, pathologie)
+            VALUES(:identifiant, :genre, :poids, :taille, :groupe_sanguin, :sommeil_moyen, :pathologie)";
 
 $sql = $bdd->prepare($query);
 
+$sql->bindParam(':identifiant', $_SESSION['identifiant']);
 $sql->bindParam(':genre', $_SESSION['genre']);
 $sql->bindParam(':poids', $_SESSION['poids']);
 $sql->bindParam(':taille', $_SESSION['taille']);

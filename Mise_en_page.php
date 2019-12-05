@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="Stylesheet" href="ressources/stylesheets/Stylesheet.css" />
-    <title>Mise en page</title>
-</head>
-<body>
 <nav>
     <section id="profil">
         <br>
@@ -56,6 +48,3 @@
     <button id="settings" title="Parametres" onclick="window.location.href = 'modifier_parametres_compte.php'"></button>
     <button id="home" title="Accueil" onclick="window.location.href = ''"></button>
 </header>
-
-</body>
-</html>

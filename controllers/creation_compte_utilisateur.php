@@ -22,14 +22,34 @@ else {
 
 // Profil utilisateur
 // TODO gérer la photo de profil
-if (isset($_POST['Prenom']) && isset($_POST['Nom'])  && isset($_POST['identifiant']) && isset($_POST['dateNaissance']) && isset($_POST['numeroTel']) && isset($_POST['email'])
-    && isset($_POST['password']) && isset($_POST['validePassword']) && isset($_POST['emplois'])) {
+// TODO gestion du formulaire côté client (JavaScript)
+if (isset($_POST['Prenom']) && isset($_POST['Nom'])  && isset($_POST['identifiant']) && isset($_POST['dateNaissance']) && isset($_POST['numeroTel'])
+    && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['validePassword']) && isset($_POST['emplois'])) {
 
     // Vérifier que le mot de passe renseigné est identique à sa confirmation
+    $mot_de_passe_incorrect = false;
+
     if ($_POST['password'] != $_POST['validePassword']) {
-        header('location:?confirmation_mdp_erronee');
+        $mot_de_passe_incorrect = true;
+        $destination_header = "?confirmation_mdp_erronee";
     }
-    else {
+
+    // Vérifier que l'identifiant renseigné est non vide et pas déjà pris
+    $identifiant_incorrect = false;
+
+    if ($_POST['identifiant'] == "") {  // L'identifiant renseigné est vide
+        $identifiant_incorrect = true;
+    }
+    include('../models/verif_disponibilite_identifiant.php');
+    if ($identifiant_indicateur != null) {  // L'identifiant renseigné est déjà pris
+        $identifiant_incorrect = true;
+    }
+
+    if ($identifiant_incorrect) {
+        $destination_header = "?identifiant_invalide";
+    }
+
+    if (!$mot_de_passe_incorrect && !$identifiant_incorrect) {
         $_SESSION['Prenom'] = $_POST['Prenom'];
         $_SESSION['Nom'] = $_POST['Nom'];
         $_SESSION['identifiant'] = $_POST['identifiant'];
@@ -38,8 +58,11 @@ if (isset($_POST['Prenom']) && isset($_POST['Nom'])  && isset($_POST['identifian
         $_SESSION['email'] = $_POST['email'];
         $_SESSION['password'] = $_POST['password'];
         $_SESSION['emplois'] = $_POST['emplois'];
-        header('location:?etape=2');
+
+        $destination_header = "?etape=2";
     }
+
+    header("location:" . $destination_header);
 }
 
 // Santé utilisateur
@@ -53,6 +76,7 @@ else if (isset($_POST['genre']) && isset($_POST['poids']) && isset($_POST['taill
     header('location:?etape=3');
 }
 
+// Enregistrer l'utilisateur dans la bdd
 else if (isset($_GET['toutes_infos_collectees'])) {
     include('../models/insertion_compte_utilisateur.php');
     header('location:?etape=3&inscription_reussie');

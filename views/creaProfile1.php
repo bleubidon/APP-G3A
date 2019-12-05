@@ -8,8 +8,7 @@
 
     <body>
     <section id="sec1">
-<!--        <img id="imgPageDeCo" src="../ressources/images/creaProfile1.png">-->
-        <img id="imgPageDeCo" src="../ressources/images/creaProfil2.png">
+        <img id="imgPageDeCo" src="../ressources/images/creaProfile1.png">
     </section>
     <section id="sec2">
         <h1>Création de votre profil</h1>
@@ -69,6 +68,19 @@
 
             <p>
                 <a href="../">Retour</a>
+
+                <?php
+                    if (isset($_GET['identifiant_invalide'])) {
+                ?>
+                    <p style="color:blue">Identifiant invalide (vide ou déjà pris)</p>
+                <?php
+                    }
+                    else if (isset($_GET['confirmation_mdp_erronee'])) {
+                ?>
+                    <p style="color:blue">Le mot de passe renseigné ne correspond pas à sa confirmation</p>
+                <?php } ?>
+
+
                 <input type="submit" value="Continuer"/>
             </p>
         </form>
