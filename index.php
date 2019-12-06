@@ -9,7 +9,7 @@
     <br><br>
     <br><br>
     <h1 class="header">CAPTEST</h1>
-    <img id="logo" src="ressources/images/infinite_mesure.png">
+    <img id="logo" src="ressources/images/captimove_logo.png">
     <div1>
         <form action="controllers/verif_auth_utilisateur.php" method="post">
             <p>
