@@ -89,7 +89,7 @@ section4 {
 section3 {
     text-align: center;
     line-height: 1px;
-    text-indent: 33px;
+    text-indent: 50px;
     font-size: 13px
 }
 
@@ -100,8 +100,11 @@ section3 {
 
 #logoCaptimove
 {
+
     width: 243px;
     height: 244px;
+    background: none;
+     color: #545871;
 }
 
 #CGU {
@@ -184,16 +187,12 @@ button:hover {
 .captest
 {
     text-transform: uppercase;
-    font-size: 28px;
+    font-size: 16px;
     color: #000000;
-    justify-content: center;
+    text-align: center;
 }
 
-#section
-{
-    display: flex;
-    justify-content: left;
-}
+
 
 .footer {
     font-size: 14px;
@@ -202,8 +201,9 @@ button:hover {
     text-transform: uppercase;
     opacity: 1;
     display: flex;
-    justify-content: center;
-    text-align: end;
+    justify-content: right;
+    text-align: center;
+    float: right;
 
 }
 
@@ -212,5 +212,27 @@ button:hover {
     color: #707070;
     text-decoration: underline;
     text-decoration-color: #707070;
+    font-size: 25px;
+}
+
+
+section1
+{
+    height: 100%;
+    width: 16%;
+    margin-bottom: 0px;
+    background-color: #545871;
+    font-family: Basicsans;
+    display: flex;
+    justify-content: center;
+    float: left;
+}
+
+section2
+{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: right;
 }
 
