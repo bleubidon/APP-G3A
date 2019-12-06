@@ -1,16 +1,28 @@
 {
   "stylesheets": {
-    "/index.php": ["Stylesheet_Login.css"],
-    "/views/page_principale_utilisateur.php": ["Stylesheet.css", "Stylesheet_page_accueil.css"],
-    "/controllers/creation_compte_utilisateur.php": ["Stylesheet_Login.css"],
-    "/views/mot_de_passe_oublie.php": ["Stylesheet_Login.css"],
-    "/views/reinitialisation_mot_de_passe.php": ["Stylesheet_Login.css"],
-    "/views/contact_administrateur.php": ["Stylesheet_contact_administrateur.css"]
+    "/index.php": [
+      "Stylesheet_Login.css"
+    ],
+    "/views/page_principale_utilisateur.php": [
+      "Stylesheet.css",
+      "Stylesheet_page_accueil.css"
+    ],
+    "/controllers/creation_compte_utilisateur.php": [
+      "Stylesheet_Login.css"
+    ],
+    "/views/mot_de_passe_oublie.php": [
+      "Stylesheet_Login.css"
+    ],
+    "/views/reinitialisation_mot_de_passe.php": [
+      "Stylesheet_Login.css"
+    ],
+    "/views/contact_administrateur.php": [
+      "Stylesheet_contact_administrateur.css"
+    ]
   },
-
   "titres": {
     "/index.php": "Captest",
-    "/views/page_principale_utilisateur.php":  "Page principale",
+    "/views/page_principale_utilisateur.php": "Page principale",
     "/controllers/creation_compte_utilisateur.php": "Création de votre profil sur Captest",
     "/views/mot_de_passe_oublie.php": "Mot de passe oublié ?",
     "/views/reinitialisation_mot_de_passe.php": "Réinitialisez votre mot de passe",

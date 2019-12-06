@@ -17,15 +17,14 @@ if (isset($_GET['etape'])) {
         default:
             include("../views/creaProfile1.php");
     }
-}
-else {
+} else {
     include("../views/creaProfile1.php");
 }
 
 // Profil utilisateur
 // TODO gérer la photo de profil
 // TODO gestion du formulaire côté client (JavaScript)
-if (isset($_POST['Prenom']) && isset($_POST['Nom'])  && isset($_POST['identifiant']) && isset($_POST['dateNaissance']) && isset($_POST['numeroTel'])
+if (isset($_POST['Prenom']) && isset($_POST['Nom']) && isset($_POST['identifiant']) && isset($_POST['dateNaissance']) && isset($_POST['numeroTel'])
     && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['validePassword']) && isset($_POST['emplois'])) {
 
     // Vérifier que le mot de passe renseigné est identique à sa confirmation
@@ -65,9 +64,7 @@ if (isset($_POST['Prenom']) && isset($_POST['Nom'])  && isset($_POST['identifian
     }
 
     header("location:" . $destination_header);
-}
-
-// Santé utilisateur
+} // Santé utilisateur
 else if (isset($_POST['genre']) && isset($_POST['poids']) && isset($_POST['taille']) && isset($_POST['gsang']) && isset($_POST['sommeil']) && isset($_POST['pathologie'])) {
     $_SESSION['genre'] = $_POST['genre'];
     $_SESSION['poids'] = $_POST['poids'];
@@ -76,9 +73,7 @@ else if (isset($_POST['genre']) && isset($_POST['poids']) && isset($_POST['taill
     $_SESSION['sommeil'] = $_POST['sommeil'];
     $_SESSION['pathologie'] = $_POST['pathologie'];
     header('location:?etape=3');
-}
-
-// Enregistrer l'utilisateur dans la bdd
+} // Enregistrer l'utilisateur dans la bdd
 else if (isset($_GET['toutes_infos_collectees'])) {
     include('../models/insertion_compte_utilisateur.php');
 

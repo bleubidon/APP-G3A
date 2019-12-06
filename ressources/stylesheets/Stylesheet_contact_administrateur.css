@@ -1,46 +1,67 @@
-@font-face {font-family: "basicsans";
-    src: url("../fonts/basicsanssf.ttf");}
+@font-face {
+    font-family: "basicsans";
+    src: url("../fonts/basicsanssf.ttf");
+}
 
-html {height: 100%;}
+html {
+    height: 100%;
+}
 
-body
-{
+body {
     background-color: white;
     height: 100%;
     font-family: "Basicsans";
     font-weight: bold;
-    margin: 0; bottom: 0;
+    margin: 0;
+    bottom: 0;
     overflow: hidden;
 }
 
-h1 {text-align: left; color: #545871;}
+h1 {
+    text-align: left;
+    color: #545871;
+}
 
 
-label {color: #545871;}
+label {
+    color: #545871;
+}
 
-button:hover {cursor: pointer;}
+button:hover {
+    cursor: pointer;
+}
 
-.imgContactAdmin
-{
+.imgContactAdmin {
     display: flex;
     justify-content: flex-start;
-    width:50%;
+    width: 50%;
     height: 100%;
     float: left;
 }
 
-input, textarea { border: 1px solid darkgray;
+input, textarea {
+    border: 1px solid darkgray;
     border-radius: 4px;
     height: 30px;
     color: gray;
-    display: inline-block;}
+    display: inline-block;
+}
 
-div1 {text-align: center;}
-div2,div3,div4 {text-align: left; display: inline-block;}
+div1 {
+    text-align: center;
+}
+
+div2, div3, div4 {
+    text-align: left;
+    display: inline-block;
+}
 
 /*#section1 { font-size: 15px;  width: 50%; height: 100%;}*/
 
-#section1 { font-size: 15px; display: inline;}
+#section1 {
+    font-size: 15px;
+    display: inline;
+}
 
 /*#section2 { font-size: 15px;
     float: right;
@@ -50,14 +71,24 @@ div2,div3,div4 {text-align: left; display: inline-block;}
     justify-content: center;
     flex-direction: column; }*/
 
-#section2 { display: flex; justify-content: left; }
+#section2 {
+    display: flex;
+    justify-content: left;
+}
 
 
-#conteneur1 { display: flex; justify-content: center; }
-#conteneur2 { display: flex; flex-direction: column; justify-content: left;}
+#conteneur1 {
+    display: flex;
+    justify-content: center;
+}
 
-#bouton_envoi, #bouton_retour
-{
+#conteneur2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+#bouton_envoi, #bouton_retour {
     border: 1px solid darkgray;
     background-color: White;
     border-radius: 100px;
@@ -68,10 +99,13 @@ div2,div3,div4 {text-align: left; display: inline-block;}
     font-size: 20px;
 }
 
-#bouton_envoi { border: 1px solid #545871; background-color: #545871; color: white;}
+#bouton_envoi {
+    border: 1px solid #545871;
+    background-color: #545871;
+    color: white;
+}
 
-.footer
-{
+.footer {
     text-align: left;
     font-size: 14px;
     letter-spacing: 1.4px;

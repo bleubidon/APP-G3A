@@ -1,45 +1,69 @@
-@font-face {font-family: "basicsans";
-    src: url("../fonts/basicsanssf.ttf");}
+@font-face {
+    font-family: "basicsans";
+    src: url("../fonts/basicsanssf.ttf");
+}
 
-html { height: 100%;}
+html {
+    height: 100%;
+}
 
-body { background-color: white;
+body {
+    background-color: white;
     height: 100%;
     font-family: Basicsans;
     font-weight: bold;
     font-size: 15px;
-    margin: 0; bottom: 0;
-    overflow: hidden;}
+    margin: 0;
+    bottom: 0;
+    overflow: hidden;
+}
 
-a { color: #FFFFFF;
-    text-decoration: none;}
-a:hover {text-decoration: underline;}
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
 
-h { font-size: 13px; color: #9597A6;}
+a:hover {
+    text-decoration: underline;
+}
 
-nav { height: 100%;
+h {
+    font-size: 13px;
+    color: #9597A6;
+}
+
+nav {
+    height: 100%;
     width: 16%;
     margin-bottom: 0px;
     background-color: #545871;
     font-family: Basicsans;
-    float: left;}
+    float: left;
+}
 
-ul { list-style: none;}
+ul {
+    list-style: none;
+}
 
-section { text-decoration: none;
+section {
+    text-decoration: none;
     color: white;
     width: 99%;
     border-style: solid;
     border-bottom-color: #545871;
-    border-top-color: gray ;
+    border-top-color: gray;
     border-left-color: transparent;
     border-right-color: transparent;
-    border-width: 1px;}
+    border-width: 1px;
+}
 
-#profil { text-align: center;
-    font-size: 13px;}
+#profil {
+    text-align: center;
+    font-size: 13px;
+}
 
-#foot { position: absolute;
+#foot {
+    position: absolute;
     width: 15.9%;
     bottom: 0;
     border-style: solid;
@@ -47,40 +71,106 @@ section { text-decoration: none;
     border-bottom-color: #545871;
     border-left-color: transparent;
     border-right-color: transparent;
-    border-width: 1px;}
+    border-width: 1px;
+}
 
-section3, section4 { border-color: transparent; display: inline-block; margin-bottom: 2px; }
-section4 { float: right; margin-top: 30px ; margin-right: 5px;}
-section3 { text-align: center; line-height: 1px; text-indent: 33px; font-size: 13px}
-#logoinf {width: 35px; height: 35px;}
+section3, section4 {
+    border-color: transparent;
+    display: inline-block;
+    margin-bottom: 2px;
+}
 
-#CGU {color: #9597A6; font-size: 9px;}
+section4 {
+    float: right;
+    margin-top: 30px;
+    margin-right: 5px;
+}
 
-#Recherche { margin-left: 30px;
+section3 {
+    text-align: center;
+    line-height: 1px;
+    text-indent: 33px;
+    font-size: 13px
+}
+
+#logoinf {
+    width: 35px;
+    height: 35px;
+}
+
+#CGU {
+    color: #9597A6;
+    font-size: 9px;
+}
+
+#Recherche {
+    margin-left: 30px;
     margin-top: 15px;
     height: 40px;
     border: 1px solid darkgrey;
-    border-radius: 30px;}
+    border-radius: 30px;
+}
+
 #Recherche[type=search] {
     background-image: url("../images/searchIcon.png");
     background-color: white;
     background-position: 10px 7px;
     background-repeat: no-repeat;
-    padding-left: 40px;}
+    padding-left: 40px;
+}
 
-button {padding: 15px 15px;
+button {
+    padding: 15px 15px;
     float: right;
     margin-top: 20px;
     margin-right: 25px;
     border: none;
-    background-size: 100%;}
-button:hover { cursor : pointer;}
-#home { background-image: url("../images/homeIcon.png");}
-#settings { background-image: url("../images/settingsIcon.png");}
-#Logout { background-image: url("../images/logoutIcon.png");}
+    background-size: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#home {
+    background-image: url("../images/homeIcon.png");
+}
+
+#settings {
+    background-image: url("../images/settingsIcon.png");
+}
+
+#Logout {
+    background-image: url("../images/logoutIcon.png");
+}
 
 
-#util { text-align: center; font-size: 13px;}
-#stat { text-align: center; font-size: 10px;}
-#profImg {border: 1px solid white; border-radius: 100%; width: 60px; height: 60px; margin: 0 auto;}
-#snake { width: 100%; height: 100%; border-radius: 100%;}#snake { width: 100%; height: 100%; border-radius: 100%;}
+#util {
+    text-align: center;
+    font-size: 13px;
+}
+
+#stat {
+    text-align: center;
+    font-size: 10px;
+}
+
+#profImg {
+    border: 1px solid white;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+#snake {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+#snake {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}

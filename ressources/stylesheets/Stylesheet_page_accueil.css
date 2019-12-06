@@ -1,7 +1,8 @@
-ul{
+ul {
 
 }
-#enoncebis{
+
+#enoncebis {
     text-align: left;
     font: Bold 25px/28px Basic Sans;
     letter-spacing: 2.5px;
@@ -9,7 +10,7 @@ ul{
     opacity: 1;
 }
 
-#informationbis{
+#informationbis {
     text-align: center;
     font: Bold 25px/32px Basic Sans;
     letter-spacing: 0;
@@ -17,11 +18,13 @@ ul{
     opacity: 1;
 }
 
-#global{
+#global {
     width: 100%;
 }
-#enonce{
+
+#enonce {
     float: left;
 }
-#information{
+
+#information {
 }

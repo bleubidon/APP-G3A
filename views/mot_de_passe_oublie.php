@@ -31,8 +31,7 @@
                 ?>
                 <p id="error">Adresse email inconnue</p>
                 <?php
-            }
-            else if (isset($_GET['mail_ok'])) {
+            } else if (isset($_GET['mail_ok'])) {
                 ?>
                 <p>Un email de réinitialisation de votre mot de passe vous a été envoyé à l'adresse renseignée.</p>
                 <?php
@@ -42,7 +41,9 @@
             <input id="con" type="submit" value="Récupérer mon mot de passe">
         </form>
         <p>
-            <button id="cree" onclick="window.location.href = '../controllers/contact_administrateur.php' ">Contacter un Administrateur</button>
+            <button id="cree" onclick="window.location.href = '../controllers/contact_administrateur.php' ">Contacter un
+                Administrateur
+            </button>
         </p>
     </div1>
     <div id="divRet">

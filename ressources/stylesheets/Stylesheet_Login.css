@@ -1,32 +1,63 @@
-@font-face {font-family: "basicsans";
-    src: url("../fonts/basicsanssf.ttf");}
+@font-face {
+    font-family: "basicsans";
+    src: url("../fonts/basicsanssf.ttf");
+}
 
-html {height: 100%;}
+html {
+    height: 100%;
+}
 
-body {background-color: white;
+body {
+    background-color: white;
     height: 100%;
     font-family: "Basicsans";
     font-weight: bold;
-    margin: 0; bottom: 0;
-    overflow: hidden;}
+    margin: 0;
+    bottom: 0;
+    overflow: hidden;
+}
 
-button:hover {cursor: pointer;}
+button:hover {
+    cursor: pointer;
+}
 
-label {color: #545871;}
-input, textarea { border: 1px solid darkgray;
+label {
+    color: #545871;
+}
+
+input, textarea {
+    border: 1px solid darkgray;
     border-radius: 4px;
     height: 30px;
     color: gray;
-    display: inline-block;}
+    display: inline-block;
+}
 
-#imgPageDeCo , #imgAirplane{width:50%; height: 100%;}
-#imgCreaProfil2 {width: 40%; height: 100%;}
-#logo {width: 222px; height: 224px;display: block; margin-right: auto; margin-left: auto;}
+#imgPageDeCo, #imgAirplane {
+    width: 50%;
+    height: 100%;
+}
 
-#error {text-align: center; color: red; font-size: 9px;}
+#imgCreaProfil2 {
+    width: 40%;
+    height: 100%;
+}
 
-#con, #cree
-{
+#logo {
+    width: 222px;
+    height: 224px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#error {
+    text-align: center;
+    color: red;
+    font-size: 9px;
+}
+
+#con, #cree {
     border: 1px solid darkgray;
     background-color: White;
     border-radius: 100px;
@@ -37,16 +68,23 @@ input, textarea { border: 1px solid darkgray;
     font-size: 16px;
 
 }
-#con { border: 1px solid #545871; background-color: #545871; color: white;}
-#mdp { text-align: left;
+
+#con {
+    border: 1px solid #545871;
+    background-color: #545871;
+    color: white;
+}
+
+#mdp {
+    text-align: left;
     text-decoration: underline;
     font-size: 12px;
     letter-spacing: 0;
     color: #545871;
-    opacity: 1;}
+    opacity: 1;
+}
 
-#Retour
-{
+#Retour {
     border: 1px solid darkgray;
     background-color: White;
     border-radius: 100px;
@@ -57,41 +95,96 @@ input, textarea { border: 1px solid darkgray;
     font-size: 16px;
 }
 
-div1 { text-align: center;}
-div2 { text-align: center; width: 100%;}
-div3 { float: right; width: 7%;}
-div2 , div3 { display: inline-block; float: bottom;}
-div4, div5 {text-align: left; display: inline-block;}
-div6, div7 {text-align: left; display: inline-block;}
-div8 {text-align: left;}
-#divRet{ text-align: center; width: 100%; float: bottom;}
+div1 {
+    text-align: center;
+}
 
-h1
-{
+div2 {
+    text-align: center;
+    width: 100%;
+}
+
+div3 {
+    float: right;
+    width: 7%;
+}
+
+div2, div3 {
+    display: inline-block;
+    float: bottom;
+}
+
+div4, div5 {
+    text-align: left;
+    display: inline-block;
+}
+
+div6, div7 {
+    text-align: left;
+    display: inline-block;
+}
+
+div8 {
+    text-align: left;
+}
+
+#divRet {
+    text-align: center;
+    width: 100%;
+    float: bottom;
+}
+
+h1 {
     text-align: center;
 
 }
 
 
-#container { vertical-align: center; display: inline-block;}
+#container {
+    vertical-align: center;
+    display: inline-block;
+}
 
-#sec1 { font-size: 15px; display: inline;}
+#sec1 {
+    font-size: 15px;
+    display: inline;
+}
 
-#sec2 { font-size: 15px;
+#sec2 {
+    font-size: 15px;
     float: right;
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
-    flex-direction: column;}
+    flex-direction: column;
+}
 
-#name {display: flex; justify-content: center; flex-direction: row;}
-#phone {display: flex; justify-content: center; flex-direction: row;}
-#mail {display: flex; justify-content: center; flex-direction: row;}
-#mdp {display: flex; justify-content: center; flex-direction: row;}
+#name {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
 
-.footer
-{
+#phone {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#mail {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#mdp {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.footer {
     text-align: left;
     font-size: 14px;
     letter-spacing: 1.4px;
@@ -102,9 +195,11 @@ h1
     justify-content: center;
 }
 
-#conteneur { display: flex;}
-#languageFR,#languageUS
-{
+#conteneur {
+    display: flex;
+}
+
+#languageFR, #languageUS {
     text-align: left;
     text-decoration: underline;
     font-size: 12px;

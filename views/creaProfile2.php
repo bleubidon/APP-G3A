@@ -10,7 +10,7 @@
             <p>
                 Genre : <br/>
                 <input type="radio" name="genre" value="Homme" id="Homme"/>
-                <label  for="Homme">Homme</label>
+                <label for="Homme">Homme</label>
 
                 <input type="radio" name="genre" value="Femme" id="Femme"/>
                 <label for="Femme">Femme</label>
@@ -35,7 +35,8 @@
         <div id="pathologie">
             <p><label for="mail">Antécedent / Pathologie</label>
                 <br>
-                <textarea name="pathologie" id="pathologie" placeholder=" Vos antécedent et/ou pathologie" cols="55" rows="5"></textarea>
+                <textarea name="pathologie" id="pathologie" placeholder=" Vos antécedent et/ou pathologie" cols="55"
+                          rows="5"></textarea>
         </div>
         <p>
             <a href="?etape=1">Retour</a>

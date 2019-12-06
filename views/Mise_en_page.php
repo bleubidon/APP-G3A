@@ -2,13 +2,15 @@
     <section id="profil">
         <br>
         <div class="container" id="profImg"><img id="snake" src="../ressources/images/snake2.jpg"></div>
-        <p><?php echo $_SESSION['prenom'] . " " . $_SESSION['nom'] ?> &lt;<?php echo $_SESSION['identifiant'] ?>&gt;</p><br>
+        <p><?php echo $_SESSION['prenom'] . " " . $_SESSION['nom'] ?> &lt;<?php echo $_SESSION['identifiant'] ?>&gt;</p>
+        <br>
         <?php echo ucfirst($_SESSION['statut_utilisateur_site']) ?>
     </section>
 
     <section>
         <ul>
-            <h>Fonctionnalités</h><br><br>
+            <h>Fonctionnalités</h>
+            <br><br>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="Profile.html">Profil</a></li>
             <li><a href="Historique.html">Historique</a></li>

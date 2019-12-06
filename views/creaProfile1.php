@@ -8,42 +8,42 @@
     <form action="" method="post">
         <div id="name">
             <p><label for="Prenom">Prénom :</label>
-            <br>
-            <input type="text" name="Prenom" id="Prenom" placeholder="Votre Prénom"/></p>
+                <br>
+                <input type="text" name="Prenom" id="Prenom" placeholder="Votre Prénom"/></p>
 
             <p><label for="Nom">Nom :</label><br>
-            <input type="text" name="Nom" id="Nom" placeholder="Votre Nom"/></p>
+                <input type="text" name="Nom" id="Nom" placeholder="Votre Nom"/></p>
         </div>
-            <br />
+        <br/>
         <div id="phone">
             <p><label for="dateNaissance">Date de Naissance :</label><br>
-            <input type="date" name="dateNaissance" id="dateNaissance" placeholder="jj/mm/année"/></p>
+                <input type="date" name="dateNaissance" id="dateNaissance" placeholder="jj/mm/année"/></p>
 
             <p><label for="numeroTel">Numéro de téléphone :</label><br>
-            <input type="tel" name="numeroTel" id="numeroTel" placeholder="00.00.00.00.00"/></p>
+                <input type="tel" name="numeroTel" id="numeroTel" placeholder="00.00.00.00.00"/></p>
         </div>
-            <br />
+        <br/>
         <div id="mail">
             <p><label for="email">Email :</label><br>
-                <input type="email" name="email" id="email"placeholder="Votre adresse mail"/></p>
+                <input type="email" name="email" id="email" placeholder="Votre adresse mail"/></p>
 
             <p><label for="identifiant">Identifiant :</label><br>
-                <input type="text" name="identifiant" id="identifiant"placeholder="Identifiant"/></p>
+                <input type="text" name="identifiant" id="identifiant" placeholder="Identifiant"/></p>
         </div>
         <br>
         <div id="mdp">
             <p><label for="password"><strong>Mot de passe :</strong></label><br>
-            <input type="password" name="password" id="password"/></p>
+                <input type="password" name="password" id="password"/></p>
 
             <p><label for="validePassword">Confirmation du mot de passe :</label><br>
-            <input type="password" name="validePassword" id="validePassword"/></p>
+                <input type="password" name="validePassword" id="validePassword"/></p>
         </div>
 
         <p>
             Type d'emploi : <br/>
 
             <input type="radio" name="emplois" value="Pilote" id="Pilote"/>
-            <label  for="Pilote">Pilote</label>
+            <label for="Pilote">Pilote</label>
 
             <input type="radio" name="emplois" value="PersonnelAuSol" id="PersonnelAuSol"/>
             <label for="PersonnelAuSol">Personnel au sol</label>
@@ -54,7 +54,7 @@
 
         <p>
             Upload a photo<br/>
-                <input type="file" name="PhotoProfil"/><br/>
+            <input type="file" name="PhotoProfil"/><br/>
             <input type="submit" value="Envoyer le fichier"/>
         </p>
 
@@ -62,18 +62,18 @@
             <a href="../">Retour</a>
 
             <?php
-                if (isset($_GET['identifiant_invalide'])) {
+            if (isset($_GET['identifiant_invalide'])) {
             ?>
-                <p style="color:blue">Identifiant invalide (vide ou déjà pris)</p>
-            <?php
-                }
-                else if (isset($_GET['confirmation_mdp_erronee'])) {
+        <p style="color:blue">Identifiant invalide (vide ou déjà pris)</p>
+        <?php
+        }
+        else if (isset($_GET['confirmation_mdp_erronee'])) {
             ?>
-                <p style="color:blue">Le mot de passe renseigné ne correspond pas à sa confirmation</p>
-            <?php } ?>
+            <p style="color:blue">Le mot de passe renseigné ne correspond pas à sa confirmation</p>
+        <?php } ?>
 
 
-            <input type="submit" value="Continuer"/>
+        <input type="submit" value="Continuer"/>
         </p>
     </form>
 </section>

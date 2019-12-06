@@ -30,8 +30,7 @@ if (isset($_POST['Mail'])) {
 
         // Notification de succès à l'utilisateur
         header('location:?mail_ok');
-    }
-    else {
+    } else {
         header('location:?mail_inconnu');
     }
 }

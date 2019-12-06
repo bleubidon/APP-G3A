@@ -1,4 +1,5 @@
 <?php
+
 class Email
 {
     private $mail;
@@ -14,8 +15,9 @@ class Email
     private $nom_emetteur = "Support Captest";
 
 
-    function __construct($email_destinataire, $sujet, $message, $reply_to=null) {
-        require_once( '../include/class.phpmailer.php');
+    function __construct($email_destinataire, $sujet, $message, $reply_to = null)
+    {
+        require_once('../include/class.phpmailer.php');
 
         $this->adresse_email_destinataire = $email_destinataire;
         $this->sujet = $sujet;
@@ -42,7 +44,8 @@ class Email
         $this->mail->Body = $this->message;
     }
 
-    function envoyerEmail() {
+    function envoyerEmail()
+    {
         $this->mail->send();
     }
 }

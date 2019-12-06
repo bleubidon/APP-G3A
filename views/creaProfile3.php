@@ -25,12 +25,12 @@
         <a href="?etape=2">Retour</a>
 
         <?php
-            if (isset($_GET['inscription_reussie'])) {
-        ?>
-                <h2 style="color:blue">Inscription réussie !</h2>
-                <a href="../">Identifiez-vous</a>
-        <?php
-            }
+        if (isset($_GET['inscription_reussie'])) {
+            ?>
+            <h2 style="color:blue">Inscription réussie !</h2>
+            <a href="../">Identifiez-vous</a>
+            <?php
+        }
         ?>
         <input type="submit" value="Continuer"/>
     </form>
