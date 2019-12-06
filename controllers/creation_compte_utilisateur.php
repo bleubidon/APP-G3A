@@ -29,7 +29,6 @@ if (isset($_POST['Prenom']) && isset($_POST['Nom']) && isset($_POST['identifiant
 
     // Vérifier que le mot de passe renseigné est identique à sa confirmation
     $mot_de_passe_incorrect = false;
-
     if ($_POST['password'] != $_POST['validePassword']) {
         $mot_de_passe_incorrect = true;
         $destination_header = "?confirmation_mdp_erronee";
@@ -37,7 +36,6 @@ if (isset($_POST['Prenom']) && isset($_POST['Nom']) && isset($_POST['identifiant
 
     // Vérifier que l'identifiant renseigné est non vide et pas déjà pris
     $identifiant_incorrect = false;
-
     if ($_POST['identifiant'] == "") {  // L'identifiant renseigné est vide
         $identifiant_incorrect = true;
     }
@@ -45,18 +43,24 @@ if (isset($_POST['Prenom']) && isset($_POST['Nom']) && isset($_POST['identifiant
     if ($identifiant_indicateur != null) {  // L'identifiant renseigné est déjà pris
         $identifiant_incorrect = true;
     }
-
     if ($identifiant_incorrect) {
         $destination_header = "?identifiant_invalide";
     }
 
     if (!$mot_de_passe_incorrect && !$identifiant_incorrect) {
+        // Si une photo de profil a été renseignée dans le formulaire, la télécharger sur le serveur
+        if (isset($_FILES['PhotoProfil'])) {
+            $nom_photo_profil = $_POST['identifiant'] . '_' . $_FILES['PhotoProfil']['name'];
+            move_uploaded_file($_FILES['PhotoProfil']['tmp_name'], "../photos_profil/$nom_photo_profil");
+        }
+
+        $_SESSION['identifiant'] = $_POST['identifiant'];
         $_SESSION['Prenom'] = $_POST['Prenom'];
         $_SESSION['Nom'] = $_POST['Nom'];
-        $_SESSION['identifiant'] = $_POST['identifiant'];
         $_SESSION['dateNaissance'] = $_POST['dateNaissance'];
         $_SESSION['numeroTel'] = $_POST['numeroTel'];
         $_SESSION['email'] = $_POST['email'];
+        if (isset($nom_photo_profil)) $_SESSION['nom_photo_profil'] = $nom_photo_profil;
         $_SESSION['password'] = $_POST['password'];
         $_SESSION['emplois'] = $_POST['emplois'];
 

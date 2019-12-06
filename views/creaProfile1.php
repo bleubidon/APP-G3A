@@ -1,11 +1,12 @@
 <body>
 <section id="sec1">
-    <img id="imgPageDeCo" src="../ressources/images/creaProfile1.png">
+    <!--    <img id="imgPageDeCo" src="../ressources/images/creaProfile1.png">-->
 </section>
 <section id="sec2">
     <h1>Création de votre profil</h1>
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
+<!--        Cet enctype est nécessaire pour l'upload de fichier via le formuaire-->
         <div id="name">
             <p><label for="Prenom">Prénom :</label>
                 <br>
@@ -53,7 +54,7 @@
         </p>
 
         <p>
-            Upload a photo<br/>
+            Photo de profil (< 2 Mo) :<br/>
             <input type="file" name="PhotoProfil"/><br/>
             <input type="submit" value="Envoyer le fichier"/>
         </p>

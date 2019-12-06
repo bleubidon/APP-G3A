@@ -25,8 +25,8 @@ include('Mise_en_page.php');  // Pour utiliser Mise_en_page.php, inclure la styl
         <ul id='informationbis'>
             <h> :</h>
             <br><br>
-            <li><?php echo $prenom ?></li>
-            <li><?php echo $nom ?></li>
+            <li><?php echo $_SESSION['prenom'] ?></li>
+            <li><?php echo $_SESSION['nom'] ?></li>
             <?php $age = age($date_de_naissance) ?>
             <li><?php echo "$age[0] ans $age[1] mois" ?></li>
             <li><?php echo $type_emploi ?></li>

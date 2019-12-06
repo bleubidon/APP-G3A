@@ -8,9 +8,6 @@ $fichier_parent = str_replace("\\", "/", explode("APP-G3A", end($include_tree))[
 $stylesheets_et_titres = file_get_contents("{$_SERVER['DOCUMENT_ROOT']}/stylesheets_et_titres.json");
 $json_all = json_decode($stylesheets_et_titres, true);
 
-// Path ___
-
-
 // Stylesheets (il peut y en avoir plusieurs)
 if (isset($json_all["stylesheets"][$fichier_parent])) {
     $stylesheets = $json_all["stylesheets"][$fichier_parent];
@@ -21,11 +18,11 @@ if (isset($json_all["titres"][$fichier_parent])) {
     $titre = $json_all["titres"][$fichier_parent];
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/ressources/images/favicon.png">
     <?php
     if (isset($stylesheets)) {
         foreach ($stylesheets as &$stylesheet) {
@@ -37,4 +34,3 @@ if (isset($json_all["titres"][$fichier_parent])) {
     }
     ?>
 </head>
-

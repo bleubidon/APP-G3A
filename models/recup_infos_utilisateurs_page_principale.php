@@ -2,17 +2,15 @@
 include('connexion_bdd.php');
 
 // Profil utilisateur
-$query = "SELECT statut, nom, prenom, date_de_naissance, email, type_emploi FROM profil_utilisateur WHERE identifiant=:identifiant";
+$query = "SELECT date_de_naissance, email, photo, type_emploi FROM profil_utilisateur WHERE identifiant=:identifiant";
 $sql = $bdd->prepare($query);
 $sql->bindParam(':identifiant', $_SESSION['identifiant']);
 $sql->execute();
 $donnees = $sql->fetch();
 
-$statut = $donnees['statut'];
-$nom = $donnees['nom'];
-$prenom = $donnees['prenom'];
 $date_de_naissance = $donnees['date_de_naissance'];
 $adresse_email = $donnees['email'];
+$nom_photo_profil = $donnees['photo'];
 $type_emploi = $donnees['type_emploi'];
 
 // Santé utilisateur

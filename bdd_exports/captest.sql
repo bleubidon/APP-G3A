@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 06, 2019 at 12:18 AM
+-- Generation Time: Dec 06, 2019 at 02:12 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.5
 
@@ -48,8 +48,7 @@ CREATE TABLE IF NOT EXISTS `profil_utilisateur` (
 --
 
 INSERT INTO `profil_utilisateur` (`identifiant`, `statut`, `nom`, `prenom`, `date_de_naissance`, `telephone`, `email`, `photo`, `mot_de_passe`, `type_emploi`) VALUES
-('bleubidon', 'gestionnaire', 'Barral', 'Armand', '2000-04-05', '0688382574', 'armand.barral@orange.fr', NULL, '$argon2i$v=19$m=1024,t=2,p=2$aHZWQnl1ZjZJYTZ2NlRDWg$IMYfMY+y88rXKp+0EFfkzFKcAldv3dQ29HXM3woI3jo', 'Pilote'),
-('admin', 'administrateur', 'barral', 'armand', '2000-04-05', '0688888888', 'armand.barral@orange.fr', NULL, 'admin', '');
+('bleubidon', 'gestionnaire', 'Barral', 'Armand', '2000-04-05', '0688382574', 'armand.barral@orange.fr', NULL, '$argon2i$v=19$m=1024,t=2,p=2$aHZWQnl1ZjZJYTZ2NlRDWg$IMYfMY+y88rXKp+0EFfkzFKcAldv3dQ29HXM3woI3jo', 'Pilote');
 
 -- --------------------------------------------------------
 

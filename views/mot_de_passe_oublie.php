@@ -41,7 +41,8 @@
             <input id="con" type="submit" value="Récupérer mon mot de passe">
         </form>
         <p>
-            <button id="cree" onclick="window.location.href = '../controllers/contact_administrateur.php' ">Contacter un
+            <?php $php_self = $_SERVER['PHP_SELF']?>
+            <button id="cree" onclick="window.location.href = '../controllers/contact_administrateur.php?retour=<?php echo $php_self?>'">Contacter un
                 Administrateur
             </button>
         </p>
