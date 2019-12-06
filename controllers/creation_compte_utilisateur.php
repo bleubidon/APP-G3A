@@ -87,6 +87,7 @@ else if (isset($_GET['toutes_infos_collectees'])) {
     unset($_SESSION['dateNaissance']);
     unset($_SESSION['numeroTel']);
     unset($_SESSION['email']);
+    if (isset($_SESSION['nom_photo_profil'])) unset($_SESSION['nom_photo_profil']);
     unset($_SESSION['password']);
     unset($_SESSION['emplois']);
     unset($_SESSION['genre']);
