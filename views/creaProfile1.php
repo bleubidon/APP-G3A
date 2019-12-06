@@ -5,7 +5,7 @@
 <section id="sec2">
     <h1>Création de votre profil</h1>
 
-    <form method="post" action="" enctype="multipart/form-data">
+    <form action="" method="post">
         <div id="name">
             <p><label for="Prenom">Prénom :</label>
             <br>

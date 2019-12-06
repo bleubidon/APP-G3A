@@ -2,8 +2,8 @@
     <section id="profil">
         <br>
         <div class="container" id="profImg"><img id="snake" src="../ressources/images/snake2.jpg"></div>
-        <p><?php echo "$prenom $nom" ?> &lt;<?php echo $_SESSION['identifiant'] ?>&gt;</p><br>
-        <?php echo ucfirst($statut) ?>
+        <p><?php echo $_SESSION['prenom'] . " " . $_SESSION['nom'] ?> &lt;<?php echo $_SESSION['identifiant'] ?>&gt;</p><br>
+        <?php echo ucfirst($_SESSION['statut_utilisateur_site']) ?>
     </section>
 
     <section>

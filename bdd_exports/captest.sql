@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 05, 2019 at 08:44 PM
+-- Generation Time: Dec 06, 2019 at 12:18 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.5
 
@@ -48,7 +48,8 @@ CREATE TABLE IF NOT EXISTS `profil_utilisateur` (
 --
 
 INSERT INTO `profil_utilisateur` (`identifiant`, `statut`, `nom`, `prenom`, `date_de_naissance`, `telephone`, `email`, `photo`, `mot_de_passe`, `type_emploi`) VALUES
-('bleubidon', 'utilisateur', 'Barral', 'Armand', '2000-04-05', '0688382574', 'armand.barral@orange.fr', NULL, '$argon2i$v=19$m=1024,t=2,p=2$RHhmSmYvZ0ZXYUZYaWNVZQ$sTWIyCkNU7wgJmZmbDAeLCHbCYmyo9SZ8V8fvvAuCxE', 'Pilote');
+('bleubidon', 'gestionnaire', 'Barral', 'Armand', '2000-04-05', '0688382574', 'armand.barral@orange.fr', NULL, '$argon2i$v=19$m=1024,t=2,p=2$aHZWQnl1ZjZJYTZ2NlRDWg$IMYfMY+y88rXKp+0EFfkzFKcAldv3dQ29HXM3woI3jo', 'Pilote'),
+('admin', 'administrateur', 'barral', 'armand', '2000-04-05', '0688888888', 'armand.barral@orange.fr', NULL, 'admin', '');
 
 -- --------------------------------------------------------
 
@@ -83,20 +84,19 @@ INSERT INTO `sante_utilisateur` (`identifiant`, `genre`, `poids`, `taille`, `gro
 
 DROP TABLE IF EXISTS `tokens_reinitialisation_mot_de_passe`;
 CREATE TABLE IF NOT EXISTS `tokens_reinitialisation_mot_de_passe` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_utilisateur` varchar(255) NOT NULL,
   `token` varchar(255) NOT NULL,
   `timestamp_creation` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `token` (`token`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+  UNIQUE KEY `token` (`token`),
+  UNIQUE KEY `id_utilisateur` (`id_utilisateur`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tokens_reinitialisation_mot_de_passe`
 --
 
-INSERT INTO `tokens_reinitialisation_mot_de_passe` (`id`, `id_utilisateur`, `token`, `timestamp_creation`) VALUES
-(13, 'bleubidon', 'wf0149libm', 1575552577);
+INSERT INTO `tokens_reinitialisation_mot_de_passe` (`id_utilisateur`, `token`, `timestamp_creation`) VALUES
+('bleubidon', 'ucz93yq0as', 1575591280);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -36,7 +36,7 @@ input, textarea { border: 1px solid darkgray;
     display: inline-block;}
 
 div1 {text-align: center;}
-div2,div3,div4,div5 {text-align: left; display: inline-block;}
+div2,div3,div4 {text-align: left; display: inline-block;}
 
 /*#section1 { font-size: 15px;  width: 50%; height: 100%;}*/
 

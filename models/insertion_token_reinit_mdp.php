@@ -5,11 +5,11 @@ include('connexion_bdd.php');
 // Ce token a une durée de validité limitée, on stocke donc sa date de création
 
 // Vérifier si l'utilisateur a déjà un token
-$query = "SELECT id FROM tokens_reinitialisation_mot_de_passe WHERE id_utilisateur=:id_utilisateur";
+$query = "SELECT id_utilisateur FROM tokens_reinitialisation_mot_de_passe WHERE id_utilisateur=:id_utilisateur";
 $sql = $bdd->prepare($query);
 $sql->bindParam(':id_utilisateur', $id_utilisateur);
 $status = $sql->execute();
-$id = $sql->fetch()['id'];
+$id = $sql->fetch()['id_utilisateur'];
 
 if ($id == null) {  // L'utilisateur n'a pas encore de token
     // Ajouter une entrée dans la table (id_utilisateur, token)

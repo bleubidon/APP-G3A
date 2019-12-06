@@ -14,7 +14,7 @@
 <section id="sec2">
     <h1>Modification de votre profil</h1>
 
-    <form method="post" action="?modifs_enregistrees" enctype="multipart/form-data">
+    <form action="?modifs_enregistrees" method="post">
         <div id="name">
             <p><label for="Prenom">Prénom :</label>
                 <br>

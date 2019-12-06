@@ -11,6 +11,9 @@ if (isset($_GET['etape'])) {
         case 3:
             include("../views/creaProfile3.php");
             break;
+        case 4:
+            include("../views/creaProfile4.php");
+            break;
         default:
             include("../views/creaProfile1.php");
     }
@@ -94,5 +97,5 @@ else if (isset($_GET['toutes_infos_collectees'])) {
     unset($_SESSION['sommeil']);
     unset($_SESSION['pathologie']);
 
-    header('location:?etape=3&inscription_reussie');
+    header('location:?etape=4');
 }

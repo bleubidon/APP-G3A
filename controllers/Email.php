@@ -14,7 +14,7 @@ class Email
     private $nom_emetteur = "Support Captest";
 
 
-    function __construct($email_destinataire, $sujet, $message) {
+    function __construct($email_destinataire, $sujet, $message, $reply_to=null) {
         require_once( '../include/class.phpmailer.php');
 
         $this->adresse_email_destinataire = $email_destinataire;
@@ -33,6 +33,7 @@ class Email
         $this->mail->SMTPSecure = "tls";  // If SMTP requires TLS encryption then set it
         $this->mail->Port = $this->port;  // Set TCP port to connect to
         $this->mail->FromName = $this->nom_emetteur;
+        if ($reply_to) $this->mail->AddReplyTo($reply_to);
         $this->mail->AddAddress($this->adresse_email_destinataire, "Recipient Name");
         $this->mail->IsHTML(true);
 

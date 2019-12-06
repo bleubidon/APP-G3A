@@ -21,7 +21,7 @@
     echo "<p>Pathologie : " . $_SESSION['pathologie'] . "</p>\n";
     ?>
 
-    <form method="post" action="?etape=3&toutes_infos_collectees">
+    <form action="?etape=3&toutes_infos_collectees" method="post">
         <a href="?etape=2">Retour</a>
 
         <?php

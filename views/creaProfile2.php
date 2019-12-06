@@ -5,7 +5,7 @@
 <section id="sec2">
     <h1>Vos données de santé</h1>
 
-    <form method="post" action="" enctype="multipart/form-data">
+    <form action="" method="post">
         <div id="genre">
             <p>
                 Genre : <br/>
