@@ -2,8 +2,8 @@
 <nav>
     <section id="profil">
         <br>
-        <?php if ($nom_photo_profil != null) { ?>
-            <div class="container" id="profImg"><img id="snake" src="/photos_profil/<?php echo $nom_photo_profil ?>">
+        <?php if ($_SESSION['nom_photo_profil'] != null) { ?>
+            <div class="container" id="profImg"><img id="snake" src="/photos_profil/<?php echo $_SESSION['nom_photo_profil'] ?>">
             </div>
         <?php } else { ?>
             <div class="container" id="profImg">
@@ -29,7 +29,7 @@
             <br>
             <p><a href="/controllers/contact_administrateur.php?retour=<?php echo $_SERVER['PHP_SELF'] ?>">Contacter le
                     support</a></p>
-            <p><a href="/views/a_propos.html">À propos</a></p>
+            <p><a href="/views/a_propos.php">À propos</a></p>
             <p><a id="CGU" href="/views/cgu.html">CGU et mentions légales</a></p>
         </section3>
         <section4>
@@ -42,7 +42,7 @@
     <input type="search" name="Recherche" id="Recherche" placeholder="Recherche" size="110"/>
     <button id="Logout" title="Déconnexion" onclick="window.location.href = '/controllers/deconnexion'"></button>
     <button id="settings" title="Parametres"
-            onclick="window.location.href = '/modifier_parametres_compte.php'"></button>
+            onclick="window.location.href = '/controllers/modification_compte_utilisateur.php'"></button>
     <button id="home" title="Accueil"
             onclick="window.location.href = '/controllers/page_principale_utilisateur.php'"></button>
 </header>
