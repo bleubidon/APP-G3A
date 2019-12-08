@@ -1,13 +1,16 @@
-@font-face {
+@font-face
+{
     font-family: "basicsans";
     src: url("../fonts/basicsanssf.ttf");
 }
 
-html {
+html
+{
     height: 100%;
 }
 
-body {
+body
+{
     background-color: white;
     height: 100%;
     font-family: Basicsans;
@@ -18,21 +21,25 @@ body {
     overflow: hidden;
 }
 
-a {
+a
+{
     color: #FFFFFF;
     text-decoration: none;
 }
 
-a:hover {
+a:hover
+{
     text-decoration: underline;
 }
 
-h {
+h
+{
     font-size: 13px;
     color: #9597A6;
 }
 
-nav {
+nav
+{
     height: 100%;
     width: 16%;
     margin-bottom: 0px;
@@ -41,11 +48,13 @@ nav {
     float: left;
 }
 
-ul {
+ul
+{
     list-style: none;
 }
 
-section {
+section
+{
     text-decoration: none;
     color: white;
     width: 99%;
@@ -57,12 +66,14 @@ section {
     border-width: 1px;
 }
 
-#profil {
+#profil
+{
     text-align: center;
     font-size: 13px;
 }
 
-#foot {
+#foot
+{
     position: absolute;
     width: 15.9%;
     bottom: 0;
@@ -74,45 +85,37 @@ section {
     border-width: 1px;
 }
 
-section3, section4 {
+section3, section4
+{
     border-color: transparent;
     display: inline-block;
     margin-bottom: 2px;
 }
 
-section4 {
+section4
+{
     float: right;
     margin-top: 30px;
     margin-right: 5px;
 }
 
-section3 {
-    text-align: center;
-    line-height: 1px;
-    text-indent: 50px;
-    font-size: 13px
-}
 
-#logoinf {
+
+#logoinf
+{
     width: 35px;
     height: 35px;
 }
 
-#logoCaptimove
+
+#CGU
 {
-
-    width: 243px;
-    height: 244px;
-    background: none;
-     color: #545871;
-}
-
-#CGU {
     color: #9597A6;
     font-size: 9px;
 }
 
-#Recherche {
+#Recherche
+{
     margin-left: 30px;
     margin-top: 15px;
     height: 40px;
@@ -120,7 +123,8 @@ section3 {
     border-radius: 30px;
 }
 
-#Recherche[type=search] {
+#Recherche[type=search]
+{
     background-image: url("../images/searchIcon.png");
     background-color: white;
     background-position: 10px 7px;
@@ -128,7 +132,8 @@ section3 {
     padding-left: 40px;
 }
 
-button {
+button
+{
     padding: 15px 15px;
     float: right;
     margin-top: 20px;
@@ -137,34 +142,41 @@ button {
     background-size: 100%;
 }
 
-button:hover {
+button:hover
+{
     cursor: pointer;
 }
 
-#home {
+#home
+{
     background-image: url("../images/homeIcon.png");
 }
 
-#settings {
+#settings
+{
     background-image: url("../images/settingsIcon.png");
 }
 
-#Logout {
+#Logout
+{
     background-image: url("../images/logoutIcon.png");
 }
 
 
-#util {
+#util
+{
     text-align: center;
     font-size: 13px;
 }
 
-#stat {
+#stat
+{
     text-align: center;
     font-size: 10px;
 }
 
-#profImg {
+#profImg
+{
     border: 1px solid white;
     border-radius: 100%;
     width: 60px;
@@ -172,67 +184,10 @@ button:hover {
     margin: 0 auto;
 }
 
-#snake {
+#snake
+{
     width: 100%;
     height: 100%;
     border-radius: 100%;
-}
-
-#snake {
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-}
-
-.captest
-{
-    text-transform: uppercase;
-    font-size: 16px;
-    color: #000000;
-    text-align: center;
-}
-
-
-
-.footer {
-    font-size: 14px;
-    letter-spacing: 1.4px;
-    color: #545871;
-    text-transform: uppercase;
-    opacity: 1;
-    display: flex;
-    justify-content: right;
-    text-align: center;
-    float: right;
-
-}
-
-#infoProduit, #coordonnees, #infoProduitbis
-{
-    color: #707070;
-    text-decoration: underline;
-    text-decoration-color: #707070;
-    font-size: 25px;
-}
-
-
-section1
-{
-    height: 100%;
-    width: 16%;
-    margin-bottom: 0px;
-    background-color: #545871;
-    font-family: Basicsans;
-    display: flex;
-    justify-content: center;
-    float: left;
-}
-
-section2
-{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    justify-content: right;
 }
 

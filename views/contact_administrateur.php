@@ -22,7 +22,7 @@
                 <p>
                     <label for="nom">Nom, Prénom</label>
                     <br>
-                    <input type="text" name="nom_prenom" id="nom_prenom" placeholder=" Votre prénom , nom" size="55"/>
+                    <input type="text" name="nom_prenom" id="nom_prenom" placeholder=" Votre prénom , nom" size="100"/>
                 </p>
             </div2>
             <br>
@@ -30,7 +30,7 @@
             <div3>
                 <p>
                     <label for="mail">Mail</label>
-                    <br><input type="mail" name="mail" id="mail" placeholder="Votre mail" size="55"/>
+                    <br><input type="mail" name="mail" id="mail" placeholder="Votre mail" size="100"/>
                 </p>
             </div3>
             <br>
@@ -39,7 +39,7 @@
                 <p>
                     <label for="message">Message</label>
                     <br>
-                    <textarea name="message" id="message" placeholder="Votre message" cols="55" rows="5"></textarea>
+                    <textarea name="message" id="message" placeholder="Votre message" cols="100" rows="5"></textarea>
                 </p>
             </div4>
 
@@ -53,16 +53,19 @@
                     <input id="bouton_envoi" type="submit" value="Envoyer l'email">
                 </div9>
                 <br>
-            </div8>
         </form>
-        <div10>
-            <?php
-            $retour = isset($_GET['retour']) ? $_GET['retour'] : "/";
-            ?>
-            <button id="bouton_retour" onclick="window.location.href = '<?php echo $retour ?>'">Retour</button>
-        </div10>
+            <div10>
+                <?php
+                $retour = isset($_GET['retour']) ? $_GET['retour'] : "/";
+                ?>
+                <button id="bouton_retour" onclick="window.location.href = '<?php echo $retour ?>'">Retour</button>
+            </div10>
+            </div8>
 
         <br><br><br>
+        <br><br><br>
+        <br><br><br>
+
         <p class="footer">CAPTEST</p>
         </div1>
     </section>
