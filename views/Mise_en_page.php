@@ -33,7 +33,7 @@
             <p><a id="CGU" href="/views/cgu.html">CGU et mentions légales</a></p>
         </section3>
         <section4>
-            <img id="logoinf" src="/ressources/images/infinite_mesure.png">
+            <img id="logoinf" src="/ressources/images/captimove_logo.png">
         </section4>
     </div>
 </nav>

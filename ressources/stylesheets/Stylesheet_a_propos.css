@@ -72,7 +72,8 @@ button:hover
 
 #logoCaptimove
 {
-
+    border-radius: 360%;
+    border: 2px solid black;
     width: 243px;
     height: 244px;
     background: none;
