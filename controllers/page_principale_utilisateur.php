@@ -11,8 +11,8 @@ if (isset($_SESSION['identifiant'])) {  // Un utilisateur du site est connecté
         return array($annee, $mois);
     }
 
-    include('../models/recup_infos_utilisateurs_page_principale.php');
-    include('../views/page_principale_utilisateur.php');
+    include "../models/recup_infos_utilisateurs_page_principale.php";
+    include "../views/page_principale_utilisateur.php";
 } else {
     echo "Vous n'êtes pas connecté. <a href ='/'>Me connecter</a>";
 }

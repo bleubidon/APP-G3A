@@ -1,24 +1,24 @@
 <?php
 session_start();
-include("../views/header.php");
+include "../views/header.php";
 
 // Chargement de la vue correspondant à l'étape du formulaire de création de compte (1, 2 ou 3)
 if (isset($_GET['etape'])) {
     switch ($_GET['etape']) {
         case 2:
-            include("../views/creaProfile2.php");
+            include "../views/creaProfile2.php";
             break;
         case 3:
-            include("../views/creaProfile3.php");
+            include "../views/creaProfile3.php";
             break;
         case 4:
-            include("../views/creaProfile4.php");
+            include "../views/creaProfile4.php";
             break;
         default:
-            include("../views/creaProfile1.php");
+            include "../views/creaProfile1.php";
     }
 } else {
-    include("../views/creaProfile1.php");
+    include "../views/creaProfile1.php";
 }
 
 // Profil utilisateur
@@ -38,7 +38,7 @@ if (isset($_POST['Prenom']) && isset($_POST['Nom']) && isset($_POST['identifiant
     if ($_POST['identifiant'] == "") {  // L'identifiant renseigné est vide
         $identifiant_incorrect = true;
     }
-    include('../models/verif_disponibilite_identifiant.php');
+    include "../models/verif_disponibilite_identifiant.php";
     if ($identifiant_indicateur != null) {  // L'identifiant renseigné est déjà pris
         $identifiant_incorrect = true;
     }
@@ -48,7 +48,7 @@ if (isset($_POST['Prenom']) && isset($_POST['Nom']) && isset($_POST['identifiant
 
     if (!$mot_de_passe_incorrect && !$identifiant_incorrect) {
         // Si une photo de profil a été renseignée dans le formulaire, la télécharger sur le serveur
-        if (isset($_FILES['PhotoProfil'])) {
+        if (file_exists($_FILES['PhotoProfil']['tmp_name']) && is_uploaded_file($_FILES['PhotoProfil']['tmp_name'])) {  // Une photo a été envoyée par POST
             $nom_photo_profil = $_POST['identifiant'] . '_' . $_FILES['PhotoProfil']['name'];
             move_uploaded_file($_FILES['PhotoProfil']['tmp_name'], "../photos_profil/$nom_photo_profil");
         }
@@ -60,25 +60,27 @@ if (isset($_POST['Prenom']) && isset($_POST['Nom']) && isset($_POST['identifiant
         $_SESSION['numeroTel'] = $_POST['numeroTel'];
         $_SESSION['email'] = $_POST['email'];
         if (isset($nom_photo_profil)) $_SESSION['nom_photo_profil'] = $nom_photo_profil;
-        $_SESSION['password'] = $_POST['password'];
+        $_SESSION['mot_de_passe_hache'] = password_hash($_POST['password'], PASSWORD_ARGON2I);  // Hachage du mot de passe
         $_SESSION['emplois'] = $_POST['emplois'];
 
         $destination_header = "?etape=2";
     }
 
-    header("location:" . $destination_header);
+    redirection($destination_header);
 } // Santé utilisateur
-else if (isset($_POST['genre']) && isset($_POST['poids']) && isset($_POST['taille']) && isset($_POST['gsang']) && isset($_POST['sommeil']) && isset($_POST['pathologie'])) {
+else if (isset($_POST['genre']) && isset($_POST['poids']) && isset($_POST['taille']) && isset($_POST['gsang'])
+    && isset($_POST['sommeil']) && isset($_POST['pathologie'])) {
+
     $_SESSION['genre'] = $_POST['genre'];
     $_SESSION['poids'] = $_POST['poids'];
     $_SESSION['taille'] = $_POST['taille'];
     $_SESSION['gsang'] = $_POST['gsang'];
     $_SESSION['sommeil'] = $_POST['sommeil'];
     $_SESSION['pathologie'] = $_POST['pathologie'];
-    header('location:?etape=3');
+    redirection("?etape=3");
 } // Enregistrer l'utilisateur dans la bdd
 else if (isset($_GET['toutes_infos_collectees'])) {
-    include('../models/insertion_compte_utilisateur.php');
+    include "../models/insertion_compte_utilisateur.php";
 
     unset($_SESSION['Prenom']);
     unset($_SESSION['Nom']);
@@ -96,5 +98,5 @@ else if (isset($_GET['toutes_infos_collectees'])) {
     unset($_SESSION['sommeil']);
     unset($_SESSION['pathologie']);
 
-    header('location:?etape=4');
+    redirection("?etape=4");
 }

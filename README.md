@@ -6,4 +6,4 @@ Projet d'informatique / électronique réalisé dans le cadre de l'isep.
 - Il est écrit au format JSON
 - Il est composé de 2 sections: "stylesheets" qui recense les feuilles de style à utiliser et "titres" qui recense les titres des pages web
 - Pour chaque vue, il est possible de spécifier 0 ou plusieurs feuilles de style au sein d'un tableau JSON, ainsi que pas de titre ou 1 titre
-- Pour l'inclure dans une vue, placer la ligne ```<?php include("header.php") ?>``` au début de celle-ci. Cette ligne remplace la section de code HTML depuis ```DOCTYPE``` jusqu'à ```</head>```
+- Pour l'inclure dans une vue, placer la ligne ```<?php include "header.php" ?>``` au début de celle-ci. Cette ligne remplace la section de code HTML depuis ```DOCTYPE``` jusqu'à ```</head>```

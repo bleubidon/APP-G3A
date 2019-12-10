@@ -1,5 +1,5 @@
 <?php
-include('connexion_bdd.php');
+include "connexion_bdd.php";
 
 // Profil utilisateur
 $query = "SELECT date_de_naissance, email, type_emploi FROM profil_utilisateur WHERE identifiant=:identifiant";

@@ -208,3 +208,8 @@ h1 {
     opacity: 1;
 }
 
+input[type=file]{
+    border: none;
+    width:90px;
+    color:transparent;
+}

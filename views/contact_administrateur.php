@@ -1,4 +1,4 @@
-<?php include("../views/header.php") ?>
+<?php include "../views/header.php" ?>
 
 <body>
 <br>

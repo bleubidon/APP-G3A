@@ -1,8 +1,8 @@
-<?php include("header.php") ?>
+<?php include "header.php" ?>
 
 <body>
 <?php
-include('Mise_en_page.php');  // Pour utiliser Mise_en_page.php, inclure la stylesheet "Stylesheet.css" depuis le json
+include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la stylesheet "Stylesheet.css" depuis le json
 ?>
 
 <div id='global'>

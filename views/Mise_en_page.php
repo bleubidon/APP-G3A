@@ -40,8 +40,8 @@
 
 <header>
     <input type="search" name="Recherche" id="Recherche" placeholder="Recherche" size="110"/>
-    <button id="Logout" title="Déconnexion" onclick="window.location.href = '/controllers/deconnexion'"></button>
-    <button id="settings" title="Parametres"
+    <button id="Logout" title="Déconnexion" onclick="window.location.href = '/scripts/deconnexion'"></button>
+    <button id="settings" title="Modifier votre profil"
             onclick="window.location.href = '/controllers/modification_compte_utilisateur.php'"></button>
     <button id="home" title="Accueil"
             onclick="window.location.href = '/controllers/page_principale_utilisateur.php'"></button>

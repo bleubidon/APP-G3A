@@ -1,5 +1,5 @@
 <?php
-include('connexion_bdd.php');
+include "connexion_bdd.php";
 // Vérification de la validité du mot de passe
 $query = "SELECT identifiant FROM profil_utilisateur WHERE identifiant=:identifiant_renseigne";
 $sql = $bdd->prepare($query);

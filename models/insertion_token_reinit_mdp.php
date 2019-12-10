@@ -1,5 +1,5 @@
 <?php
-include('connexion_bdd.php');
+include "connexion_bdd.php";
 
 // Stockage du token associé à l'id de l'utilisateur
 // Ce token a une durée de validité limitée, on stocke donc sa date de création

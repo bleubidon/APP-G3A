@@ -1,8 +1,7 @@
 <?php
-include('connexion_bdd.php');
+include "connexion_bdd.php";
 
 // Insertion du profil utilisateur
-$mot_de_passe_hache = password_hash($_SESSION['password'], PASSWORD_ARGON2I);  // Hachage du mot de passe
 $query = "INSERT INTO profil_utilisateur(identifiant, nom, prenom, date_de_naissance, telephone, email, photo, mot_de_passe, type_emploi)
             VALUES(:identifiant, :nom, :prenom, :date_de_naissance, :telephone, :email, :photo, :mot_de_passe, :type_emploi)";
 
@@ -15,7 +14,7 @@ $sql->bindParam(':date_de_naissance', $_SESSION['dateNaissance']);
 $sql->bindParam(':telephone', $_SESSION['numeroTel']);
 $sql->bindParam(':email', $_SESSION['email']);
 $sql->bindParam(':photo', $_SESSION['nom_photo_profil']);
-$sql->bindParam(':mot_de_passe', $mot_de_passe_hache);
+$sql->bindParam(':mot_de_passe', $_SESSION['mot_de_passe_hache']);
 $sql->bindParam(':type_emploi', $_SESSION['emplois']);
 
 $status = $sql->execute();
