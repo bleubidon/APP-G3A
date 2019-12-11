@@ -7,6 +7,10 @@
       "Stylesheet.css",
       "Stylesheet_page_accueil.css"
     ],
+    "/views/administration_FAQ.php": [
+      "Stylesheet.css",
+      "Stylesheet_Login.css"
+    ],
     "/controllers/creation_compte_utilisateur.php": [
       "Stylesheet_Login.css"
     ],
@@ -30,6 +34,7 @@
     "/views/mot_de_passe_oublie.php": "Mot de passe oublié ?",
     "/views/reinitialisation_mot_de_passe.php": "Réinitialisez votre mot de passe",
     "/views/contact_administrateur.php": "Contacter un administrateur",
-    "/controllers/modification_compte_utilisateur.php": "Modification de votre profil sur Captest"
+    "/controllers/modification_compte_utilisateur.php": "Modification de votre profil sur Captest",
+    "/views/administration_FAQ.php": "FAQ"
   }
 }

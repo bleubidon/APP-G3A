@@ -111,7 +111,7 @@ div2, div3, div4 {
     color: darkgrey;
     font-size: 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 #bouton_envoi {

@@ -128,6 +128,12 @@ div8 {
     text-align: left;
 }
 
+div10 , div11
+{
+    display: flex;
+    justify-content: center;
+}
+
 #divRet {
     text-align: center;
     width: 100%;
@@ -212,4 +218,33 @@ input[type=file]{
     border: none;
     width:90px;
     color:transparent;
+}
+
+#sectionAdminFaq
+{ display: flex; justify-content: center; flex-direction: column}
+
+#bouton_retour
+{
+    border: 1px solid darkgray;
+    background-color: White;
+    border-radius: 100px;
+    width: 175px;
+    height: 45px;
+    color: darkgrey;
+    font-size: 20px;
+    text-align: center;
+}
+
+#bouton_ajouter, #bouton_supprimer
+{
+    border-radius: 100px;
+    text-align: center;
+    width: 135px;
+    height: 45px;
+    color: darkgrey;
+    font-size: 16px;
+    border: 1px solid #545871;
+    background-color: #545871;
+    color: white;
+    float: left;
 }

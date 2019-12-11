@@ -74,10 +74,12 @@ button:hover
 {
     border-radius: 360%;
     border: 2px solid black;
-    width: 243px;
-    height: 244px;
+    width: 223px;
+    height: 224px;
     background: none;
     color: #545871;
+    display: flex;
+    justify-content: center;
 }
 
 #foot
