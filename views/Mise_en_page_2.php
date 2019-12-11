@@ -31,7 +31,7 @@
             <br>
             <p><a href="/controllers/contact_administrateur.php?retour=<?php echo $_SERVER['PHP_SELF'] ?>">Contacter le
                     support</a></p>
-            <p><a href="/views/a_propos.php">À propos</a></p>
+            <p><a href="/views/a_propos.html">À propos</a></p>
             <p><a id="CGU" href="/views/cgu.html">CGU et mentions légales</a></p>
         </section3>
         <section4>

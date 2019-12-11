@@ -1,4 +1,5 @@
-<!--Pour utiliser Mise_en_page.php, inclure la stylesheet "Stylesheet.css" depuis le json-->
+<!--uniquement barre latérale sans onglet statistiques, sans barre de recherche-->
+
 <nav>
     <section id="profil">
         <br>
@@ -20,7 +21,7 @@
             <br><br>
             <li><a href="Profile.html">Profil</a></li><br>
             <li><a href="Historique.html">Historique</a></li><br>
-            <li><a href="client_FAQ.php">FAQ</a></li>
+            <li><a href="administration_FAQ.php">FAQ</a></li>
         </ul>
     </section>
 
@@ -39,7 +40,6 @@
 </nav>
 
 <header>
-    <input type="search" name="Recherche" id="Recherche" placeholder="Recherche" size="110"/>
     <button id="Logout" title="Déconnexion" onclick="window.location.href = '/scripts/deconnexion'"></button>
     <button id="settings" title="Modifier votre profil"
             onclick="window.location.href = '/controllers/modification_compte_utilisateur.php'"></button>

@@ -38,6 +38,8 @@ input, textarea {
     height: 100%;
 }
 
+
+
 #imgCreaProfil2 {
     width: 40%;
     height: 100%;
@@ -128,11 +130,15 @@ div8 {
     text-align: left;
 }
 
-div10 , div11
+div10 , div11 , div13, div14, div15, div16, div17, div18, div19
 {
     display: flex;
     justify-content: center;
 }
+
+
+
+
 
 #divRet {
     text-align: center;
@@ -220,8 +226,11 @@ input[type=file]{
     color:transparent;
 }
 
-#sectionAdminFaq
+#sectionAdminFaq, #sectionClientFAQ
 { display: flex; justify-content: center; flex-direction: column}
+
+
+
 
 #bouton_retour
 {
