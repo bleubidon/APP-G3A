@@ -10,31 +10,30 @@ include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la style
         <ul id='enoncebis'>
             <h>Mon compte :</h>
             <br><br>
-            <li>Prénom :</li>
-            <li>Nom :</li>
-            <li>Age :</li>
-            <li>Catégorie</li>
-            <li>Poids :</li>
-            <li>Taille :</li>
-            <li>Genre :</li>
-            <li>Email :</li>
+            <li>Prénom :</li><br>
+            <li>Nom :</li><br>
+            <li>Age :</li><br>
+            <li>Catégorie :</li><br>
+            <li>Poids :</li><br>
+            <li>Taille :</li><br>
+            <li>Genre :</li><br>
+            <li>Email :</li><br>
             <li>Groupe Sanguin :</li>
         </ul>
     </div>
     <div id='information'>
         <ul id='informationbis'>
-            <h> :</h>
+            <h> : </h>
             <br><br>
-            <li><?php echo $_SESSION['prenom'] ?></li>
-            <li><?php echo $_SESSION['nom'] ?></li>
-            <?php $age = age($date_de_naissance) ?>
-            <li><?php echo "$age[0] ans $age[1] mois" ?></li>
-            <li><?php echo $type_emploi ?></li>
-            <li><?php echo $poids ?></li>
-            <li><?php echo $taille ?></li>
-            <li><?php echo $genre ?></li>
-            <li><?php echo $adresse_email ?></li>
-            <li><?php echo $groupe_sanguin ?></li>
+            <li><?php echo $_SESSION['prenom'] ?></li><br>
+            <li><?php echo $_SESSION['nom'] ?></li><br>
+            <li><?php $age = age($date_de_naissance); echo "$age[0] ans $age[1] mois" ?></li><br>
+            <li><?php echo $type_emploi ?></li><br>
+            <li><?php echo $poids ?></li><br>
+            <li><?php echo $taille ?></li><br>
+            <li><?php echo $genre ?></li><br>
+            <li><?php echo $adresse_email ?></li><br>
+            <li><?php echo $groupe_sanguin ?></li><br>
         </ul>
     </div>
 </div>

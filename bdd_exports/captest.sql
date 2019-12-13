@@ -50,8 +50,6 @@ CREATE TABLE IF NOT EXISTS `profil_utilisateur` (
 INSERT INTO `profil_utilisateur` (`identifiant`, `statut`, `nom`, `prenom`, `date_de_naissance`, `telephone`, `email`, `photo`, `mot_de_passe`, `type_emploi`) VALUES
 ('bleubidon', 'gestionnaire', 'Barral', 'Armand', '2000-04-05', '0688382574', 'armand.barral@orange.fr', NULL, '$argon2i$v=19$m=1024,t=2,p=2$aHZWQnl1ZjZJYTZ2NlRDWg$IMYfMY+y88rXKp+0EFfkzFKcAldv3dQ29HXM3woI3jo', 'Pilote');
 
-INSERT INTO `profil_utilisateur` (`identifiant`, `statut`, `nom`, `prenom`, `date_de_naissance`, `telephone`, `email`, `photo`, `mot_de_passe`, `type_emploi`) VALUES
-('ericaff', 'utilisateur', 'Affoyon', 'Eric', '1999-08-16', '0660022070', 'yemi.affoyon@gmail.com', NULL, '$argon2i$v=19$m=65536,t=4,p=1$ZGNnNU83Lm1NeVBKS3Q2OA$iUbG6yUODYscOEkKdEbd57QJXLvo0FC62K1SXINvHng', 'Pilote');
 
 -- --------------------------------------------------------
 
