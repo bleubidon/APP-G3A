@@ -7,16 +7,18 @@ include "../models/recup_infos_utilisateur_modif_compte.php";
 if (isset($_GET['etape'])) {
     switch ($_GET['etape']) {
         case 2:
-            include "../views/creaProfile2.php";
+            include "../views/creaProfile/creaProfile2.php";
             break;
         case 4:
-            include "../views/creaProfile4.php";
+            include "../views/creaProfile/creaProfile4.php";
             break;
         default:
-            include "../views/creaProfile1.php";
+            include "../views/creaProfile/creaProfile1.php";
     }
 } else {
-    include "../views/creaProfile1.php";
+    // TODO refaire le système de retour plus proprement
+    $retour = "page_principale_utilisateur.php";
+    include "../views/creaProfile/creaProfile1.php";
 }
 
 // Profil utilisateur

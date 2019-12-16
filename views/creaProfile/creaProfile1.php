@@ -1,19 +1,23 @@
 <body>
-<script src="../scripts/upload_fichier_nom_dynamique.js"></script>
+<script src="../../scripts/upload_fichier_nom_dynamique.js"></script>
+<script src="../../scripts/validation_formulaire_creation_compte.js"></script>
 <section id="sec1">
-    <img id="imgPageDeCo" src="../ressources/images/creaProfile1.png">
+        <img id="imgPageDeCo" src="../../ressources/images/creaProfile1.png">
 </section>
 <section id="sec2">
     <?php
     if (isset($modification_profil)) echo "<h1>Modification de votre profil</h1>";
     else echo "<h1>Création de votre profil</h1>"; ?>
-    <form action="" method="post" enctype="multipart/form-data">
-        <!--        Cet enctype est nécessaire pour l'upload de fichier via le formuaire-->
+    <form action="" method="post" enctype="multipart/form-data" name="form1"
+          onsubmit="validation_formulaire_creation_compte()">
+<!--        Cet enctype est nécessaire pour l'upload de fichier via le formuaire-->
         <div id="name">
             <p><label for="Prenom">Prénom :</label>
                 <br>
                 <input type="text" name="Prenom" id="Prenom"
-                       placeholder="Votre Prénom" <?php if (isset($modification_profil)) echo "value=\"$prenom\"" ?>/>
+                       placeholder="Votre Prénom"
+                       <?php if (isset($modification_profil)) echo "value=\"$prenom\"" ?>required
+                       data-value-missing="This field is required!"/>
             </p>
 
             <p><label for="Nom">Nom :</label><br>
@@ -38,23 +42,19 @@
                 <input type="email" name="email" id="email"
                        placeholder="Votre adresse mail" <?php if (isset($modification_profil)) echo "value=\"$adresse_email\"" ?>/>
             </p>
-            <?php if (!isset($modification_profil)) { ?>
-                <p><label for="identifiant">Identifiant :</label><br>
-                    <input type="text" name="identifiant" id="identifiant"
-                           placeholder="Identifiant" <?php if (isset($modification_profil)) echo "value=\"$identifiant\"" ?>/>
+            <?php if (!isset($modification_profil)) { ?><p><label for="identifiant">Identifiant :</label><br>
+                <input type="text" name="identifiant" id="identifiant"
+                       placeholder="Identifiant" <?php if (isset($modification_profil)) echo "value=\"$identifiant\"" ?>/>
                 </p>
-            <?php } ?>
-        </div>
+            <?php } ?></div>
         <br>
-        <?php if (isset($modification_profil)) { ?>
-            <p>Modifiez votre mot de passe :</p>
+        <?php if (isset($modification_profil)) { ?><p>Modifiez votre mot de passe :</p>
             <div id="mdp">
                 <p><label for="password">Mot de passe actuel :</label><br>
                     <input type="password" name="password_ancien" id="password"/>
                 </p>
             </div>
-        <?php } ?>
-        <br>
+        <?php } ?><br>
         <div id="mdp">
             <p>
                 <label for="password"><strong><?php echo isset($modification_profil) ? "Nouveau mot de passe :" : "Mot de passe :" ?></strong></label><br>
@@ -90,15 +90,16 @@
         </p>
 
         <p>
-            <a href="../">Retour</a>
-
             <?php
-            if (isset($_GET['identifiant_invalide'])) { ?>
-        <p style="color:blue">Identifiant invalide (vide ou déjà pris)</p>
-    <?php
-    } else if (isset($_GET['confirmation_mdp_erronee'])) { ?>
-        <p style="color:blue">Le mot de passe renseigné ne correspond pas à sa confirmation</p>
-    <?php } ?><input type="submit" value="Continuer"/>
+            $retour = isset($retour) ? $retour : "/";
+            ?><a href="<?php echo $retour ?>">Retour</a>
+
+        <?php
+        if (isset($_GET['identifiant_invalide'])) { ?><p style="color:blue">Identifiant invalide (vide ou déjà pris)</p>
+            <?php
+        } else if (isset($_GET['confirmation_mdp_erronee'])) { ?><p style="color:blue">Le mot de passe renseigné ne
+            correspond pas à sa confirmation</p>
+        <?php } ?><input type="submit" value="Continuer"/>
         </p>
     </form>
 </section>

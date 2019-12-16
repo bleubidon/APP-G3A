@@ -1,6 +1,6 @@
 <body>
 <section id="sec1">
-    <img id="imgCreaProfil2" src="../ressources/images/creaProfil2.png">
+    <img id="imgCreaProfil2" src="../../ressources/images/creaProfil2.png">
 </section>
 <section id="sec2">
     <?php

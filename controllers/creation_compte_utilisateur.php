@@ -6,19 +6,19 @@ include "../views/header.php";
 if (isset($_GET['etape'])) {
     switch ($_GET['etape']) {
         case 2:
-            include "../views/creaProfile2.php";
+            include "../views/creaProfile/creaProfile2.php";
             break;
         case 3:
-            include "../views/creaProfile3.php";
+            include "../views/creaProfile/creaProfile3.php";
             break;
         case 4:
-            include "../views/creaProfile4.php";
+            include "../views/creaProfile/creaProfile4.php";
             break;
         default:
-            include "../views/creaProfile1.php";
+            include "../views/creaProfile/creaProfile1.php";
     }
 } else {
-    include "../views/creaProfile1.php";
+    include "../views/creaProfile/creaProfile1.php";
 }
 
 // Profil utilisateur

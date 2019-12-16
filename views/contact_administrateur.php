@@ -54,13 +54,14 @@
                 </div9>
                 <br>
         </form>
-            <div10>
-                <?php
-                $retour = isset($_GET['retour']) ? $_GET['retour'] : "/";
-                ?>
-                <button id="bouton_retour" onclick="window.location.href = '<?php echo $retour ?>'">Retour</button>
-            </div10>
-            </div8>
+        </div8>
+        <div10>
+            <?php
+            $retour = isset($_GET['retour']) ? $_GET['retour'] : "/";
+            ?>
+            <button id="bouton_retour" onclick="window.location.href = '<?php echo $retour ?>'">Retour</button>
+        </div10>
+
 
         <br><br><br>
         <br><br><br>

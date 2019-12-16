@@ -1,9 +1,13 @@
-<?php include("../views/header.php") ?>
+<?php
+// TODO integrer cette page quelque part
+session_start();
+include "../views/header.php"
+?>
 
 
 <body>
 <?php
-include('Mise_en_page_2.php');
+include('Mise_en_page.php');
 ?>
 
 <div>

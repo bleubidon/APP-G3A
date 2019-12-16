@@ -1,9 +1,12 @@
-<?php include("../views/header.php") ?>
+<?php
+session_start();
+include "../views/header.php"
+?>
 
 <body>
 
 <?php
-include('Mise_en_page_3.php');
+include('Mise_en_page.php');
 ?>
 
 <div19 id="sectionClientFAQ">
