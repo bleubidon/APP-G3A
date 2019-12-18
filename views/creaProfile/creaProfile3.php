@@ -32,7 +32,7 @@
             <?php
         }
         ?>
-        <input type="submit" value="Continuer"/>
+        <input type="submit" value="Je valide mon inscription"/>
     </form>
 </section>
 </body>

@@ -18,13 +18,15 @@ include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la style
             <li>Taille :</li><br>
             <li>Genre :</li><br>
             <li>Email :</li><br>
-            <li>Groupe Sanguin :</li>
+            <li>Groupe Sanguin :</li><br>
+            <li>Sommeil moyen :</li>
         </ul>
     </div>
     <div id='information'>
         <ul id='informationbis'>
+            <br>
             <h> : </h>
-            <br><br>
+            <br>
             <li><?php echo $_SESSION['prenom'] ?></li><br>
             <li><?php echo $_SESSION['nom'] ?></li><br>
             <li><?php $age = age($date_de_naissance); echo "$age[0] ans $age[1] mois" ?></li><br>
@@ -34,6 +36,7 @@ include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la style
             <li><?php echo $genre ?></li><br>
             <li><?php echo $adresse_email ?></li><br>
             <li><?php echo $groupe_sanguin ?></li><br>
+            <li><></li>
         </ul>
     </div>
 </div>

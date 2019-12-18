@@ -1,0 +1,36 @@
+@font-face
+{
+    font-family: "basicsans";
+    src: url("../fonts/basicsanssf.ttf");
+}
+
+h1
+{
+    color: #545871;
+    font-size: 36px;
+}
+
+div20
+{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-size: 38px;
+}
+
+div21
+{
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    font-size: 38px;
+    float: right;
+}
+
+.pilote, .personnelNaviguant, .personnelSol
+{
+    background-image: url("/ressources/images/background_catégories.png");
+    height: 144px;
+    width: 800px;
+}
+

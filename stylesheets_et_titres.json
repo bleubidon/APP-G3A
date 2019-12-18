@@ -17,7 +17,8 @@
     ],
     "/views/test_a_passer_choix.php": [
       "Stylesheet.css",
-      "Stylesheet_Login.css"
+      "Stylesheet_Login.css",
+      "Stylesheet_test_a_passer.css"
     ],
     "/controllers/creation_compte_utilisateur.php": [
       "Stylesheet_Login.css"
