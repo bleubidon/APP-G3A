@@ -257,3 +257,12 @@ input[type=file]{
     color: white;
     float: left;
 }
+
+input[aria-invalid="false"] {
+    border: 1px solid green;
+    box-shadow: 0 0 4px 0 green;
+}
+input[aria-invalid="true"] {
+    border: 1px solid red;
+    box-shadow: 0 0 4px 0 red;
+}

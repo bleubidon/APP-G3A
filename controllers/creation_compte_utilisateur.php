@@ -22,7 +22,7 @@ if (isset($_GET['etape'])) {
 }
 
 // Profil utilisateur
-// TODO gestion du formulaire côté client (JavaScript)
+// TODO gestion du formulaire côté serveur
 if (isset($_POST['Prenom']) && isset($_POST['Nom']) && isset($_POST['identifiant']) && isset($_POST['dateNaissance']) && isset($_POST['numeroTel'])
     && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['validePassword']) && isset($_POST['emplois'])) {
 

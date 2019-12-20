@@ -3,6 +3,7 @@ session_start();
 include "../views/header.php";
 $modification_profil = true;  // Influe sur la vue incluse ci-après
 include "../models/recup_infos_utilisateur_modif_compte.php";
+
 // Chargement de la vue correspondant à l'étape du formulaire de modification de compte (1, 2 ou 4)
 if (isset($_GET['etape'])) {
     switch ($_GET['etape']) {

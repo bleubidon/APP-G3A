@@ -47,7 +47,13 @@
     "/views/administration_FAQ.php": "FAQ",
     "/views/client_FAQ.php": "FAQ",
     "/views/test_a_passer_choix.php": "Test à passer"
-
-
+  },
+  "scripts": {
+    "/controllers/creation_compte_utilisateur.php": [
+      "upload_fichier_nom_dynamique.js"
+    ],
+    "/controllers/modification_compte_utilisateur.php": [
+      "upload_fichier_nom_dynamique.js"
+    ]
   }
 }

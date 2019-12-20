@@ -12,6 +12,11 @@ if (isset($json_all["stylesheets"][$fichier_parent])) {
     $stylesheets = $json_all["stylesheets"][$fichier_parent];
 }
 
+// JavaScripts (il peut y en avoir plusieurs)
+if (isset($json_all["scripts"][$fichier_parent])) {
+    $javascripts = $json_all["scripts"][$fichier_parent];
+}
+
 // Titre (il est unique)
 if (isset($json_all["titres"][$fichier_parent])) {
     $titre = $json_all["titres"][$fichier_parent];
@@ -32,6 +37,11 @@ include $_SERVER["DOCUMENT_ROOT"] . "/scripts/redirection.php";
     if (isset($stylesheets)) {
         foreach ($stylesheets as &$stylesheet) {
             echo "<link rel=\"Stylesheet\" href=\"/ressources/stylesheets/$stylesheet\">\n";
+        }
+    }
+    if (isset($javascripts)) {
+        foreach ($javascripts as &$javascript) {
+            echo "    <script src=\"/scripts/$javascript\"></script>\n";
         }
     }
     if (isset($titre)) {
