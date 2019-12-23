@@ -20,7 +20,10 @@
       "Stylesheet_Login.css",
       "Stylesheet_test_a_passer.css"
     ],
-    "/controllers/creation_compte_utilisateur.php": [
+    "/controllers/gestion_formulaire_compte_utilisateur/creation_compte_utilisateur.php": [
+      "Stylesheet_Login.css"
+    ],
+    "/controllers/gestion_formulaire_compte_utilisateur/modification_compte_utilisateur.php": [
       "Stylesheet_Login.css"
     ],
     "/views/mot_de_passe_oublie.php": [
@@ -31,28 +34,25 @@
     ],
     "/views/contact_administrateur.php": [
       "Stylesheet_contact_administrateur.css"
-    ],
-    "/controllers/modification_compte_utilisateur.php": [
-      "Stylesheet_Login.css"
     ]
   },
   "titres": {
     "/index.php": "Captest",
     "/views/page_principale_utilisateur.php": "Page principale",
-    "/controllers/creation_compte_utilisateur.php": "Création de votre profil sur Captest",
+    "/controllers/gestion_formulaire_compte_utilisateur/creation_compte_utilisateur.php": "Création de votre profil sur Captest",
     "/views/mot_de_passe_oublie.php": "Mot de passe oublié ?",
     "/views/reinitialisation_mot_de_passe.php": "Réinitialisez votre mot de passe",
     "/views/contact_administrateur.php": "Contacter un administrateur",
-    "/controllers/modification_compte_utilisateur.php": "Modification de votre profil sur Captest",
+    "/controllers/gestion_formulaire_compte_utilisateur/modification_compte_utilisateur.php": "Modification de votre profil sur Captest",
     "/views/administration_FAQ.php": "FAQ",
     "/views/client_FAQ.php": "FAQ",
     "/views/test_a_passer_choix.php": "Test à passer"
   },
   "scripts": {
-    "/controllers/creation_compte_utilisateur.php": [
+    "/controllers/gestion_formulaire_compte_utilisateur/creation_compte_utilisateur.php": [
       "upload_fichier_nom_dynamique.js"
     ],
-    "/controllers/modification_compte_utilisateur.php": [
+    "/controllers/gestion_formulaire_compte_utilisateur/modification_compte_utilisateur.php": [
       "upload_fichier_nom_dynamique.js"
     ]
   }

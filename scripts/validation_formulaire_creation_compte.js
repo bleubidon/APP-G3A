@@ -35,7 +35,7 @@ function identifiantDisponible(callback, field, mode) {
     }
     xmlhttp.open("POST", "../models/verif_disponibilite_identifiant.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send("identifiant=" + document.getElementById("identifiant").value + "&verbose");
+    xmlhttp.send("identifiant=" + document.getElementById("identifiant").value + "&ajax");
 }
 
 function handleMessageErreur(messageErreur, field) {

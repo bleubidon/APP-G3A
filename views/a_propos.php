@@ -15,7 +15,7 @@
         <div id="foot">
             <section3>
                 <br>
-                <p><a href="/controllers/contact_administrateur.php?retour=<?php echo $_SERVER['PHP_SELF'] ?>">Contacter le
+                <p><a href="/controllers/contact_administrateur.php?retour=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>">Contacter le
                     support</a></p>
                 <p> <a href="/controllers/deconnexion.php"> Se déconnecter </a></p>
                 <p><a href="/views/a_propos.html">À propos</a></p>

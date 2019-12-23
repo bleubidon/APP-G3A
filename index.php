@@ -39,7 +39,7 @@
         </form>
 
         <p>
-            <button id="cree" onclick="window.location.href = 'controllers/creation_compte_utilisateur.php'">Créer un
+            <button id="cree" onclick="window.location.href = 'controllers/gestion_formulaire_compte_utilisateur/creation_compte_utilisateur.php'">Créer un
                 compte
             </button>
         </p>

@@ -35,7 +35,7 @@
     <div id="foot">
         <section3>
             <br>
-            <p><a href="/controllers/contact_administrateur.php?retour=<?php echo $_SERVER['PHP_SELF'] ?>">Contacter le
+            <p><a href="/controllers/contact_administrateur.php?retour=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>">Contacter le
                     support</a></p>
             <p><a href="/views/a_propos.php">À propos</a></p>
             <p><a id="CGU" href="/views/cgu.html">CGU et mentions légales</a></p>
@@ -52,7 +52,7 @@
     <?php } ?>
     <button id="Logout" title="Déconnexion" onclick="window.location.href = '/scripts/deconnexion.php'"></button>
     <button id="settings" title="Modifier votre profil"
-            onclick="window.location.href = '/controllers/modification_compte_utilisateur.php'"></button>
+            onclick="window.location.href = '/controllers/gestion_formulaire_compte_utilisateur/modification_compte_utilisateur.php'"></button>
     <button id="home" title="Accueil"
             onclick="window.location.href = '/controllers/page_principale_utilisateur.php'"></button>
 </header>
