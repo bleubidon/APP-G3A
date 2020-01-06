@@ -25,9 +25,10 @@
             <br>
             <?php if ($_SESSION['statut_utilisateur_site'] == "utilisateur") { ?>
                 <li><a href="../views/client_FAQ.php">FAQ</a></li>
-            <?php } else if ($_SESSION['statut_utilisateur_site'] == "administrateur") { ?>
+            <?php } else if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>
                 <li><a href="statistiques.php">Statistiques</a></li><br>
                 <li><a href="administration_FAQ.php">FAQ</a></li>
+                <button id="bouton_test" onclick="window.location.href = '/views/test_a_passer_choix.php'" " ></button>
             <?php } ?>
         </ul>
     </section>
