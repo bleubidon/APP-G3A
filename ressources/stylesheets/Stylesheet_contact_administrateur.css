@@ -22,14 +22,24 @@ h1 {
     color: #545871;
 }
 
+@media all and (max-width: 1024px) {
+    h1 {
+        text-align: center;
+        color: #545871;
+    }
+}
+
+
 
 label {
     color: #545871;
+    text-align: center;
 }
 
 button:hover {
     cursor: pointer;
 }
+
 
 .imgContactAdmin {
     display: flex;
@@ -37,6 +47,12 @@ button:hover {
     width: 50%;
     height: 100%;
     float: left;
+}
+
+@media all and (max-width: 1024px) {
+    .imgContactAdmin {
+        display: none;
+    }
 }
 
 input
@@ -68,11 +84,25 @@ div2, div3, div4 {
     display: inline-block;
 }
 
+@media all and (max-width: 1024px){
+div2, div3, div4 {
+    text-align: center;
+    display: inline-block;
+}
+}
+
+
 /*#section1 { font-size: 15px;  width: 50%; height: 100%;}*/
 
 #section1 {
     font-size: 15px;
     display: inline;
+}
+
+@media all and (max-width: 1024px){
+#section1 {
+    display: none;
+}
 }
 
 /*#section2 { font-size: 15px;
