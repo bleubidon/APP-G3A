@@ -21,13 +21,28 @@ include('Mise_en_page.php');
     </div20>
 
     <div21 id="liens">
-        <br>
-        <p><a id="selectionnerPilote" href=""> Sélectionner </a></p>
-        <br>
-        <p><a id="selectionnerPersSol" href=""> Sélectionner </a></p>
-        <br>
-        <p><a id="selectionnerPersNaviguant" href=""> Sélectionner </a></p>
+        <p><a id="selectionnerPilote" href="/views/test_a_passer.php"> Sélectionner </a> &nbsp;
+            <a id="selectionnerPersSol" href=""> Sélectionner </a> &nbsp;
+        <a id="selectionnerPersNaviguant" href=""> Sélectionner </a></p>
     </div21>
+
+    <div>
+        <?php
+        $retour = isset($_GET['retour']) ? $_GET['retour'] : "/";
+        ?>
+        <button id="bouton_retour" onclick="window.location.href = '<?php echo $retour ?>'">Retour</button>
+    </div>
+
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+    <p class="footer">CAPTEST</p>
 
 
 </div>
