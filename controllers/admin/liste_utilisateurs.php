@@ -1,7 +1,7 @@
 <?php
 include "verif_acces_authorise.php";
 if ($acces_authorise) {
-    include "../../views/admin/backoffice_view.php";
+    include "../../views/admin/liste_utilisateurs.php";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $identifiant = $_POST["identifiant"];

@@ -12,12 +12,12 @@ include('Mise_en_page.php');
 
 <div>
     <br><br><br>
-    <h1> Vous désirez passer le test pour ?</h1>
+    <h1> Vous désirez faire passer le test pour:</h1>
 
     <div20 id="catégories">
         <p class="pilote"> Un pilote </p>
-        <p class="personnelSol"> Personnel au sol </p>
-        <p class="personnelNaviguant"> Personnel naviguant </p>
+        <p class="personnelSol"> Un personnel au sol </p>
+        <p class="personnelNaviguant"> Un personnel naviguant </p>
     </div20>
 
     <div21 id="liens">

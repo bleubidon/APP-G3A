@@ -26,14 +26,16 @@
             <?php if ($_SESSION['statut_utilisateur_site'] == "utilisateur") { ?>
                 <li><a href="../views/client_FAQ.php">FAQ</a></li>
             <?php } else if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>
-                <li><a href="statistiques.php">Statistiques</a></li><br>
-                <li><a href="administration_FAQ.php">FAQ</a></li>
-<<<<<<< Updated upstream
-                <button id="bouton_test" onclick="window.location.href = '/views/test_a_passer_choix.php'" "  > Faire passer un test </button>
-=======
+                <br>
+                <li><a href="/controllers/gestionnaire/statistiques.php">Statistiques</a></li><br>
+                <li><a href="/controllers/gestionnaire/moteur_de_recherche.php">Moteur de recherche</a></li><br>
+                <button id="bouton_test"
+                        onclick="window.location.href = '/views/test_a_passer_choix.php'"> Faire passer un test </button>
             <?php } else if ($_SESSION['statut_utilisateur_site'] == "administrateur") { ?>
-                <li><a href="/controllers/admin/backoffice_index.php">Accéder au backoffice</a></li>
->>>>>>> Stashed changes
+                <br>
+                <h>Backoffice</h><br><br>
+                <li><a href="/controllers/admin/liste_utilisateurs.php">Gérer les utilisateurs</a></li><br>
+                <li><a href="/controllers/admin/administration_FAQ.php">Administration de la FAQ</a></li>
             <?php } ?>
         </ul>
     </section>
@@ -41,7 +43,9 @@
     <div id="foot">
         <section3>
             <br>
-            <p><a href="/controllers/contact_administrateur.php?retour=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>">Contacter le
+            <p>
+                <a href="/controllers/contact_administrateur.php?retour=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>">Contacter
+                    le
                     support</a></p>
             <p><a href="/views/a_propos.php">À propos</a></p>
             <p><a id="CGU" href="/views/cgu.html">CGU et mentions légales</a></p>
