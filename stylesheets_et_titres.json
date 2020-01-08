@@ -39,10 +39,16 @@
     "/views/contact_administrateur.php": [
       "Stylesheet_contact_administrateur.css"
     ],
+<<<<<<< Updated upstream
     "/views/test_a_passer.php": [
       "Stylesheet.css",
       "Stylesheet_Login.css",
       "Stylesheet_test_a_passer.css"
+=======
+    "/views/admin/backoffice_view.php": [
+      "Stylesheet.css",
+      "Stylesheet_backoffice.css"
+>>>>>>> Stashed changes
     ]
   },
   "titres": {
@@ -65,6 +71,9 @@
     ],
     "/controllers/gestion_formulaire_compte_utilisateur/modification_compte_utilisateur.php": [
       "upload_fichier_nom_dynamique.js"
+    ],
+    "/views/admin/backoffice_view.php": [
+      "backoffice.js"
     ]
   }
 }

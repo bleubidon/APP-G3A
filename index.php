@@ -33,13 +33,20 @@
                 <p id="error">Mot de passe ou identifiant incorrect</p>
                 <?php
             }
+            if (isset($_GET['banni'])) {
+                ?>
+                <p id="error">Vous êtes banni</p>
+                <?php
+            }
             ?>
 
             <input id="con" type="submit" value="Se connecter">
         </form>
 
         <p>
-            <button id="cree" onclick="window.location.href = 'controllers/gestion_formulaire_compte_utilisateur/creation_compte_utilisateur.php'">Créer un
+            <button id="cree"
+                    onclick="window.location.href = 'controllers/gestion_formulaire_compte_utilisateur/creation_compte_utilisateur.php'">
+                Créer un
                 compte
             </button>
         </p>

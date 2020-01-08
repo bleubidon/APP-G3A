@@ -28,7 +28,12 @@
             <?php } else if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>
                 <li><a href="statistiques.php">Statistiques</a></li><br>
                 <li><a href="administration_FAQ.php">FAQ</a></li>
+<<<<<<< Updated upstream
                 <button id="bouton_test" onclick="window.location.href = '/views/test_a_passer_choix.php'" "  > Faire passer un test </button>
+=======
+            <?php } else if ($_SESSION['statut_utilisateur_site'] == "administrateur") { ?>
+                <li><a href="/controllers/admin/backoffice_index.php">Accéder au backoffice</a></li>
+>>>>>>> Stashed changes
             <?php } ?>
         </ul>
     </section>
