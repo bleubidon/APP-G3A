@@ -33,6 +33,11 @@ input, textarea {
     display: inline-block;
 }
 
+input:hover{
+    background-color: #9597A6;
+    color: white;
+}
+
 
 
 #imgPageDeCo, #imgAirplane {
@@ -77,11 +82,21 @@ input, textarea {
 
 }
 
+
 #con {
     border: 1px solid #545871;
     background-color: #545871;
     color: white;
 }
+#con:hover{
+    background-color: #636780;
+}
+
+#cree:hover{
+    background-color: #9597A6;
+    color: white;
+}
+
 
 #mdp {
     text-align: left;
@@ -102,6 +117,7 @@ input, textarea {
     color: darkgrey;
     font-size: 16px;
 }
+
 
 div1 {
     text-align: center;
@@ -201,25 +217,29 @@ h1 {
 }
 
 #name {
-    display: flex;
+    display: inline-flex;
+    margin-left: 30%;
     justify-content: center;
     flex-direction: row;
 }
 
 #phone {
-    display: flex;
+    display: inline-flex;
+    margin-left: 30%;
     justify-content: center;
     flex-direction: row;
 }
 
 #mail {
-    display: flex;
+    display: inline-flex;
+    margin-left: 30%;
     justify-content: center;
     flex-direction: row;
 }
 
 #mdp {
-    display: flex;
+    display: inline-flex;
+    margin-left: 30%;
     justify-content: center;
     flex-direction: row;
 }
@@ -249,6 +269,7 @@ h1 {
 }
 
 input[type=file]{
+
     border: none;
     width:90px;
     color:transparent;

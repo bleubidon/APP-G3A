@@ -23,7 +23,8 @@
                        pattern="^[-\w]+$"/>
                 <span id="Prenom_erreur"><?php echo $Prenom_err ?></span>
             </p>
-
+            &nbsp;
+            &nbsp;
             <p><label for="Nom">Nom <abbr title="Champ obligatoire">*</abbr></label><br>
                 <input type="text" name="Nom" id="Nom"
                        placeholder="Votre Nom"
@@ -49,7 +50,8 @@
                        pattern="^\d{4}-[01]\d-[0-3]\d$"/>
                 <span id="dateNaissance_erreur"><?php echo $dateNaissance_err ?></span>
             </p>
-
+            &nbsp;
+            &nbsp;
             <p><label for="numeroTel">Numéro de téléphone <abbr title="Champ obligatoire">*</abbr></label><br>
                 <input type="tel" name="numeroTel" id="numeroTel"
                        placeholder="0xxxxxxxxx"
@@ -75,6 +77,8 @@
                        pattern="^[-.\w]+@[-.\w]+.[a-zA-Z]+$"/>
                 <span id="email_erreur"><?php echo $email_err ?></span>
             </p>
+            &nbsp;
+            &nbsp;
             <?php if (!isset($modification_profil)) { ?>
                 <p><label for="identifiant">Identifiant <abbr title="Champ obligatoire">*</abbr></label><br>
                     <input type="text" name="identifiant" id="identifiant"
@@ -117,7 +121,8 @@
                 <?php } ?>
                 <span id="password_erreur"><?php echo $password_err ?></span>
             </p>
-
+            &nbsp;
+            &nbsp;
             <p><label for="validePassword">Confirmation du mot de passe<?php echo isset($modification_profil) ?
                         " :" :
                         "<abbr title=\"Champ obligatoire\">*</abbr>"

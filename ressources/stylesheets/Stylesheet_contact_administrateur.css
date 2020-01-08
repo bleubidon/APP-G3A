@@ -49,6 +49,10 @@ button:hover {
     float: left;
 }
 
+
+/* Media */
+
+
 @media all and (max-width: 1024px) {
     .imgContactAdmin {
         display: none;
@@ -84,6 +88,12 @@ div2, div3, div4 {
     display: inline-block;
 }
 
+
+
+/* Media */
+
+
+
 @media all and (max-width: 1024px){
 div2, div3, div4 {
     text-align: center;
@@ -98,6 +108,12 @@ div2, div3, div4 {
     font-size: 15px;
     display: inline;
 }
+
+
+/* Media */
+
+
+
 
 @media all and (max-width: 1024px){
 #section1 {
