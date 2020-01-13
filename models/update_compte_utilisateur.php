@@ -3,8 +3,9 @@ include "connexion_bdd.php";
 
 // Modification du profil utilisateur
 $query = "UPDATE profil_utilisateur SET nom=:nom, prenom=:prenom, date_de_naissance=:date_de_naissance,
-        telephone=:telephone, email=:email, photo=:photo, type_emploi=:type_emploi";
+        telephone=:telephone, email=:email, type_emploi=:type_emploi";
 if (isset($_SESSION['mot_de_passe_hache_nouveau'])) $query .= ", mot_de_passe=:mot_de_passe";
+if ($_SESSION['do_photo_profil_update']) $query .= ", photo=:photo";
 $query .= " WHERE identifiant=:identifiant";
 
 $sql = $bdd->prepare($query);
@@ -14,8 +15,8 @@ $sql->bindParam(':prenom', $_SESSION['Prenom_nouveau']);
 $sql->bindParam(':date_de_naissance', $_SESSION['dateNaissance_nouveau']);
 $sql->bindParam(':telephone', $_SESSION['numeroTel_nouveau']);
 $sql->bindParam(':email', $_SESSION['email_nouveau']);
-$sql->bindParam(':photo', $_SESSION['nom_photo_profil_nouveau']);
 if (isset($_SESSION['mot_de_passe_hache_nouveau'])) $sql->bindParam(':mot_de_passe', $_SESSION['mot_de_passe_hache_nouveau']);
+if ($_SESSION['do_photo_profil_update']) $sql->bindParam(':photo', $_SESSION['nom_photo_profil_nouveau']);
 $sql->bindParam(':type_emploi', $_SESSION['type_emploi_nouveau']);
 $sql->bindParam(':identifiant', $_SESSION['identifiant']);
 

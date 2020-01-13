@@ -1,6 +1,6 @@
 <body>
 <section id="sec1">
-        <img id="imgPageDeCo" src="../../ressources/images/creaProfile1.png">
+    <img id="imgPageDeCo" src="../../ressources/images/creaProfile1.png">
 </section>
 <section id="sec2">
     <?php

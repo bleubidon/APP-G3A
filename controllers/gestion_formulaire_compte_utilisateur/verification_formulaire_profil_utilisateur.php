@@ -89,8 +89,7 @@ if (!isset($modification_profil) || !empty($password_ancien)) {
         $validePassword = clean_user_input($_POST['validePassword']);
     }
 } else {
-    $password = clean_user_input($_POST['password']);
-    $validePassword = clean_user_input($_POST['validePassword']);
+    $modif_mdp_authorise = false;
 }
 
 if (empty($_POST["emplois"])) {

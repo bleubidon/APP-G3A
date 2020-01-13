@@ -21,12 +21,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["Prenom"])) {
         if ($modif_mdp_authorise) $_SESSION['mot_de_passe_hache_nouveau'] = password_hash($password, PASSWORD_ARGON2I);
 
         // Si une photo de profil a été renseignée dans le formulaire, la télécharger sur le serveur
+        $photo_profil_path_prefix = "../photos_profil/";
         if (file_exists($_FILES['PhotoProfil']['tmp_name']) && is_uploaded_file($_FILES['PhotoProfil']['tmp_name'])) {  // Une photo a été envoyée par POST
+            $_SESSION['do_photo_profil_update'] = true;
             $nom_photo_profil = $_SESSION['identifiant'] . '_' . $_FILES['PhotoProfil']['name'];
-            unlink("../photos_profil/" . $_SESSION['nom_photo_profil']);  // Supprimer l'ancienne photo de profil
-            move_uploaded_file($_FILES['PhotoProfil']['tmp_name'], "../photos_profil/$nom_photo_profil");
+            $old_photo_profil = $_SERVER['DOCUMENT_ROOT'] . "/photos_profil/" . $_SESSION['nom_photo_profil'];
+            if (file_exists($old_photo_profil)) {
+                unlink($old_photo_profil);  // Supprimer l'ancienne photo de profil s'il y en a une
+            }
+            move_uploaded_file($_FILES['PhotoProfil']['tmp_name'], "../" . $photo_profil_path_prefix . $nom_photo_profil);
             $_SESSION['nom_photo_profil_nouveau'] = $nom_photo_profil;
-        }
+        } else $_SESSION['do_photo_profil_update'] = false;
 
         redirection("?etape=2");
     }
@@ -78,6 +83,6 @@ if (isset($_GET['etape'])) {
     }
 } else {
     // TODO refaire le système de retour plus proprement
-    $retour = "page_principale_utilisateur.php";
+    $retour = "../page_principale_utilisateur.php";
     include $_SERVER["DOCUMENT_ROOT"] . "/views/creaProfile/creaProfile1.php";
 }
