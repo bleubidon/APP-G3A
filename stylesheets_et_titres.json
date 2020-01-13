@@ -54,6 +54,9 @@
     ],
     "/views/admin/administration_FAQ.php": [
       "Stylesheet.css"
+    ],
+    "/views/affichage_Test_en_cours.php": [
+      "Stylesheet.css"
     ]
   },
   "titres": {
