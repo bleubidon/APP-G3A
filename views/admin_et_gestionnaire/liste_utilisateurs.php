@@ -1,8 +1,7 @@
 <body>
 <?php
 include "../../views/Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la stylesheet "Stylesheet.css" depuis le json
-$table_color1 = "#FF0000";
-$table_color2 = "#00FF00";
+include "../../views/tableau_colore.php";
 
 $parametre_js = $_SESSION['statut_utilisateur_site'] == "administrateur" ? true : false;
 ?>
