@@ -48,6 +48,10 @@
       "Stylesheet.css",
       "Stylesheet_backoffice.css"
     ],
+    "/views/gestionnaire/liste_utilisateurs.php": [
+      "Stylesheet.css",
+      "Stylesheet_backoffice.css"
+    ],
     "/views/admin/administration_FAQ.php": [
       "Stylesheet.css"
     ]
@@ -73,7 +77,11 @@
       "upload_fichier_nom_dynamique.js"
     ],
     "/views/admin/liste_utilisateurs.php": [
+      "lister_utilisateurs.js",
       "backoffice.js"
+    ],
+    "/views/gestionnaire/liste_utilisateurs.php": [
+      "lister_utilisateurs.js"
     ]
   }
 }
