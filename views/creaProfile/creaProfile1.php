@@ -1,8 +1,5 @@
 <body>
 <section id="sec1">
-    <img id="imgPageDeCo" src="../../ressources/images/creaProfile1.png">
-</section>
-<section id="sec2">
     <?php
     if (isset($modification_profil)) echo "<h1>Modification de votre profil</h1>";
     else echo "<h1>Création de votre profil</h1>"; ?>
@@ -140,7 +137,7 @@
             </p>
         </div>
 
-        <p>
+        <p><div id="emplois">
             Type d'emploi <abbr title="Champ obligatoire">*</abbr><br/>
             <input type="radio" name="emplois" value="Pilote"
                    id="Pilote"
@@ -163,17 +160,19 @@
                 ?>/>
             <label for="PersonnelNaviguant">Personnel naviguant</label>
             <span id="emplois_erreur"><?php echo $emplois_err ?></span>
+        </div>
         </p>
-        <p>
+        <p><div id="photo">
             Photo de profil (< 2 Mo) :<br/>
             <input type="file" name="PhotoProfil" id="PhotoProfilId" onchange="fichierSelectionne()"/>
             <label id="PhotoProfilLabel">Choisissez un fichier</label>
             <?php if (isset($modification_profil) && $nom_photo_profil != null) { ?>
                 <script> placeHolder(<?php echo "'" . explode("_", $nom_photo_profil)[1] . "'" ?>) </script>
             <?php } ?>
+        </div>
         </p>
 
-        <p>
+        <p><div id="boutons">
             <?php
             $retour = isset($retour) ? $retour : "/";
             ?><a href="<?php echo $retour ?>">Retour</a>
@@ -183,7 +182,7 @@
             <?php
         } else if (isset($_GET['confirmation_mdp_erronee'])) { ?><p style="color:blue">Le mot de passe renseigné ne
             correspond pas à sa confirmation</p>
-        <?php } ?><input type="submit" value="Continuer"/>
+        <?php } ?><input type="submit" value="Continuer"/></div>
         </p>
     </form>
 </section>
