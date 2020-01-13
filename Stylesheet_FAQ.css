@@ -9,7 +9,7 @@ li { font-family: Basicsans;
     border-radius: 7px;
     padding: 7px;
     width: 600px;
-    margin-left: 15%;
+    margin-left: 30%;
     box-shadow: 8px 8px 12px #aaa;}
 
 #menu-deroulant, #menu-deroulant ul {
@@ -44,4 +44,16 @@ li { font-family: Basicsans;
 #menu-deroulant li:hover ul {
     /* Au survol des li du menu on replace les sous menus */
     left: auto;
+}
+
+#menu-deroulant li:hover li {
+    background-color: #9597A6;
+    border-bottom: 1px solid #9597A6;
+    width: 600px;
+    height: 50px;
+    border-radius: 3px;
+}
+
+#Q1:hover #Q2 {
+    padding: 0;
 }
