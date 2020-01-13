@@ -48,7 +48,7 @@
                     le
                     support</a></p>
             <p><a href="/views/a_propos.php">À propos</a></p>
-            <p><a id="CGU" href="/views/cgu.html">CGU et mentions légales</a></p>
+            <p><a id="CGU" href="/views/cgu.php?retour=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>">CGU et mentions légales</a></p>
         </section3>
         <section4>
             <img id="logoinf" src="/ressources/images/captimove_logo.png">

@@ -2,7 +2,7 @@
 include "../views/contact_administrateur.php";
 
 if (isset($_POST['nom_prenom']) && isset($_POST['mail']) && isset($_POST['message'])) {
-    // Envoi du message à [tous les administrateurs ? Un administrateur référent ?]
+    // Envoi du message à un administrateur (le premier qu'on trouve dans la bdd)
     require "Email.php";
     include "../models/recup_adresse_mail_administrateur.php";
     $adresse_email_destinataire = $adresse_email_administrateur;
