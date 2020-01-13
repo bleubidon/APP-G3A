@@ -29,8 +29,8 @@
 
             <div3>
                 <p>
-                    <label for="mail">Mail</label>
-                    <br><input type="mail" name="mail" id="mail" placeholder="Votre mail" size="100"/>
+                    <label for="mail">Adresse email pour recevoir une réponse</label>
+                    <br><input type="mail" name="mail" id="mail" placeholder="Votre adresse email" size="100"/>
                 </p>
             </div3>
             <br>
