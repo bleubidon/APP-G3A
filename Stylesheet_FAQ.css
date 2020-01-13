@@ -5,8 +5,7 @@ h { font-size: 17px;
 li { font-family: Basicsans;
     font-size: 15px;}
 
-#Q {border-bottom: 1px solid lightgray;
-    background-color: #9597A6;
+#Q {border-bottom: 1px solid #9597A6;
     border-radius: 7px;
     padding: 7px;
     width: 600px;
