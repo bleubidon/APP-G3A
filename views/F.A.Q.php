@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../Stylesheet_FAQ.css" />
+    <link rel="stylesheet" href="../ressources/stylesheets/Stylesheet_FAQ.css" />
     <link rel="stylesheet" href="../ressources/stylesheets/Stylesheet.css"/>
     <title>FAQ-Captest</title>
 </head>
