@@ -1,32 +1,76 @@
-@font-face {font-family: "basicsans";
-    src: url("../fonts/basicsanssf.ttf");}
+@font-face {
+    font-family: "basicsans";
+    src: url("../fonts/basicsanssf.ttf");
+}
 
-html {height: 100%;}
+html {
+    height: 100%;
+}
 
-body {background-color: white;
+body {
+    background-color: white;
     height: 100%;
     font-family: "Basicsans";
     font-weight: bold;
-    margin: 0; bottom: 0;
-    overflow: hidden;}
+    margin: 0;
+    bottom: 0;
+    overflow: hidden;
+}
 
-button:hover {cursor: pointer;}
+button:hover {
+    cursor: pointer;
+}
 
-label {color: #545871;}
-input, textarea { border: 1px solid darkgray;
+label {
+    color: #545871;
+}
+
+input, textarea {
+    border: 1px solid darkgray;
     border-radius: 4px;
     height: 30px;
     color: gray;
-    display: inline-block;}
+    display: inline-block;
+}
 
-#imgPageDeCo , #imgAirplane{width:50%; height: 100%;}
-#imgCreaProfil2 {width: 40%; height: 100%;}
-#logo {width: 222px; height: 224px;display: block; margin-right: auto; margin-left: auto;}
+input:hover{
+    background-color: #9597A6;
+    color: white;
+}
 
-#error {text-align: center; color: red; font-size: 9px;}
 
-#con, #cree
-{
+
+#imgPageDeCo, #imgAirplane {
+    width: 50%;
+    height: 100%;
+}
+
+@media all and (max-width: 1024px){
+    #imgPageDeCo, #imgAirplane {
+        display: none;
+    }
+}
+
+#imgCreaProfil2 {
+    width: 40%;
+    height: 100%;
+}
+
+#logo {
+    width: 260px;
+    height: 230px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#error {
+    text-align: center;
+    color: red;
+    font-size: 9px;
+}
+
+#con, #cree {
     border: 1px solid darkgray;
     background-color: White;
     border-radius: 100px;
@@ -37,16 +81,33 @@ input, textarea { border: 1px solid darkgray;
     font-size: 16px;
 
 }
-#con { border: 1px solid #545871; background-color: #545871; color: white;}
-#mdp { text-align: left;
+
+
+#con {
+    border: 1px solid #545871;
+    background-color: #545871;
+    color: white;
+}
+#con:hover{
+    background-color: #636780;
+}
+
+#cree:hover{
+    background-color: #9597A6;
+    color: white;
+}
+
+
+#mdp {
+    text-align: left;
     text-decoration: underline;
     font-size: 12px;
     letter-spacing: 0;
     color: #545871;
-    opacity: 1;}
+    opacity: 1;
+}
 
-#Retour
-{
+#Retour {
     border: 1px solid darkgray;
     background-color: White;
     border-radius: 100px;
@@ -57,41 +118,133 @@ input, textarea { border: 1px solid darkgray;
     font-size: 16px;
 }
 
-div1 { text-align: center;}
-div2 { text-align: center; width: 100%;}
-div3 { float: right; width: 7%;}
-div2 , div3 { display: inline-block; float: bottom;}
-div4, div5 {text-align: left; display: inline-block;}
-div6, div7 {text-align: left; display: inline-block;}
-div8 {text-align: left;}
-#divRet{ text-align: center; width: 100%; float: bottom;}
 
-h1
+div1 {
+    text-align: center;
+}
+
+div2 {
+    text-align: center;
+    width: 100%;
+}
+
+div3 {
+    float: right;
+    width: 7%;
+}
+
+div2, div3 {
+    display: inline-block;
+    float: bottom;
+}
+
+div4, div5 {
+    text-align: left;
+    display: inline-block;
+}
+
+div6, div7 {
+    text-align: left;
+    display: inline-block;
+}
+
+div8 {
+    text-align: left;
+}
+
+div10 , div11 , div13, div14, div15, div16, div17, div18, div19
 {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+#divRet {
+    text-align: center;
+    width: 100%;
+    float: bottom;
+}
+
+h1 {
     text-align: center;
 
 }
 
 
-#container { vertical-align: center; display: inline-block;}
+#container {
+    vertical-align: center;
+    display: inline-block;
+}
 
-#sec1 { font-size: 15px; display: inline;}
 
-#sec2 { font-size: 15px;
+
+#sec1 {
+    font-size: 15px;
+    display: inline;
+}
+
+@media all and (max-width: 1024px){
+    #sec1 {
+        display: none;
+    }
+}
+
+
+
+#sec2 {
+    font-size: 15px;
     float: right;
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
-    flex-direction: column;}
+    flex-direction: column;
+}
 
-#name {display: flex; justify-content: center; flex-direction: row;}
-#phone {display: flex; justify-content: center; flex-direction: row;}
-#mail {display: flex; justify-content: center; flex-direction: row;}
-#mdp {display: flex; justify-content: center; flex-direction: row;}
+@media screen and (max-width: 1024px) {
+    #sec2 {
+        font-size: 15px;
+        float: right;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
 
-.footer
-{
+#name {
+    display: inline-flex;
+    margin-left: 30%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#phone {
+    display: inline-flex;
+    margin-left: 30%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#mail {
+    display: inline-flex;
+    margin-left: 30%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#mdp {
+    display: inline-flex;
+    margin-left: 30%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.footer {
     text-align: left;
     font-size: 14px;
     letter-spacing: 1.4px;
@@ -102,9 +255,11 @@ h1
     justify-content: center;
 }
 
-#conteneur { display: flex;}
-#languageFR,#languageUS
-{
+#conteneur {
+    display: flex;
+}
+
+#languageFR, #languageUS {
     text-align: left;
     text-decoration: underline;
     font-size: 12px;
@@ -113,3 +268,68 @@ h1
     opacity: 1;
 }
 
+input[type=file]{
+
+    border: none;
+    width:90px;
+    color:transparent;
+}
+
+#sectionAdminFaq, #sectionClientFAQ
+{ display: flex; justify-content: center; flex-direction: column}
+
+
+
+
+#bouton_retour
+{
+    border: 1px solid darkgray;
+    background-color: White;
+    border-radius: 100px;
+    width: 175px;
+    height: 45px;
+    color: darkgrey;
+    font-size: 20px;
+    text-align: center;
+}
+
+#bouton_ajouter, #bouton_supprimer
+{
+    border-radius: 100px;
+    text-align: center;
+    width: 135px;
+    height: 45px;
+    color: darkgrey;
+    font-size: 16px;
+    border: 1px solid #545871;
+    background-color: #545871;
+    color: white;
+    float: left;
+}
+
+#bouton_test
+{
+    top: 451px;
+    left: 82px;
+    width: 199px;
+    height: 48px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    color: black;
+    font-size: 16px;
+}
+
+#bouton_test:hover
+{
+    background-color: grey;
+}
+
+input[aria-invalid="false"] {
+    border: 1px solid green;
+    box-shadow: 0 0 4px 0 green;
+}
+input[aria-invalid="true"] {
+    border: 1px solid red;
+    box-shadow: 0 0 4px 0 red;
+}

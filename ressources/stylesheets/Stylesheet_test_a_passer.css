@@ -1,0 +1,102 @@
+@font-face
+{
+    font-family: "basicsans";
+    src: url("../fonts/basicsanssf.ttf");
+}
+
+h1
+{
+    color: #545871;
+    font-size: 36px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+div20, div22
+{
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    font-size: 38px;
+    float: left;
+}
+
+div21, div23
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 38px;
+    float: right;
+    justify-content: flex-end;
+}
+
+.pilote, .personnelNaviguant, .personnelSol, .testCalcMental, .testFreqCardiaque, .testMemo
+{
+    background-color: #DCE9FC;
+    background-position: bottom 50px right 100px;
+    height: 144px;
+    width: 800px;
+    margin-left: 60px;
+    vertical-align: middle;
+    text-margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#selectionnerPersNaviguant, #selectionnerPersSol, #selectionnerPilote
+{
+    background-color: #636780;
+    background-position: bottom 50px right 100px;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 50px;
+    vertical-align: middle;
+    height: 144px;
+    width: 293px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.passer
+{
+    background-color: #636780;
+    background-position: bottom 50px right 100px;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 50px;
+    vertical-align: middle;
+    height: 144px;
+    width: 293px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:hover
+{
+    text-decoration: underline;
+    background-color: #474e71;
+}
+
+#selectionnerPilote:hover, #selectionnerPersSol:hover, #selectionnerPersNaviguant:hover
+{
+    text-decoration: underline;
+    background-color: #474e71;
+}
+
+.footer
+{
+    text-align: right;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    color: #545871;
+    text-transform: uppercase;
+    opacity: 1;
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    margin-left: 650px;
+}

@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="Stylesheet" href="../ressources/stylesheets/Stylesheet_Login.css" />
-    <title>Captest</title>
-</head>
+<?php include "header.php" ?>
+
 <body>
 
 <section id="sec1">
@@ -18,7 +13,7 @@
 
 
     <div1>
-        <form action="../controllers/mot_de_passe_oublie.php" method="post">
+        <form action="" method="post">
             <p>
                 <div4>
                     <label for="nom">Adresse Mail</label>
@@ -36,8 +31,7 @@
                 ?>
                 <p id="error">Adresse email inconnue</p>
                 <?php
-            }
-            else if (isset($_GET['mail_ok'])) {
+            } else if (isset($_GET['mail_ok'])) {
                 ?>
                 <p>Un email de réinitialisation de votre mot de passe vous a été envoyé à l'adresse renseignée.</p>
                 <?php
@@ -47,7 +41,10 @@
             <input id="con" type="submit" value="Récupérer mon mot de passe">
         </form>
         <p>
-            <button id="cree" onclick="window.location.href = '../controllers/contact_administrateur.php' ">Contacter un Administrateur</button>
+            <?php $php_self = htmlspecialchars($_SERVER["PHP_SELF"])?>
+            <button id="cree" onclick="window.location.href = '../controllers/contact_administrateur.php?retour=<?php echo $php_self?>'">Contacter un
+                Administrateur
+            </button>
         </p>
     </div1>
     <div id="divRet">

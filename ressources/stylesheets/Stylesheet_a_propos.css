@@ -1,0 +1,150 @@
+@font-face
+{
+    font-family: "basicsans";
+    src: url("../fonts/basicsanssf.ttf");
+}
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    background-color: white;
+    height: 100%;
+    font-family: Basicsans;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+a
+{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+ul
+{
+    list-style: none;
+}
+
+button:hover
+{
+    cursor: pointer;
+}
+
+
+
+#bouton_retour
+{
+    border: 1px solid darkgray;
+    background-color: White;
+    border-radius: 100px;
+    text-align: center;
+    width: 175px;
+    height: 45px;
+    color: darkgrey;
+    font-size: 20px;
+}
+
+#conteneur
+{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#infoProduit, #coordonnees, #infoProduitbis
+{
+    color: #707070;
+    text-decoration: underline;
+    text-decoration-color: #707070;
+    font-size: 25px;
+}
+
+#logoCaptimove
+{
+    border-radius: 360%;
+    border: 2px solid black;
+    width: 223px;
+    height: 224px;
+    background: none;
+    color: #545871;
+    display: flex;
+    justify-content: center;
+}
+
+#foot
+{
+    position: absolute;
+    width: 15.9%;
+    bottom: 0;
+    border-style: solid;
+    border-top-color: gray;
+    border-bottom-color: #545871;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-width: 1px;
+}
+
+#CGU
+{
+    color: #9597A6;
+    font-size: 9px;
+}
+
+.captest
+{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+}
+
+.footer
+{
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    color: #545871;
+    text-transform: uppercase;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    float: right;
+}
+
+section1
+{
+    height: 100%;
+    width: 16%;
+    margin-bottom: 0px;
+    background-color: #545871;
+    font-family: Basicsans;
+    display: flex;
+    justify-content: center;
+    float: left;
+}
+
+section2
+{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: right;
+}
+
+section3
+{
+    text-align: center;
+    line-height: 1px;
+    font-size: 13px
+}

@@ -1,12 +1,19 @@
-@font-face {font-family: "basicsans";
-    src: url("../fonts/basicsanssf.ttf");}
+@font-face {
+    font-family: "basicsans";
+    src: url("../fonts/basicsanssf.ttf");
+}
 
-html { height: 100%;}
+html {
+    height: 100%;
+}
 
-body { background-color: white;
+body {
+    background-color: white;
     height: 100%;
     font-family: Basicsans;
     font-weight: bold;
     font-size: 15px;
-    margin: 0; bottom: 0;
-    overflow: hidden;}
+    margin: 0;
+    bottom: 0;
+    overflow: hidden;
+}
