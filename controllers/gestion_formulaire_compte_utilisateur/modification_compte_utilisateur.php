@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["Prenom"])) {
             }
             move_uploaded_file($_FILES['PhotoProfil']['tmp_name'], "../" . $photo_profil_path_prefix . $nom_photo_profil);
             $_SESSION['nom_photo_profil_nouveau'] = $nom_photo_profil;
-        } else $_SESSION['do_photo_profil_update'] = false;
+        } else {$_SESSION['do_photo_profil_update'] = false;}
 
         redirection("?etape=2");
     }
