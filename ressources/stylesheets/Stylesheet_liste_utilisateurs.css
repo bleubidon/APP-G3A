@@ -13,18 +13,6 @@ table {
     width: 50%;
 }
 
-td, th {
-    border-radius: 2px;
-}
-
-.color1 {
-    background-color: #a6c4f5;
-}
-
-.color2 {
-    background-color: #a9f5a6;
-}
-
 .button_like {
     margin:auto;
     display:block;
