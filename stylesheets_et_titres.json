@@ -57,7 +57,7 @@
     "/views/admin/administration_FAQ.php": [
       "Stylesheet.css"
     ],
-    "/views/affichage_Test_en_cours.php": [
+    "/views/affichage_test_en_cours.php": [
       "Stylesheet.css"
     ],
     "/views/F.A.Q.php": [
@@ -66,6 +66,7 @@
     ],
     "/views/admin/gestion_capteurs.php": [
       "Stylesheet.css",
+      "Stylesheet_gestion_capteurs.css",
       "tableau_colore.css"
     ],
     "/views/a_propos.php": [
