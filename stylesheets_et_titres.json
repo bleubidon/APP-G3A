@@ -122,6 +122,10 @@
     "/views/gestionnaire/liste_utilisateurs.php": [
       "create_ajax_object",
       "lister_utilisateurs.js"
+    ],
+    "/views/admin/gestion_capteurs.php": [
+      "create_ajax_object",
+      "lister_capteurs.js"
     ]
   }
 }
