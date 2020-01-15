@@ -1,4 +1,4 @@
-function lister_utilisateurs(administrateur = false) {
+function lister_capteurs(administrateur = false) {
     var xmlhttp = create_ajax_object();
 
     xmlhttp.onreadystatechange = function () {
@@ -73,22 +73,6 @@ function lister_utilisateurs(administrateur = false) {
             }
         }
     };
-
-    // Construction de la requête
-    var identifiant = document.getElementById("filtre_identifiant").value;
-    var statut = document.getElementById("filtre_statut").value;
-    var nom = document.getElementById("filtre_nom").value;
-    var prenom = document.getElementById("filtre_prenom").value;
-    var date_de_naissance = document.getElementById("filtre_date_de_naissance").value;
-    var telephone = document.getElementById("filtre_telephone").value;
-    var email = document.getElementById("filtre_email").value;
-    var emploi = document.getElementById("filtre_emploi").value;
-    var genre = document.getElementById("filtre_genre").value;
-    var poids = document.getElementById("filtre_poids").value;
-    var taille = document.getElementById("filtre_taille").value;
-    var groupe_sanguin = document.getElementById("filtre_groupe_sanguin").value;
-    var sommeil_moyen = document.getElementById("filtre_sommeil_moyen").value;
-    var pathologie = document.getElementById("filtre_pathologie").value;
 
     xmlhttp.open("POST", "../../views/admin_et_gestionnaire/generer_table_utilisateurs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

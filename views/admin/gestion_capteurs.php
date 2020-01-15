@@ -15,8 +15,13 @@ include "../../views/tableau_colore.php";
             <th class="color2">Statut</th>
         </tr>
         <tr>
-            <td class="color1">Nom du capteur</td>
-            <td class="color2">Statut</td>
+            <td class="color1">Capteur 1</td>
+            <td class="color2">
+                <select>
+                    <option value="activer">Activer</option>
+                    <option value="désactiver">Désactiver</option>
+                </select>
+            </td>
         </tr>
     </table>
 </div>

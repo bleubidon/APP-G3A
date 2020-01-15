@@ -4,6 +4,10 @@
     top: 50px;
 }
 
+select {
+    width: 100%;
+}
+
 table {
     white-space: nowrap;
     table-layout: fixed;

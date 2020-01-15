@@ -92,16 +92,19 @@
   },
   "scripts": {
     "/controllers/gestion_formulaire_compte_utilisateur/creation_compte_utilisateur.php": [
+      "create_ajax_object",
       "upload_fichier_nom_dynamique.js"
     ],
     "/controllers/gestion_formulaire_compte_utilisateur/modification_compte_utilisateur.php": [
       "upload_fichier_nom_dynamique.js"
     ],
     "/views/admin/liste_utilisateurs.php": [
+      "create_ajax_object",
       "lister_utilisateurs.js",
       "backoffice.js"
     ],
     "/views/gestionnaire/liste_utilisateurs.php": [
+      "create_ajax_object",
       "lister_utilisateurs.js"
     ]
   }
