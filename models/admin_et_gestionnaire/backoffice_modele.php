@@ -8,7 +8,7 @@ $query = "SELECT p.identifiant, p.statut, p.nom, p.prenom, p.date_de_naissance, 
                  ON p.identifiant = s.identifiant";
 
 if ($_POST["identifiant"] != "") $query .= " WHERE p.identifiant='" . $_POST["identifiant"] . "'";
-if ($_POST["statut"] != "") $query .= " WHERE p.statut='" .$_POST["statut"] . "'";
+if ($_POST["statut"] != "all") $query .= " WHERE p.statut='" .$_POST["statut"] . "'";
 if ($_POST["nom"] != "") $query .= " WHERE p.nom='" .$_POST["nom"] . "'";
 if ($_POST["prenom"] != "") $query .= " WHERE p.prenom='" .$_POST["prenom"] . "'";
 if ($_POST["date_de_naissance"] != "") $query .= " WHERE p.date_de_naissance='" .$_POST["date_de_naissance"] . "'";
