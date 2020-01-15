@@ -44,6 +44,21 @@
       "Stylesheet_Login.css",
       "Stylesheet_test_a_passer.css"
     ],
+    "/views/test_a_passer_personnel_naviguant.php": [
+      "Stylesheet.css",
+      "Stylesheet_Login.css",
+      "Stylesheet_test_a_passer.css"
+    ],
+    "/views/test_a_passer_personnel_sol.php": [
+      "Stylesheet.css",
+      "Stylesheet_Login.css",
+      "Stylesheet_test_a_passer.css"
+    ],
+    "/views/test_a_passer_pilote.php": [
+      "Stylesheet.css",
+      "Stylesheet_Login.css",
+      "Stylesheet_test_a_passer.css"
+    ],
     "/views/admin/liste_utilisateurs.php": [
       "Stylesheet.css",
       "Stylesheet_liste_utilisateurs.css",
@@ -88,7 +103,8 @@
     "/views/test_a_passer.php": "Test à passer",
     "/views/F.A.Q.php": "FAQ-Captest",
     "/views/a_propos.php": "A propos",
-    "/views/cgu.php": "CGU"
+    "/views/cgu.php": "CGU",
+    "/views/affichage_test_en_cours.php": "test en cours"
   },
   "scripts": {
     "/controllers/gestion_formulaire_compte_utilisateur/creation_compte_utilisateur.php": [

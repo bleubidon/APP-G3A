@@ -166,6 +166,11 @@ div2, div3, div4 {
     color: white;
 }
 
+#bouton_envoi:hover, #bouton_retour:hover
+{
+    background-color: grey;
+}
+
 .footer {
     text-align: left;
     font-size: 14px;

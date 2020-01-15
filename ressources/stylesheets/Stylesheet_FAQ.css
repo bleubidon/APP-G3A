@@ -57,3 +57,14 @@ li { font-family: Basicsans;
 #Q1:hover #Q2 {
     padding: 0;
 }
+
+
+#bouton_ajouter:hover
+{
+    background-color: #636780;
+}
+
+#bouton_supprimer:hover
+{
+    background-color: #636780;
+}

@@ -36,7 +36,7 @@ include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la style
             <li><?php echo $genre ?></li><br>
             <li><?php echo $adresse_email ?></li><br>
             <li><?php echo $groupe_sanguin ?></li><br>
-            <li><></li>
+            <li></li>
         </ul>
     </div>
 </div>

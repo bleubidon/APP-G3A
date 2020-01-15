@@ -11,7 +11,7 @@ include('Mise_en_page.php');
 ?>
 
 <div>
-    <br><br><br>
+    <br><br>
     <h1> Tests à passer: </h1>
 
     <div22 id="catégories">
@@ -29,9 +29,9 @@ include('Mise_en_page.php');
     </div23>
     <div>
         <?php
-        $retour = isset($_GET['retour']) ? $_GET['retour'] : "/";
+        $retour = isset($_GET['retour']) ? $_GET['retour'] : "/views/test_a_passer_choix.php";
         ?>
-        <button id="bouton_retour" onclick="window.location.href = '<?php echo $retour ?>'">Retour</button>
+        <button id="bouton_retour" onclick="window.location.href= '<?php echo $retour ?>'">Retour</button>
     </div>
 
     <br><br><br><br>
@@ -43,6 +43,7 @@ include('Mise_en_page.php');
     <br><br><br><br>
     <br><br><br><br>
     <br><br><br><br>
+    <br>
 
 
     <p class="footer">CAPTEST</p>

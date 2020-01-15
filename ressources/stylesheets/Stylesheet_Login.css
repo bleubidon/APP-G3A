@@ -118,6 +118,11 @@ input:hover{
     font-size: 16px;
 }
 
+#Retour:hover
+{
+    background-color: grey;
+}
+
 
 div1 {
     text-align: center;
@@ -355,10 +360,15 @@ a:hover{
     background-color: White;
     border-radius: 100px;
     width: 175px;
-    height: 45px;
+    height: 50px;
     color: darkgrey;
     font-size: 20px;
     text-align: center;
+}
+
+#bouton_retour:hover, #bouton_ajouter:hover, #bouton_supprimer:hover
+{
+    background-color: grey;
 }
 
 #bouton_ajouter, #bouton_supprimer

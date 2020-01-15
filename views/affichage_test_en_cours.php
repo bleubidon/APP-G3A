@@ -1,14 +1,4 @@
 <?php include "header.php" ?>
-
-<body>
-<?php
-session_start();
-include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la stylesheet "Stylesheet.css" depuis le json
-?>
-
-
-
-<html>
 <head>
     <script>
         window.onload = function () {
@@ -30,7 +20,7 @@ include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la style
             var xVal = 0;
             var yVal = 100;
             var updateInterval = 1000;
-            var dataLength = 50; // number of dataPoints visible at any point
+            var dataLength = 20; // number of dataPoints visible at any point
 
             var updateChart = function (count) {
 
@@ -59,16 +49,17 @@ include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la style
     </script>
 </head>
 <body>
-<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<?php
+include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la stylesheet "Stylesheet.css" depuis le json
+?>
+
+
+
+
+<div id="chartContainer" style="height: 300px; width: 70%;display: block "></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+
 </body>
 </html>
-
-</body>
-</html>
-
-
-
-
-
-
