@@ -323,6 +323,13 @@ input[type=file]{
     color:transparent;
 }
 
+input[type=radio]{
+    width: 50px;
+    margin-left: 5px;
+    box-shadow: 1px 1px 1px gray;
+    cursor: pointer;
+}
+
 #sectionAdminFaq, #sectionClientFAQ
 { display: flex; justify-content: center; flex-direction: column}
 
