@@ -1,0 +1,16 @@
+#section_centrale {
+    position: absolute;
+    left: 18%;
+    top: 50px;
+}
+
+table {
+    white-space: nowrap;
+    table-layout: fixed;
+    width: 50%;
+}
+
+.button_like {
+    margin:auto;
+    display:block;
+}
