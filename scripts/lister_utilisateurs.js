@@ -61,7 +61,9 @@ function lister_utilisateurs(administrateur = false) {
                         "<option value='" + liste_utilisateurs[utilisateur]["statut"] + "'>" + liste_utilisateurs[utilisateur]["statut"] + "</option>";
 
                     for (var i = 0; i < statuts_alternatifs.length; i++) {
-                        innerHTML_string += "<option value=" + statuts_alternatifs[i] + ">" + statuts_alternatifs[i] + "</option>";
+                        innerHTML_string += "<option ";
+                        if (statuts_alternatifs[i] == "banni") innerHTML_string += "style=\"background-color:#FF5733\" ";
+                        innerHTML_string += "value=" + statuts_alternatifs[i] + ">" + statuts_alternatifs[i] + "</option>";
                     }
                     innerHTML_string += "</select></td>";
                 } else {
