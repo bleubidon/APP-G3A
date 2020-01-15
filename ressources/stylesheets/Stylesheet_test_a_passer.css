@@ -12,7 +12,7 @@ h1
     margin-left: 50px;
 }
 
-div20, div22
+div20, div22, div24, div26
 {
     text-align: center;
     width: 50%;
@@ -22,7 +22,8 @@ div20, div22
     float: left;
 }
 
-div21, div23
+
+div21, div23 , div25 , div27
 {
     display: flex;
     flex-direction: column;
@@ -31,7 +32,7 @@ div21, div23
     justify-content: flex-end;
 }
 
-.pilote, .personnelNaviguant, .personnelSol, .testCalcMental, .testFreqCardiaque, .testMemo
+.pilote, .personnelNaviguant, .personnelSol
 {
     background-color: #DCE9FC;
     background-position: bottom 50px right 100px;
@@ -58,7 +59,52 @@ div21, div23
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0px;
 }
+
+
+.testCalcMental, .testFreqCardiaque, .testMemo
+{
+    background-color: #DCE9FC;
+    background-position: bottom 50px right 100px;
+    height: 144px;
+    width: 800px;
+    margin-left: 60px;
+    vertical-align: middle;
+    text-margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testIntelligence, .testRaisonnement, .testAlphaNum
+{
+    background-color: #DCE9FC;
+    background-position: bottom 50px right 100px;
+    height: 144px;
+    width: 800px;
+    margin-left: 60px;
+    vertical-align: middle;
+    text-margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testAptitudesVerbales, .testLettres, .testChiffres
+{
+    background-color: #DCE9FC;
+    background-position: bottom 50px right 100px;
+    height: 144px;
+    width: 800px;
+    margin-left: 60px;
+    vertical-align: middle;
+    text-margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .passer
 {
@@ -99,4 +145,48 @@ a:hover
     justify-content: end;
     position: fixed;
     margin-left: 650px;
+}
+
+legend
+{
+    color: red;
+}
+
+
+fieldset
+{
+    border-radius: 15px;
+    padding: 20px 20px 20px;
+    margin-bottom:10px;
+    border:1px solid #DF3F3F;
+    margin-right: unset;
+    width: 900px;
+}
+
+input[type=submit]
+{
+    width:100px;
+    margin-left:5px;
+    border-radius: 60px;
+    color: black;
+    background-color: white;
+    font-size: 15px;
+
+}
+
+input[type=submit]:hover
+{
+    background-color: grey;
+}
+
+#idUtilisateur
+{
+    border: 1px solid grey;
+}
+
+#labelPrerequis
+{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
 }

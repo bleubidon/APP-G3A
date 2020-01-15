@@ -11,31 +11,32 @@ include "Mise_en_page.php";
     <h1 id="titre">Administration de la FAQ</h1>
 
     <br><br><br>
-    <br><br><br>
 
     <form action="" method="get">
         <div10>
             <p>
-                <label for="nouvelleQuestion">Nouvelle question</label>
-                <br>
+                <label for="nouvelleQuestion" style="font-weight: bold; font-size: 20px" >Nouvelle question</label>
+                <br><br>
                 <input type="text" name="nouvelleQuestion" id="nouvelleQuestion"
-                       placeholder=" Ajouter une nouvelle question" size="100"/><br>
-                <input id="bouton_ajouter" type="submit" value="Ajouter"><br>
+                       placeholder=" Ajouter une nouvelle question" size="100"/>
+                <br><br>
+                <input id="bouton_ajouter" type="submit" value="Ajouter" style="margin-left: 550px"><br>
             </p>
         </div10>
         <br><br><br><br><br>
         <div11>
             <p>
-                <label for="supprimerQuestion">Supprimer une question</label>
-                <br>
+                <label for="supprimerQuestion" style="font-weight: bold; font-size: 20px">Supprimer une question</label>
+                <br><br>
                 <input type="text" name="supprimerQuestion" id="supprimerQuestion"
-                       placeholder=" Supprimez une question: entrez le numéro de la question" size="100"/><br>
-                <input id="bouton_supprimer" type="submit" value="Supprimer">
+                       placeholder=" Supprimez une question: entrez le numéro de la question" size="100"/>
+                <br><br>
+                <input id="bouton_supprimer" type="reset" value="Supprimer" style="margin-left: 550px">
             </p>
         </div11>
 
         <div12>
-            <br><br><br><br><br><br><br>
+            <br><br><br><br><br>
             <br><br>
             <?php
             $retour = isset($_GET['retour']) ? $_GET['retour'] : "/";

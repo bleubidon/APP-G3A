@@ -44,6 +44,21 @@
       "Stylesheet_Login.css",
       "Stylesheet_test_a_passer.css"
     ],
+    "/views/test_a_passer_personnel_naviguant.php": [
+      "Stylesheet.css",
+      "Stylesheet_Login.css",
+      "Stylesheet_test_a_passer.css"
+    ],
+    "/views/test_a_passer_personnel_sol.php": [
+      "Stylesheet.css",
+      "Stylesheet_Login.css",
+      "Stylesheet_test_a_passer.css"
+    ],
+    "/views/test_a_passer_pilote.php": [
+      "Stylesheet.css",
+      "Stylesheet_Login.css",
+      "Stylesheet_test_a_passer.css"
+    ],
     "/views/admin/liste_utilisateurs.php": [
       "Stylesheet.css",
       "Stylesheet_liste_utilisateurs.css",
