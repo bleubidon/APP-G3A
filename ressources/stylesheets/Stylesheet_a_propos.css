@@ -122,29 +122,10 @@ button:hover
     float: right;
 }
 
-section1
-{
-    height: 100%;
-    width: 16%;
-    margin-bottom: 0px;
-    background-color: #545871;
-    font-family: Basicsans;
-    display: flex;
-    justify-content: center;
-    float: left;
-}
-
 section2
 {
     display: flex;
     flex-direction: column;
     text-align: left;
     justify-content: right;
-}
-
-section3
-{
-    text-align: center;
-    line-height: 1px;
-    font-size: 13px
 }
