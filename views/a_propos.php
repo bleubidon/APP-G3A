@@ -3,7 +3,7 @@ session_start();
 include "header.php";
 include "Mise_en_page.php";
 ?>
-
+<div><
 <body>
 <section2 id="section2">
     <p id="infoProduit"> INFORMATIONS SUR LE PRODUIT </p>
@@ -27,4 +27,5 @@ include "Mise_en_page.php";
 </section2>
 
 </body>
+</div>
 </html>
