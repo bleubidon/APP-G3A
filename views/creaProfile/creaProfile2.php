@@ -1,8 +1,5 @@
 <body>
 <section id="sec1">
-    <img id="imgCreaProfil2" src="../../ressources/images/creaProfil2.png">
-</section>
-<section id="sec2">
     <?php
     if (isset($modification_profil)) echo "<h1>Modification de vos données de santé</h1>";
     else echo "<h1>Vos données de santé</h1>"; ?>
@@ -81,16 +78,16 @@
         </div>
         <div id="pathologie">
             <p><label for="mail">Antécedent / Pathologie</label>
-                <br>
+                <br />
                 <textarea name="pathologie" id="pathologie" placeholder="Vos antécedent et/ou pathologie" cols="55"
                           rows="5">
                     <?php if (isset($modification_profil)) echo $pathologie;
                     else echo $pathologie;
                     ?></textarea>
         </div>
-        <p>
+        <p><div id="boutons">
             <a href="?etape=1">Retour</a>
-            <input type="submit" value="Continuer"/>
+            <input type="submit" value="Continuer"/></div>
         </p>
     </form>
 </section>

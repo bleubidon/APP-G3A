@@ -100,7 +100,7 @@ input:hover{
 
 #mdp {
     text-align: left;
-    text-decoration: underline;
+
     font-size: 12px;
     letter-spacing: 0;
     color: #545871;
@@ -184,12 +184,7 @@ h1 {
 #sec1 {
     font-size: 15px;
     display: inline;
-}
-
-@media all and (max-width: 1024px){
-    #sec1 {
-        display: none;
-    }
+    justify-content: center;
 }
 
 
@@ -202,10 +197,11 @@ h1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    color: #545871;
 }
 
 @media screen and (max-width: 1024px) {
-    #sec2 {
+    #sec1 {
         font-size: 15px;
         float: right;
         width: 100%;
@@ -218,31 +214,87 @@ h1 {
 
 #name {
     display: inline-flex;
-    margin-left: 30%;
+    margin-left: 40%;
     justify-content: center;
     flex-direction: row;
 }
 
 #phone {
     display: inline-flex;
-    margin-left: 30%;
+    margin-left: 40%;
     justify-content: center;
     flex-direction: row;
 }
 
 #mail {
     display: inline-flex;
-    margin-left: 30%;
+    margin-left: 40%;
     justify-content: center;
     flex-direction: row;
 }
 
 #mdp {
     display: inline-flex;
-    margin-left: 30%;
+    margin-left: 40%;
     justify-content: center;
     flex-direction: row;
 }
+
+#emplois {
+    display: inline-flex;
+    margin-left: 40%;
+    justify-content: center;
+    flex-direction: row;
+    color: #545871 ;
+}
+
+#photo {
+    display: inline-flex;
+    margin-left: 40%;
+    justify-content: center;
+    flex-direction: row;
+    color:  #545871;
+}
+
+#boutons {
+    display: inline-flex;
+    margin-left: 40%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#pathologie{
+    display: inline-flex;
+    margin-left: 40%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#genre{
+    display: inline-flex;
+    margin-left: 40%;
+    justify-content: center;
+    flex-direction: row;
+    color: #545871;
+}
+
+#poids_taille{
+    display: inline-flex;
+    margin-left: 40%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#gsang_sommeil{
+    display: inline-flex;
+    margin-left: 40%;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+
+
 
 .footer {
     text-align: left;
