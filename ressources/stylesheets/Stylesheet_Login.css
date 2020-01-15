@@ -256,12 +256,8 @@ h1 {
     color:  #545871;
 }
 
-#boutons {
-    display: inline-flex;
-    margin-left: 40%;
-    justify-content: center;
-    flex-direction: row;
-}
+
+
 
 #pathologie{
     display: inline-flex;
@@ -330,7 +326,27 @@ input[type=file]{
 #sectionAdminFaq, #sectionClientFAQ
 { display: flex; justify-content: center; flex-direction: column}
 
+a.bouton{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    text-decoration:none;
+    color:grey;
+    width: 70px;
+    text-align: center;
+    font-size: 15px;
+    text-decoration:none;
+}
+a:hover{
+    color:white;
+    background-color: grey;
+}
 
+#boutons{
+    display: inline-flex;
+    margin-left: 40%;
+    justify-content: center;
+    flex-direction: row;
+}
 
 
 #bouton_retour

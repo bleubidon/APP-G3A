@@ -144,21 +144,21 @@
                 <?php if (isset($modification_profil) && $type_emploi == "Pilote") echo "checked";
                 else if (isset($emplois) && $emplois == "Pilote") echo "checked";
                 ?>/>
-            <label for="Pilote">Pilote</label>
+            <label for="Pilote">Pilote</label><br/>
 
             <input type="radio" name="emplois" value="PersonnelAuSol"
                    id="PersonnelAuSol"
                 <?php if (isset($modification_profil) && $type_emploi == "PersonnelAuSol") echo "checked";
                 else if (isset($emplois) && $emplois == "PersonnelAuSol") echo "checked";
                 ?>/>
-            <label for="PersonnelAuSol">Personnel au sol</label>
+            <label for="PersonnelAuSol">Personnel au sol</label><br/>
 
             <input type="radio" name="emplois" value="PersonnelNaviguant"
                    id="PersonnelNaviguant"
                 <?php if (isset($modification_profil) && $type_emploi == "PersonnelNaviguant") echo "checked";
                 else if (isset($emplois) && $emplois == "PersonnelNaviguant") echo "checked";
                 ?>/>
-            <label for="PersonnelNaviguant">Personnel naviguant</label>
+            <label for="PersonnelNaviguant">Personnel naviguant</label><br/>
             <span id="emplois_erreur"><?php echo $emplois_err ?></span>
         </div>
         </p>
@@ -172,10 +172,10 @@
         </div>
         </p>
 
-        <p><div id="boutons">
+        <p><div id="boutons" >
             <?php
             $retour = isset($retour) ? $retour : "/";
-            ?><a href="<?php echo $retour ?>">Retour</a>
+            ?><a class="bouton" href="<?php echo $retour ?>">Retour</a>
 
         <?php
         if (isset($_GET['identifiant_invalide'])) { ?><p style="color:blue">Identifiant invalide (vide ou déjà pris)</p>

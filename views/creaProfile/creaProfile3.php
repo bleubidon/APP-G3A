@@ -18,7 +18,7 @@
     ?>
 
     <form action="?etape=3&toutes_infos_collectees" method="post">
-        <a href="?etape=2">Retour</a>
+        <a class="bouton" href="?etape=2">Retour</a>
 
         <?php
         if (isset($_GET['inscription_reussie'])) {
