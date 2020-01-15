@@ -109,10 +109,16 @@ if (!isset($modification_profil) || !empty($password_ancien)) {
 }
 
 if (!isset($modification_profil)) {
-// Vérification formulaire: vérifier que l'identifiant renseigné n'est pas déjà pris
+    // Vérification formulaire: vérifier que l'identifiant renseigné n'est pas déjà pris
     include $_SERVER["DOCUMENT_ROOT"] . "/models/verif_disponibilite_identifiant.php";
     if ($identifiant_indicateur != null) {
         $identifiant_err = "Identifiant indisponible";  // L'identifiant renseigné est déjà pris
+        $formOK = false;
+    }
+    // Vérification formulaire: vérifier que l'adresse email renseignée n'est pas déjà prise
+    include $_SERVER["DOCUMENT_ROOT"] . "/models/verif_disponibilite_adresse_email.php";
+    if ($adresse_email_indicateur != null) {
+        $email_err = "Adresse email déjà associée à un compte";  // L'adresse email renseignée est déjà prise
         $formOK = false;
     }
 }

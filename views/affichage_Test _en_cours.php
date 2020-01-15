@@ -2,6 +2,7 @@
 
 <body>
 <?php
+session_start();
 include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la stylesheet "Stylesheet.css" depuis le json
 ?>
 
