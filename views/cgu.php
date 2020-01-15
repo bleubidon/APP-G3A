@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1> Conditions Générales d'utilisation</h1>
+<h1> Conditions Générales d'Utilisation</h1>
 
 <h2>Articel 1: Mentions légales</h2>
 Ce site est édité par la société Captimove.<br>
