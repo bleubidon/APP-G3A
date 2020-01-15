@@ -63,6 +63,9 @@
     "/views/F.A.Q.php": [
       "Stylesheet.css",
       "Stylesheet_FAQ.css"
+    ],
+    "/views/admin/gestion_capteurs.php": [
+      "Stylesheet.css"
     ]
   },
   "titres": {

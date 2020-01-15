@@ -35,7 +35,8 @@
                 <br>
                 <h>Backoffice</h><br><br>
                 <li><a href="/controllers/admin/liste_utilisateurs.php">Gérer les utilisateurs</a></li><br>
-                <li><a href="/controllers/admin/administration_FAQ.php">Administration de la FAQ</a></li>
+                <li><a href="/controllers/admin/administration_FAQ.php">Administration de la FAQ</a></li><br>
+                <li><a href="/controllers/admin/gestion_capteurs.php">Gestion des capteurs</a></li><br>
             <?php } ?>
         </ul>
     </section>
