@@ -1,47 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../ressources/stylesheets/Stylesheet_FAQ.css" />
-    <link rel="stylesheet" href="../ressources/stylesheets/Stylesheet.css"/>
-    <title>FAQ-Captest</title>
-</head>
-<?php include "views/Mise_en_page.php" ?>
+<?php session_start();
+include "header.php"; ?>
+
 <body>
+<?php
+include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la stylesheet "Stylesheet.css" depuis le json
+?>
+
 <br><br><br>
-<p id="title"><h>Questions & Réponses</h></p>
+<p id="title">
+    <h>Questions & Réponses</h>
+</p>
 
 <br>
 
 <ul id="menu-deroulant">
-    <li id="Q"><a href="#" id="Q1">↓   Question 1</a>
+    <li id="Q"><a href="#" id="Q1">↓ Question 1</a>
         <ul>
             <li><a href="#">Réponse</a></li>
         </ul>
     </li>
     <br>
-    <li id="Q"><a href="#" id="Q2">↓   Question 2</a>
+    <li id="Q"><a href="#" id="Q2">↓ Question 2</a>
         <ul>
             <li><a href="#">Réponse</a></li>
         </ul>
     </li>
     <br>
-    <li id="Q"><a href="#" id="Q3">↓   Question 3</a>
+    <li id="Q"><a href="#" id="Q3">↓ Question 3</a>
         <ul>
             <li><a href="#">Réponse</a></li>
         </ul>
     </li>
     <br>
-    <li id="Q"><a href="#" id="Q4">↓   Question 4</a>
+    <li id="Q"><a href="#" id="Q4">↓ Question 4</a>
         <ul>
             <li><a href="#">Réponse</a></li>
         </ul>
     </li>
     <br>
-    <li id="Q"><a href="#" id="Q5">↓   Question 5</a>
+    <li id="Q"><a href="#" id="Q5">↓ Question 5</a>
         <ul>
             <li><a href="#">Réponse</a></li>
         </ul>
     </li>
 </ul>
 </body>
+</html>
