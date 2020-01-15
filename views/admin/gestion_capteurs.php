@@ -5,7 +5,11 @@ include "../../views/tableau_colore.php";
 ?>
 
 <div id="section_centrale">
-    <table id="table_utilisateurs">
+    <h1>Gestion des capteurs</h1>
+    <h2>Vous pouvez désactiver, activer et supprimer les capteurs</h2>
+    <br>
+
+    <table id="table_capteurs">
         <tr>
             <th class="color1">Nom du capteur</th>
             <th class="color2">Statut</th>
