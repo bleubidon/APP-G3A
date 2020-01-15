@@ -86,7 +86,7 @@
                     ?></textarea>
         </div>
         <p><div id="boutons">
-            <a href="?etape=1">Retour</a>
+            <a class="bouton" href="?etape=1">Retour</a>
             <input type="submit" value="Continuer"/></div>
         </p>
     </form>
