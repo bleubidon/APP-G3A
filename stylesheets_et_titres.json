@@ -46,17 +46,23 @@
     ],
     "/views/admin/liste_utilisateurs.php": [
       "Stylesheet.css",
-      "Stylesheet_backoffice.css"
+      "Stylesheet_liste_utilisateurs.css",
+      "tableau_colore.css"
     ],
     "/views/gestionnaire/liste_utilisateurs.php": [
       "Stylesheet.css",
-      "Stylesheet_backoffice.css"
+      "Stylesheet_liste_utilisateurs.css",
+      "tableau_colore.css"
     ],
     "/views/admin/administration_FAQ.php": [
       "Stylesheet.css"
     ],
     "/views/affichage_Test_en_cours.php": [
       "Stylesheet.css"
+    ],
+    "/views/F.A.Q.php": [
+      "Stylesheet.css",
+      "Stylesheet_FAQ.css"
     ]
   },
   "titres": {
@@ -70,7 +76,8 @@
     "/views/administration_FAQ.php": "FAQ",
     "/views/client_FAQ.php": "FAQ",
     "/views/test_a_passer_choix.php": "Test à passer",
-    "/views/test_a_passer.php": "Test à passer"
+    "/views/test_a_passer.php": "Test à passer",
+    "/views/F.A.Q.php": "FAQ-Captest"
   },
   "scripts": {
     "/controllers/gestion_formulaire_compte_utilisateur/creation_compte_utilisateur.php": [
