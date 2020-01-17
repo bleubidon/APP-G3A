@@ -87,6 +87,11 @@
     "/views/a_propos.php": [
       "Stylesheet.css",
       "Stylesheet_a_propos.css"
+    ],
+    "/views/gestionnaire/gestion_tests_psycho.php": [
+      "Stylesheet.css",
+      "Stylesheet_gestion_capteurs.css",
+      "tableau_colore.css"
     ]
   },
   "titres": {
@@ -104,7 +109,12 @@
     "/views/F.A.Q.php": "FAQ-Captest",
     "/views/a_propos.php": "A propos",
     "/views/cgu.php": "CGU",
-    "/views/affichage_test_en_cours.php": "test en cours"
+    "/views/affichage_test_en_cours.php": "test en cours",
+    "/views/admin/liste_utilisateurs.php": "Liste des utilisateurs",
+    "/views/gestionnaire/liste_utilisateurs.php": "Liste des utilisateurs",
+    "/views/admin/administration_FAQ.php": "Administration de la FAQ",
+    "/views/admin/gestion_capteurs.php": "Gestion des capteurs"
+
   },
   "scripts": {
     "/controllers/gestion_formulaire_compte_utilisateur/creation_compte_utilisateur.php": [
@@ -126,6 +136,10 @@
     "/views/admin/gestion_capteurs.php": [
       "create_ajax_object",
       "lister_capteurs.js"
+    ],
+    "/views/gestionnaire/gestion_tests_psycho.php": [
+      "create_ajax_object",
+      "lister_tests_psycho.js"
     ]
   }
 }
