@@ -6,7 +6,7 @@ include "header.php"; ?>
 include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la stylesheet "Stylesheet.css" depuis le json
 ?>
 
-<br><br><br>
+<br>
 <p id="title">
     <h>Questions & Réponses</h>
 </p>
@@ -44,5 +44,8 @@ include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la style
         </ul>
     </li>
 </ul>
+<br><br>
+<button id="retour" onclick="window.location.href = '/controllers/page_principale_utilisateur.php'"> Retour </button>
+<button id="Message" onclick="window.location.href = '/controllers/contact_administrateur.php'"> Envoyer un Message </button>
 </body>
 </html>

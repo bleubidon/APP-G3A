@@ -10,8 +10,7 @@
             <div class="container" id="profImg">
             </div>
         <?php } ?>
-        <p><?php echo $_SESSION['prenom'] . " " . $_SESSION['nom'] ?> &lt;<?php echo $_SESSION['identifiant'] ?>&gt;</p>
-        <br>
+        <p><?php echo $_SESSION['prenom'] . " " . $_SESSION['nom'] ?> <br> <?php echo $_SESSION['identifiant'] ?></p>
         <?php echo ucfirst($_SESSION['statut_utilisateur_site']) ?>
     </section>
 
@@ -22,7 +21,7 @@
             <li><a href="/Historique">Historique</a></li>
             <br>
             <?php if ($_SESSION['statut_utilisateur_site'] == "utilisateur") { ?>
-                <li><a href="/FAQ">FAQ</a></li>
+                <li><a href="views/F.A.Q.php">FAQ</a></li>
             <?php } else if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>
                 <br>
                 <li><a href="/Gestionnaire-statistiques">Statistiques</a></li><br>

@@ -2,8 +2,6 @@
 
 <body>
 <br>
-<br><br>
-<br><br>
 
 <section class="Section1"><!-- place l'image contacter un admin dans une section -->
     <div7>
@@ -22,7 +20,7 @@
                 <p>
                     <label for="nom">Nom, Prénom</label>
                     <br>
-                    <input type="text" name="nom_prenom" id="nom_prenom" placeholder=" Votre prénom , nom" size="100"/>
+                    <input type="text" name="nom_prenom" id="nom_prenom" placeholder=" Votre prénom , nom" size="80"/>
                 </p>
             </div2>
             <br>
@@ -30,7 +28,7 @@
             <div3>
                 <p>
                     <label for="mail">Mail</label>
-                    <br><input type="mail" name="mail" id="mail" placeholder="Votre mail" size="100"/>
+                    <br><input type="mail" name="mail" id="mail" placeholder="Votre mail" size="80"/>
                 </p>
             </div3>
             <br>
@@ -39,7 +37,7 @@
                 <p>
                     <label for="message">Message</label>
                     <br>
-                    <textarea name="message" id="message" placeholder="Votre message" cols="100" rows="5"></textarea>
+                    <textarea name="message" id="message" placeholder="Votre message" cols="75" rows="5"></textarea>
                 </p>
             </div4>
 

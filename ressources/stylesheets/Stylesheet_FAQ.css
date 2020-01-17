@@ -54,8 +54,10 @@ li { font-family: Basicsans;
     border-radius: 3px;
 }
 
-#Q1:hover #Q2 {
-    padding: 0;
+#retour, #Message {
+    background-color: lightgray;
+    border: 1px solid #9597A6;
+    border-radius: 10px;
 }
 
 
