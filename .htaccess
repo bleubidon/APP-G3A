@@ -6,14 +6,15 @@ RewriteEngine on
 # Commun
 RewriteRule ^Home$ /controllers/page_principale_utilisateur.php
 RewriteRule ^A-propos$ /views/a_propos.php
+RewriteRule ^FAQ$ /views/F.A.Q.php
 RewriteRule ^Historique$ /views/historique.php
 # CGU
 RewriteCond %{REQUEST_URI}  ^/CGU$
-RewriteCond %{QUERY_STRING} ^retour=([a-z\/_\.]+)$
+RewriteCond %{QUERY_STRING} ^retour=([a-zA-Z\/_\.]+)$
 RewriteRule ^(.*)$ /views/cgu.php?retour=%1
 # Contact support
 RewriteCond %{REQUEST_URI}  ^/Support$
-RewriteCond %{QUERY_STRING} ^retour=([a-z\/_\.]+)$
+RewriteCond %{QUERY_STRING} ^retour=([a-zA-Z\/_\.]+)$
 RewriteRule ^(.*)$ /controllers/contact_administrateur.php?retour=%1
 # Pour les admins
 RewriteRule ^Backoffice-(\w+)$ /controllers/admin/$1.php

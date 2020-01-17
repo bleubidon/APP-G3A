@@ -20,9 +20,8 @@
             <br><br>
             <li><a href="/Historique">Historique</a></li>
             <br>
-            <?php if ($_SESSION['statut_utilisateur_site'] == "utilisateur") { ?>
-                <li><a href="views/F.A.Q.php">FAQ</a></li>
-            <?php } else if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>
+                <li><a href="/FAQ">FAQ</a></li>
+            <?php if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>
                 <br>
                 <li><a href="/Gestionnaire-statistiques">Statistiques</a></li><br>
                 <li><a href="/Gestionnaire-moteur_de_recherche">Moteur de recherche</a></li><br>
@@ -43,9 +42,9 @@
         <section3>
             <br>
             <p>
-                <a href="/Support?retour=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>">Contacter le support</a></p>
+                <a href="/Support?retour=/Home">Contacter le support</a></p>
             <p><a href="/A-propos">À propos</a></p>
-            <p><a id="CGU" href="/CGU?retour=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>">CGU et mentions légales</a></p>
+            <p><a id="CGU" href="/CGU?retour=/Home">CGU et mentions légales</a></p>
         </section3>
         <section4>
             <img id="logoinf" src="/ressources/images/captimove_logo.png">
