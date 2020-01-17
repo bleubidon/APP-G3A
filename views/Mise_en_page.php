@@ -22,7 +22,7 @@
             <li><a href="/Historique">Historique</a></li>
             <br>
             <?php if ($_SESSION['statut_utilisateur_site'] == "utilisateur") { ?>
-                <li><a href="/FAQ">FAQ</a></li>
+                <li><a href="views/F.A.Q.php">FAQ</a></li>
             <?php } else if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>
                 <br>
                 <li><a href="/Gestionnaire-statistiques">Statistiques</a></li><br>
