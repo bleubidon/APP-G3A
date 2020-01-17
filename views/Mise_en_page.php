@@ -10,8 +10,7 @@
             <div class="container" id="profImg">
             </div>
         <?php } ?>
-        <p><?php echo $_SESSION['prenom'] . " " . $_SESSION['nom'] ?> &lt;<?php echo $_SESSION['identifiant'] ?>&gt;</p>
-        <br>
+        <p><?php echo $_SESSION['prenom'] . " " . $_SESSION['nom'] ?> <br> <?php echo $_SESSION['identifiant'] ?></p>
         <?php echo ucfirst($_SESSION['statut_utilisateur_site']) ?>
     </section>
 

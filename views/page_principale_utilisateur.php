@@ -25,7 +25,7 @@ include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la style
     <div id='information'>
         <ul id='informationbis'>
             <br>
-            <h> : </h>
+            <br>
             <br>
             <li><?php echo $_SESSION['prenom'] ?></li><br>
             <li><?php echo $_SESSION['nom'] ?></li><br>
