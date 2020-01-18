@@ -16,7 +16,7 @@ include('Mise_en_page.php');
 
     <div22 id="catégories">
         <p class="testFreqCardiaque"> Test cardiaque </p>
-        <p class="testCalcMental"> Test calcul mental </p>
+        <p class="testTemperature"> Test de température </p>
         <p class="testMemo"> Test mémorisation </p>
     </div22>
 

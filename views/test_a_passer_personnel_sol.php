@@ -17,7 +17,7 @@ include('Mise_en_page.php');
     <div24 id="catégoriesPersonnelSol">
         <p class="testIntelligence"> Test intelligence et logique </p>
         <p class="testRaisonnement"> Test de raisonnement </p>
-        <p class="testAlphaNum"> Test de séries alphanumériques </p>
+        <p class="testTonalite"> Test de tonalité </p>
     </div24>
 
     <div25 id="liens">
