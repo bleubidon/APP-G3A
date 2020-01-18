@@ -6,29 +6,27 @@ include "../../views/header.php"
 include "../../views/Mise_en_page.php";
 ?>
 
-<div>
+<div id="section_centrale">
     <br><br>
     <h1> Tests à passer: </h1>
 
-    <div22 id="catégories">
-        <p class="testFreqCardiaque"> Test cardiaque </p>
-        <p class="testTemperature"> Test de température </p>
-        <p class="testMemo"> Test mémorisation </p>
-    </div22>
+    <?php
+    // Si aucun test n'est associé à ce type d'emploi
+    if (count($tests_psycho_associes) == 0) {
+        echo "<p style='color: red'>L'emploi de cet utilisateur ne lui permet de passer aucun test.</p>";
+    } else { ?>
+        <table id="table_tests_associes">
+            <?php
+            foreach ($tests_psycho_associes as &$test_psycho_associe) {
+                echo "<tr>";
+                echo "<td><p class='testPsycho'>" . $test_psycho_associe["nom_test_psycho"] . "</p></td>";
+                echo "<td><a class='passer' href=''> Passer </a></td>";
+                echo "</tr>";
+            }
+            ?>
+        </table>
 
-    <div23 id="liens">
-        <p><a class="passer" href=""> Passer </a>
-            <br>
-            <a class="passer" href=""> Passer </a>
-            <br>
-            <a class="passer" href=""> Passer </a></p>
-    </div23>
-    <div>
-        <?php
-        $retour = isset($_GET['retour']) ? $_GET['retour'] : "/views/test_a_passer_choix_utilisateur.php";
-        ?>
-        <button id="bouton_retour" onclick="window.location.href= '<?php echo $retour ?>'">Retour</button>
-    </div>
+    <?php } ?>
 
     <br><br><br><br>
     <br><br><br><br>
@@ -41,9 +39,7 @@ include "../../views/Mise_en_page.php";
     <br><br><br><br>
     <br>
 
-
     <p class="footer">CAPTEST</p>
-
 
 </div>
 

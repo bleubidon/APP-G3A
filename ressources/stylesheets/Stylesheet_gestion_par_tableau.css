@@ -2,6 +2,7 @@
     position: absolute;
     left: 18%;
     top: 50px;
+    height: 50%;
 }
 
 select, input[type=text] {
@@ -20,6 +21,7 @@ table {
     display: block;
     overflow: auto;
     white-space: nowrap;
+    max-height: 100%;
 }
 
 .button_like {

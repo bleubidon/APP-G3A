@@ -19,6 +19,7 @@
         <ul>
             <h>Fonctionnalités</h>
             <br><br>
+            <li><a href="/Home">Mon profil</a></li><br>
             <li><a href="/Historique">Historique</a></li>
             <br>
                 <li><a href="/FAQ">FAQ</a></li>

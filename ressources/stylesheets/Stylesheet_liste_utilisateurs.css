@@ -2,6 +2,7 @@
     position: absolute;
     left: 18%;
     top: 50px;
+    height: 60%;
 }
 
 table {
@@ -11,6 +12,7 @@ table {
 
     table-layout: fixed;
     width: 50%;
+    max-height: 100%;
 }
 
 .button_like {

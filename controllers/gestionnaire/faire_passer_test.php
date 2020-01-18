@@ -6,6 +6,8 @@ if ($acces_authorise) {
         $idUtilisateur = $_POST["idUtilisateur"];
         include "../../models/gestionnaire/recup_emploi_utilisateur.php";
         if ($emploi == null) header("location: ?identifiant_inconnu");
+        // Récupérer la liste des tests psycho associés au type d'emploi de l'utilisateur renseigné
+        include "../../models/gestionnaire/recup_tests_psycho_pour_emploi.php";
 
         // Vue étape 2: faire effectivement passer le test
         include "../../views/gestionnaire/test_a_passer_passer_test.php";

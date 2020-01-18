@@ -4,6 +4,12 @@
     src: url("../fonts/basicsanssf.ttf");
 }
 
+#section_centrale {
+    position: absolute;
+    left: 18%;
+    top: 50px;
+}
+
 h1
 {
     color: #545871;
@@ -18,7 +24,7 @@ h1
     top: 50px;
 }
 
-.pilote, .personnelNaviguant, .personnelSol
+.testPsycho
 {
     background-color: #DCE9FC;
     background-position: bottom 50px right 100px;
@@ -31,66 +37,6 @@ h1
     align-items: center;
     justify-content: center;
 }
-
-#selectionnerPersNaviguant, #selectionnerPersSol, #selectionnerPilote
-{
-    background-color: #636780;
-    background-position: bottom 50px right 100px;
-    color: #FFFFFF;
-    text-decoration: none;
-    margin-right: 50px;
-    vertical-align: middle;
-    height: 144px;
-    width: 293px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0px;
-}
-
-
-.testTemperature, .testFreqCardiaque, .testMemo
-{
-    background-color: #DCE9FC;
-    background-position: bottom 50px right 100px;
-    height: 144px;
-    width: 800px;
-    margin-left: 60px;
-    vertical-align: middle;
-    text-margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.testIntelligence, .testRaisonnement, .testTonalite
-{
-    background-color: #DCE9FC;
-    background-position: bottom 50px right 100px;
-    height: 144px;
-    width: 800px;
-    margin-left: 60px;
-    vertical-align: middle;
-    text-margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.testAptitudesVerbales, .testLettres, .testChiffres
-{
-    background-color: #DCE9FC;
-    background-position: bottom 50px right 100px;
-    height: 144px;
-    width: 800px;
-    margin-left: 60px;
-    vertical-align: middle;
-    text-margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 
 .passer
 {
@@ -108,12 +54,6 @@ h1
 }
 
 a:hover
-{
-    text-decoration: underline;
-    background-color: #474e71;
-}
-
-#selectionnerPilote:hover, #selectionnerPersSol:hover, #selectionnerPersNaviguant:hover
 {
     text-decoration: underline;
     background-color: #474e71;
@@ -137,7 +77,6 @@ legend
 {
     color: red;
 }
-
 
 fieldset
 {
