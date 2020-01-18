@@ -23,6 +23,18 @@ table {
 }
 
 .button_like {
-    margin:auto;
-    display:block;
+    margin: auto;
+    display: block;
+}
+
+.textarea_form * {
+    vertical-align: middle;
+}
+
+input, textarea {
+    border: 1px solid darkgray;
+    border-radius: 4px;
+    height: 30px;
+    color: gray;
+    display: inline-block;
 }

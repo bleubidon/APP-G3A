@@ -31,16 +31,19 @@ function lister_tests_psycho() {
                 var capteurs = liste_tests_psycho[test_psycho]["id_capteurs"].split(";");
                 innerHTML_string += "<td class='color2'>";
                 for (capteur in liste_capteurs) {
-                    var nameString = liste_capteurs[capteur]["nom_capteur"].replace(/ /g, "_");
+                    var nameString = liste_tests_psycho[test_psycho]["nom_test_psycho"].replace(/ /g, "_") + "_" + liste_capteurs[capteur]["nom_capteur"].replace(/ /g, "_");
                     innerHTML_string += "<label class='checkbox-label'>";
-                    innerHTML_string += "<input type='checkbox' " +
-                        "id='" + nameString + "_checkbox'" +
-                        "name='" + liste_tests_psycho[test_psycho]["nom_test_psycho"] + "_" + liste_capteurs[capteur]["nom_capteur"] + "'";
+                    innerHTML_string += "<input type='checkbox' ";
+                    if (liste_capteurs[capteur]["statut_capteur"] == "0") {
+                        innerHTML_string += " disabled=\"disabled\" ";
+                    }
+                    innerHTML_string += "id='" + nameString + "_checkbox'" +
+                        "name='" + nameString + "'";
                     if (capteurs.includes(liste_capteurs[capteur]["id_capteur"])) {
                         innerHTML_string += " checked";
                     }
 
-                    innerHTML_string += " onchange='modifier_tests_associes(\"" +
+                    innerHTML_string += " onchange='modifier_capteurs_associes(\"" +
                         liste_tests_psycho[test_psycho]["nom_test_psycho"] + "\", \"" +
                         liste_capteurs[capteur]["id_capteur"] + "\", " +
                         'document.getElementById("' + nameString + "_checkbox" + '").checked' +
@@ -49,6 +52,9 @@ function lister_tests_psycho() {
                     innerHTML_string += ">" + liste_capteurs[capteur]["nom_capteur"] + "</label><br>";
                 }
                 innerHTML_string += "</td>";
+
+                // Bouton de suppression
+                innerHTML_string += "<td><button class='button_like' type='button' onclick='supprimer_test_psycho(\"" + liste_tests_psycho[test_psycho]["nom_test_psycho"] + "\")'>Supprimer</button></td>";
 
                 ligne_table.innerHTML = innerHTML_string;
                 table_capteurs.appendChild(ligne_table);
@@ -61,19 +67,23 @@ function lister_tests_psycho() {
     xmlhttp.send();
 }
 
-function modifier_tests_associes(nom_test, id_capteur, nouveau_statut) {
+function modifier_capteurs_associes(nom_test, id_capteur, nouveau_statut) {
     var xmlhttp = create_ajax_object();
-
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            var debug = document.getElementById("debug");
-            debug.innerHTML = xmlhttp.responseText;
-            console.log(xmlhttp.responseText);
-        }
-    };
 
     xmlhttp.open("POST", "../../models/gestionnaire/update_capteur_test_psycho.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("nom_test=" + nom_test + "&id_capteur=" + id_capteur + "&nouveau_statut=" + nouveau_statut);
+    location.reload();
+}
+
+function supprimer_test_psycho(nom_test_psycho) {
+    var confirmation = confirm("Voulez-vous vraiment supprimer le test psychotechnique " + nom_test_psycho + " ?");
+    if (!confirmation) {
+        return;
+    }
+    var xmlhttp = create_ajax_object();
+    xmlhttp.open("POST", "../../models/gestionnaire/supprimer_test_psycho.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("nom_test_psycho=" + nom_test_psycho);
     location.reload();
 }
