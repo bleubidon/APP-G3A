@@ -16,20 +16,8 @@ var identifiantDisponible_callback = function (field, mode) {
 };
 
 function identifiantDisponible(callback, field, mode) {
-    if (window.XMLHttpRequest) {
-        var xmlhttp = new XMLHttpRequest();
-    } else {
-        if (window.ActiveXObject)
-            try {
-                var xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-            } catch (e) {
-                try {
-                    var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-                } catch (e) {
-                    return NULL;
-                }
-            }
-    }
+    var xmlhttp = create_ajax_object();
+
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) callback.apply(xmlhttp, [field, mode]);
     }

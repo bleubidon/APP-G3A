@@ -78,14 +78,12 @@
         </div>
         <div id="pathologie">
             <p><label for="mail">Antécedent / Pathologie</label>
-                <br />
-                <textarea name="pathologie" id="pathologie" placeholder="Vos antécedent et/ou pathologie" cols="55"
-                          rows="5">
-                    <?php if (isset($modification_profil)) echo $pathologie;
-                    else echo $pathologie;
-                    ?></textarea>
+                <br/>
+                <textarea name="pathologie" id="pathologie" placeholder="Vos antécedents et/ou pathologies" cols="55"
+                          rows="5"><?php if (isset($modification_profil)) echo $pathologie ?></textarea>
         </div>
-        <p><div id="boutons">
+        <p>
+        <div id="boutons">
             <a class="bouton" href="?etape=1">Retour</a>
             <input type="submit" value="Continuer"/></div>
         </p>

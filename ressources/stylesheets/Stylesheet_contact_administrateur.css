@@ -152,10 +152,10 @@ div2, div3, div4 {
     background-color: White;
     border-radius: 100px;
     text-align: center;
-    width: 175px;
-    height: 45px;
+    width: 150px;
+    height: 35px;
     color: darkgrey;
-    font-size: 20px;
+    font-size: 16px;
     display: flex;
     justify-content: center;
 }

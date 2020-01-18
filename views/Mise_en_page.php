@@ -19,24 +19,22 @@
         <ul>
             <h>Fonctionnalités</h>
             <br><br>
-            <li><a href="Profile.html">Profil</a></li>
+            <li><a href="/Historique">Historique</a></li>
             <br>
-            <li><a href="Historique.html">Historique</a></li>
-            <br>
-            <?php if ($_SESSION['statut_utilisateur_site'] == "utilisateur") { ?>
-                <li><a href="../views/F.A.Q.php">FAQ</a></li>
-            <?php } else if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>
+                <li><a href="/FAQ">FAQ</a></li>
+            <?php if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>
                 <br>
-                <li><a href="/controllers/gestionnaire/statistiques.php">Statistiques</a></li><br>
-                <li><a href="/controllers/gestionnaire/moteur_de_recherche.php">Moteur de recherche</a></li><br>
+                <li><a href="/Gestionnaire-statistiques">Statistiques</a></li><br>
+                <li><a href="/Gestionnaire-moteur_de_recherche">Moteur de recherche</a></li><br>
+                <li><a href="/Gestionnaire-gestion_tests_psycho">Gestion des tests psychotechniques</a></li><br>
                 <button id="bouton_test"
                         onclick="window.location.href = '/views/test_a_passer_choix.php'"> Faire passer un test </button>
             <?php } else if ($_SESSION['statut_utilisateur_site'] == "administrateur") { ?>
                 <br>
                 <h>Backoffice</h><br><br>
-                <li><a href="/controllers/admin/liste_utilisateurs.php">Gérer les utilisateurs</a></li><br>
-                <li><a href="/controllers/admin/administration_FAQ.php">Administration de la FAQ</a></li><br>
-                <li><a href="/controllers/admin/gestion_capteurs.php">Gestion des capteurs</a></li><br>
+                <li><a href="/Backoffice-liste_utilisateurs">Gestion des utilisateurs</a></li><br>
+                <li><a href="/Backoffice-gestion_capteurs">Gestion des capteurs</a></li><br>
+                <li><a href="/Backoffice-administration_FAQ">Administration de la FAQ</a></li><br>
             <?php } ?>
         </ul>
     </section>
@@ -45,9 +43,9 @@
         <section3>
             <br>
             <p>
-                <a href="/controllers/contact_administrateur.php?retour=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>">Contacter le support</a></p>
-            <p><a href="/views/a_propos.php">À propos</a></p>
-            <p><a id="CGU" href="/views/cgu.php?retour=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>">CGU et mentions légales</a></p>
+                <a href="/Support?retour=/Home">Contacter le support</a></p>
+            <p><a href="/A-propos">À propos</a></p>
+            <p><a id="CGU" href="/CGU?retour=/Home">CGU et mentions légales</a></p>
         </section3>
         <section4>
             <img id="logoinf" src="/ressources/images/captimove_logo.png">

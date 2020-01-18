@@ -18,7 +18,7 @@ $parametre_js = $_SESSION['statut_utilisateur_site'] == "administrateur" ? true 
             <li>- Bannir un utilisateur en lui donnant le statut "banni"</li>
         </ul>
         <br>
-    <?php } else if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") {?>
+    <?php } else if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>
         <h1>Moteur de recherche</h1>
         <h2>Vous pouvez filtrer les utilisateurs par une recherche multi-critères</h2>
         <br>
@@ -46,22 +46,29 @@ $parametre_js = $_SESSION['statut_utilisateur_site'] == "administrateur" ? true 
 
         <?php if ($_SESSION['statut_utilisateur_site'] == "administrateur") { ?>
             <tr>
-                <form action="" method="post">
+                <form action="" method="post" id="form_ajout_utilisateur">
                     <td class="color1"><input type="text" placeholder="ajouter" name="identifiant"></td>
-                    <td class="color2"><input type="text" placeholder="ajouter" name="statut"></td>
+                    <td class="color2">
+                        <select name="statut" form="form_ajout_utilisateur">
+                            <option value="administrateur">administrateur</option>
+                            <option value="utilisateur">utilisateur</option>
+                            <option value="gestionnaire">gestionnaire</option>
+                            <option style="background-color:#FF5733" value="banni">banni</option>
+                        </select>
+                    </td>
                     <td class="color1"><input type="text" placeholder="ajouter" name="nom"></td>
                     <td class="color2"><input type="text" placeholder="ajouter" name="prenom"></td>
                     <td class="color1"><input type="text" placeholder="ajouter" name="date_de_naissance"></td>
                     <td class="color2"><input type="text" placeholder="ajouter" name="telephone"></td>
-                    <td class="color1"><input type="text" placeholder="ajouter" name="email"></td>
+                    <td class="color1"><input type="email" placeholder="ajouter" name="email"></td>
                     <td class="color2"><input type="text" placeholder="ajouter" name="emploi"></td>
                     <td class="color1"><input type="text" placeholder="ajouter" name="genre"></td>
-                    <td class="color2"><input type="text" placeholder="ajouter" name="poids"></td>
-                    <td class="color1"><input type="text" placeholder="ajouter" name="taille"></td>
+                    <td class="color2"><input type="number" placeholder="ajouter" name="poids"></td>
+                    <td class="color1"><input type="number" placeholder="ajouter" name="taille"></td>
                     <td class="color2"><input type="text" placeholder="ajouter" name="groupe_sanguin"></td>
-                    <td class="color1"><input type="text" placeholder="ajouter" name="sommeil_moyen"></td>
+                    <td class="color1"><input type="number" placeholder="ajouter" name="sommeil_moyen"></td>
                     <td class="color2"><input type="text" placeholder="ajouter" name="pathologie"></td>
-                    <td class="color2"><input type="text" placeholder="ajouter" name="mot_de_passe"></td>
+                    <td class="color2"><input type="password" placeholder="ajouter" name="mot_de_passe"></td>
                     <td><input type="submit" value="Ajouter" class="button_like"/></td>
                 </form>
             </tr>
@@ -70,8 +77,15 @@ $parametre_js = $_SESSION['statut_utilisateur_site'] == "administrateur" ? true 
         <tr>
             <td class="color1"><input type="text" placeholder="filtrer" id="filtre_identifiant"
                                       onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
-            <td class="color2"><input type="text" placeholder="filtrer" id="filtre_statut"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+            <td class="color2">
+                <select name="statut" id="filtre_statut" onchange="lister_utilisateurs(<?php echo $parametre_js ?>)">
+                    <option value="all">TOUS</option>
+                    <option value="administrateur">administrateur</option>
+                    <option value="utilisateur">utilisateur</option>
+                    <option value="gestionnaire">gestionnaire</option>
+                    <option style="background-color:#FF5733" value="banni">banni</option>
+                </select>
+            </td>
             <td class="color1"><input type="text" placeholder="filtrer" id="filtre_nom"
                                       onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
             <td class="color2"><input type="text" placeholder="filtrer" id="filtre_prenom"
