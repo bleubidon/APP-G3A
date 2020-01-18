@@ -9,7 +9,7 @@ include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la style
 
             var dps = [];
             var chart = new CanvasJS.Chart("chartContainer", {
-                title :{
+                title: {
                     text: "Test en cours"
                 },
                 axisY: {
@@ -31,7 +31,7 @@ include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la style
                 count = count || 1;
 
                 for (var j = 0; j < count; j++) {
-                    yVal = yVal +  Math.round(5 + Math.random() *(-5-5));
+                    yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
                     dps.push({
                         x: xVal,
                         y: yVal
@@ -47,7 +47,9 @@ include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la style
             };
 
             updateChart(dataLength);
-            setInterval(function(){updateChart()}, updateInterval);
+            setInterval(function () {
+                updateChart()
+            }, updateInterval);
 
         }
     </script>
@@ -55,12 +57,8 @@ include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la style
 <body>
 
 
-
-
-
 <div id="chartContainer" style="height: 300px; width: 70%;display: block "></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
 
 
 </body>

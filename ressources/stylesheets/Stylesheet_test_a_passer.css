@@ -12,24 +12,10 @@ h1
     margin-left: 50px;
 }
 
-div20, div22, div24, div26
-{
-    text-align: center;
-    width: 50%;
-    height: 100%;
-    flex-direction: column;
-    font-size: 38px;
-    float: left;
-}
-
-
-div21, div23 , div25 , div27
-{
-    display: flex;
-    flex-direction: column;
-    font-size: 38px;
-    float: right;
-    justify-content: flex-end;
+#demanderIdentifiant {
+    position: absolute;
+    left: 18%;
+    top: 50px;
 }
 
 .pilote, .personnelNaviguant, .personnelSol

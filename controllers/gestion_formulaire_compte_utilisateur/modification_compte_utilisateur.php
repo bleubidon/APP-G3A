@@ -82,7 +82,6 @@ if (isset($_GET['etape'])) {
             include $_SERVER["DOCUMENT_ROOT"] . "/views/creaProfile/creaProfile1.php";
     }
 } else {
-    // TODO refaire le système de retour plus proprement
     $retour = "../page_principale_utilisateur.php";
     include $_SERVER["DOCUMENT_ROOT"] . "/views/creaProfile/creaProfile1.php";
 }

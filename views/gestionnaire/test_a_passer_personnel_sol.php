@@ -29,7 +29,7 @@ include('Mise_en_page.php');
     </div25>
     <div>
         <?php
-        $retour = isset($_GET['retour']) ? $_GET['retour'] : "/views/test_a_passer_choix.php";
+        $retour = isset($_GET['retour']) ? $_GET['retour'] : "/views/test_a_passer_choix_utilisateur.php";
         ?>
         <button id="bouton_retour" onclick="window.location.href= '<?php echo $retour ?>'">Retour</button>
     </div>

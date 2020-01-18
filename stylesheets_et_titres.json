@@ -19,7 +19,12 @@
       "Stylesheet.css",
       "Stylesheet_Login.css"
     ],
-    "/views/test_a_passer_choix.php": [
+    "/views/gestionnaire/test_a_passer_choix_utilisateur.php": [
+      "Stylesheet.css",
+      "Stylesheet_Login.css",
+      "Stylesheet_test_a_passer.css"
+    ],
+    "/views/gestionnaire/test_a_passer_passer_test.php": [
       "Stylesheet.css",
       "Stylesheet_Login.css",
       "Stylesheet_test_a_passer.css"
@@ -38,26 +43,6 @@
     ],
     "/views/contact_administrateur.php": [
       "Stylesheet_contact_administrateur.css"
-    ],
-    "/views/test_a_passer.php": [
-      "Stylesheet.css",
-      "Stylesheet_Login.css",
-      "Stylesheet_test_a_passer.css"
-    ],
-    "/views/test_a_passer_personnel_naviguant.php": [
-      "Stylesheet.css",
-      "Stylesheet_Login.css",
-      "Stylesheet_test_a_passer.css"
-    ],
-    "/views/test_a_passer_personnel_sol.php": [
-      "Stylesheet.css",
-      "Stylesheet_Login.css",
-      "Stylesheet_test_a_passer.css"
-    ],
-    "/views/test_a_passer_pilote.php": [
-      "Stylesheet.css",
-      "Stylesheet_Login.css",
-      "Stylesheet_test_a_passer.css"
     ],
     "/views/admin/liste_utilisateurs.php": [
       "Stylesheet.css",
@@ -90,6 +75,11 @@
     ],
     "/views/affichage_test_ancien.php": [
       "Stylesheet.css"
+    ],
+    "/views/gestionnaire/gestion_tests_psycho.php": [
+      "Stylesheet.css",
+      "Stylesheet_gestion_capteurs.css",
+      "tableau_colore.css"
     ]
   },
   "titres": {
@@ -105,23 +95,39 @@
     "/views/test_a_passer_choix.php": "Test à passer",
     "/views/test_a_passer.php": "Test à passer",
     "/views/F.A.Q.php": "FAQ-Captest",
-    "/views/a_propos.php": "A propos ",
+    "/views/a_propos.php": "A propos",
     "/views/cgu.php": "CGU",
-    "/views/affichage_test_en_cours.php": "test en cours"
+    "/views/affichage_test_en_cours.php": "test en cours",
+    "/views/admin/liste_utilisateurs.php": "Liste des utilisateurs",
+    "/views/gestionnaire/liste_utilisateurs.php": "Liste des utilisateurs",
+    "/views/admin/administration_FAQ.php": "Administration de la FAQ",
+    "/views/admin/gestion_capteurs.php": "Gestion des capteurs"
+
   },
   "scripts": {
     "/controllers/gestion_formulaire_compte_utilisateur/creation_compte_utilisateur.php": [
+      "create_ajax_object",
       "upload_fichier_nom_dynamique.js"
     ],
     "/controllers/gestion_formulaire_compte_utilisateur/modification_compte_utilisateur.php": [
       "upload_fichier_nom_dynamique.js"
     ],
     "/views/admin/liste_utilisateurs.php": [
+      "create_ajax_object",
       "lister_utilisateurs.js",
       "backoffice.js"
     ],
     "/views/gestionnaire/liste_utilisateurs.php": [
+      "create_ajax_object",
       "lister_utilisateurs.js"
+    ],
+    "/views/admin/gestion_capteurs.php": [
+      "create_ajax_object",
+      "lister_capteurs.js"
+    ],
+    "/views/gestionnaire/gestion_tests_psycho.php": [
+      "create_ajax_object",
+      "lister_tests_psycho.js"
     ]
   }
 }

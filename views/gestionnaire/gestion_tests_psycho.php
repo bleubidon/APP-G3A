@@ -1,10 +1,11 @@
 <?php
-include "../../views/header.php";
+include "../../views/header.php"; ?>
+<body>
+<?php
 include "../../views/Mise_en_page.php";
 include "../../views/tableau_colore.php";
 ?>
 
-<body>
 <div id="section_centrale">
     <h1>Gestion des tests psychotechniques</h1>
     <h2>Vous pouvez:</h2>

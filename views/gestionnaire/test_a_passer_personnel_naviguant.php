@@ -14,22 +14,22 @@ include('Mise_en_page.php');
     <br><br>
     <h1> Tests à passer: </h1>
 
-    <div22 id="catégories">
-        <p class="testFreqCardiaque"> Test cardiaque </p>
-        <p class="testCalcMental"> Test calcul mental </p>
-        <p class="testMemo"> Test mémorisation </p>
-    </div22>
+    <div26 id="catégories">
+        <p class="testAptitudesVerbales"> Test d'aptitudes verbales </p>
+        <p class="testLettres"> Test de lettres </p>
+        <p class="testChiffres"> Test de chiffres </p>
+    </div26>
 
-    <div23 id="liens">
+    <div27 id="liens">
         <p><a class="passer" href=""> Passer </a>
-        <br>
-        <a class="passer" href=""> Passer </a>
-        <br>
-        <a class="passer" href=""> Passer </a></p>
-    </div23>
+            <br>
+            <a class="passer" href=""> Passer </a>
+            <br>
+            <a class="passer" href=""> Passer </a></p>
+    </div27>
     <div>
         <?php
-        $retour = isset($_GET['retour']) ? $_GET['retour'] : "/views/test_a_passer_choix.php";
+        $retour = isset($_GET['retour']) ? $_GET['retour'] : "/views/test_a_passer_choix_utilisateur.php";
         ?>
         <button id="bouton_retour" onclick="window.location.href= '<?php echo $retour ?>'">Retour</button>
     </div>
