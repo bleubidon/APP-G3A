@@ -10,7 +10,7 @@ function lister_tests_psycho() {
             var ligne_table;
 
             var suite_table_nom_classe = "table_dynamique";
-            var table_capteurs = document.getElementById("table_tests_psycho");
+            var table_tests_psycho = document.getElementById("table_tests_psycho");
 
             // Suppression des anciennes données avant de charger les nouvelle
             var anciennes_donnees = document.getElementsByClassName(suite_table_nom_classe);
@@ -57,7 +57,7 @@ function lister_tests_psycho() {
                 innerHTML_string += "<td><button class='button_like' type='button' onclick='supprimer_test_psycho(\"" + liste_tests_psycho[test_psycho]["nom_test_psycho"] + "\")'>Supprimer</button></td>";
 
                 ligne_table.innerHTML = innerHTML_string;
-                table_capteurs.appendChild(ligne_table);
+                table_tests_psycho.appendChild(ligne_table);
             }
         }
     };

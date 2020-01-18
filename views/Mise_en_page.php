@@ -27,6 +27,7 @@
                 <li><a href="/Gestionnaire-statistiques">Statistiques</a></li><br>
                 <li><a href="/Gestionnaire-moteur_de_recherche">Moteur de recherche des utilisateurs</a></li><br>
                 <li><a href="/Gestionnaire-gestion_tests_psycho">Gestion des tests psychotechniques</a></li><br>
+                <li><a href="/Gestionnaire-gestion_emplois_quels_tests">Gestion des associations emploi - tests psychotehniques</a></li><br>
                 <button id="bouton_test"
                         onclick="window.location.href = '/Gestionnaire-faire_passer_test'"> Faire passer un test </button>
             <?php } else if ($_SESSION['statut_utilisateur_site'] == "administrateur") { ?>
