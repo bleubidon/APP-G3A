@@ -49,7 +49,7 @@ h1
 }
 
 
-.testCalcMental, .testFreqCardiaque, .testMemo
+.testTemperature, .testFreqCardiaque, .testMemo
 {
     background-color: #DCE9FC;
     background-position: bottom 50px right 100px;
@@ -63,7 +63,7 @@ h1
     justify-content: center;
 }
 
-.testIntelligence, .testRaisonnement, .testAlphaNum
+.testIntelligence, .testRaisonnement, .testTonalite
 {
     background-color: #DCE9FC;
     background-position: bottom 50px right 100px;

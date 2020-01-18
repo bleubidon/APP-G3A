@@ -1,5 +1,6 @@
 <body>
 <section id="sec1">
+    <br><br><br><br><br><br>
     <?php
     if (isset($modification_profil)) echo "<h1>Modification de votre profil</h1>";
     else echo "<h1>Création de votre profil</h1>"; ?>
@@ -11,7 +12,7 @@
             <p><label for="Prenom">Prénom <abbr title="Champ obligatoire; pas d'accents">*</abbr></label>
                 <br>
                 <input type="text" name="Prenom" id="Prenom"
-                       placeholder="Votre Prénom"
+                       placeholder="Votre Prénom" size="35"
                     <?php if (isset($modification_profil)) echo "value=\"$prenom\"";
                     else echo "value=\"$Prenom\"";
                     ?>
@@ -24,7 +25,7 @@
             &nbsp;
             <p><label for="Nom">Nom <abbr title="Champ obligatoire">*</abbr></label><br>
                 <input type="text" name="Nom" id="Nom"
-                       placeholder="Votre Nom"
+                       placeholder="Votre Nom" size="35"
                     <?php if (isset($modification_profil)) echo "value=\"$nom\"";
                     else echo "value=\"$Nom\"";
                     ?>
@@ -38,7 +39,7 @@
         <div id="phone">
             <p><label for="dateNaissance">Date de Naissance <abbr title="Champ obligatoire">*</abbr></label><br>
                 <input type="date" name="dateNaissance" id="dateNaissance"
-                       placeholder="jj/mm/année"
+                       placeholder="jj/mm/année" style="font-size: 17px"
                     <?php if (isset($modification_profil)) echo "value=\"$date_de_naissance\"";
                     else echo "value=\"$dateNaissance\"";
                     ?>
@@ -51,7 +52,7 @@
             &nbsp;
             <p><label for="numeroTel">Numéro de téléphone <abbr title="Champ obligatoire">*</abbr></label><br>
                 <input type="tel" name="numeroTel" id="numeroTel"
-                       placeholder="0xxxxxxxxx"
+                       placeholder="0xxxxxxxxx" size="35"
                     <?php if (isset($modification_profil)) echo "value=\"$telephone\"";
                     else echo "value=\"$numeroTel\"";
                     ?>
@@ -65,7 +66,7 @@
         <div id="mail">
             <p><label for="email">Email <abbr title="Champ obligatoire">*</abbr></label><br>
                 <input type="email" name="email" id="email"
-                       placeholder="Votre adresse mail"
+                       placeholder="Votre adresse mail" size="35"
                     <?php if (isset($modification_profil)) echo "value=\"$adresse_email\"";
                     else echo "value=\"$email\"";
                     ?>
@@ -79,7 +80,7 @@
             <?php if (!isset($modification_profil)) { ?>
                 <p><label for="identifiant">Identifiant <abbr title="Champ obligatoire">*</abbr></label><br>
                     <input type="text" name="identifiant" id="identifiant"
-                           placeholder="Identifiant"
+                           placeholder="Identifiant" size="35"
                         <?php if (isset($modification_profil)) echo "value=\"$identifiant\"";
                         else echo "value=\"$identifiant\"";
                         ?>
@@ -94,7 +95,7 @@
             <p>Modifiez votre mot de passe :</p>
             <div id="mdp">
                 <p><label for="password">Mot de passe actuel :</label><br>
-                    <input type="password" name="password_ancien" id="password_ancien"/>
+                    <input type="password" name="password_ancien" id="password_ancien" size="35"/>
                     <span id="password_ancien_erreur"><?php echo $password_ancien_err ?></span>
                 </p>
             </div>
@@ -108,7 +109,7 @@
                 </label><br>
 
                 <input type="password" name="password"
-                       id="password"
+                       id="password" size="35"
                     <?php if (isset($modification_profil))
                     echo "value=\"\"/>";
                     else { ?>
@@ -126,7 +127,7 @@
                     ?>
                 </label><br>
                 <input type="password" name="validePassword"
-                       id="validePassword"
+                       id="validePassword" size="35"
                     <?php if (isset($modification_profil))
                     echo "value=\"\"/>";
                     else { ?>
@@ -174,15 +175,15 @@
 
         <p><div id="boutons" >
             <?php
-            $retour = isset($retour) ? $retour : "/";
-            ?><a class="bouton" href="<?php echo $retour ?>">Retour</a>
+            $retour = isset($retour) ? $retour : "/index.php";
+            ?><button id="bouton_retour" onclick="window.location.href= '<?php echo $retour ?>'">Retour</button>
 
         <?php
         if (isset($_GET['identifiant_invalide'])) { ?><p style="color:blue">Identifiant invalide (vide ou déjà pris)</p>
             <?php
         } else if (isset($_GET['confirmation_mdp_erronee'])) { ?><p style="color:blue">Le mot de passe renseigné ne
             correspond pas à sa confirmation</p>
-        <?php } ?><input type="submit" value="Continuer"/></div>
+        <?php } ?> &nbsp;<input id="con" type="submit" value="Continuer"/></div>
         </p>
     </form>
 </section>

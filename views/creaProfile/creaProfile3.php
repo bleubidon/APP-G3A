@@ -28,7 +28,7 @@
             <?php
         }
         ?>
-        <input type="submit" value="Je valide mon inscription"/>
+        &nbsp; <input id="con" type="submit" value="Je valide mon inscription"/>
     </form>
 </section>
 </body>

@@ -7,6 +7,7 @@ html {
     height: 100%;
 }
 
+
 body {
     background-color: white;
     height: 100%;
@@ -366,6 +367,13 @@ a:hover{
     text-align: center;
 }
 
+#bouton_continuer
+{
+    border: 1px solid #545871;
+    background-color: #545871;
+    color: white;
+}
+
 #bouton_retour:hover, #bouton_ajouter:hover, #bouton_supprimer:hover
 {
     background-color: grey;
@@ -411,3 +419,4 @@ input[aria-invalid="true"] {
     border: 1px solid red;
     box-shadow: 0 0 4px 0 red;
 }
+
