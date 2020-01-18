@@ -87,6 +87,9 @@
     "/views/a_propos.php": [
       "Stylesheet.css",
       "Stylesheet_a_propos.css"
+    ],
+    "/views/affichage_test_ancien.php": [
+      "Stylesheet.css"
     ]
   },
   "titres": {
@@ -102,7 +105,7 @@
     "/views/test_a_passer_choix.php": "Test à passer",
     "/views/test_a_passer.php": "Test à passer",
     "/views/F.A.Q.php": "FAQ-Captest",
-    "/views/a_propos.php": "A propos",
+    "/views/a_propos.php": "A propos ",
     "/views/cgu.php": "CGU",
     "/views/affichage_test_en_cours.php": "test en cours"
   },

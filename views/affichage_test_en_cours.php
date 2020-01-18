@@ -1,12 +1,16 @@
 <?php include "header.php" ?>
+
+<?php
+include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la stylesheet "Stylesheet.css" depuis le json
+?>
 <head>
     <script>
         window.onload = function () {
 
-            var dps = []; // dataPoints
+            var dps = [];
             var chart = new CanvasJS.Chart("chartContainer", {
                 title :{
-                    text: "Dynamic Data"
+                    text: "Test en cours"
                 },
                 axisY: {
                     includeZero: false
@@ -20,7 +24,7 @@
             var xVal = 0;
             var yVal = 100;
             var updateInterval = 1000;
-            var dataLength = 20; // number of dataPoints visible at any point
+            var dataLength = 20;
 
             var updateChart = function (count) {
 
@@ -49,9 +53,7 @@
     </script>
 </head>
 <body>
-<?php
-include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la stylesheet "Stylesheet.css" depuis le json
-?>
+
 
 
 
