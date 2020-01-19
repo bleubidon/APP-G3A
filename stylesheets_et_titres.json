@@ -21,12 +21,10 @@
     ],
     "/views/gestionnaire/test_a_passer_choix_utilisateur.php": [
       "Stylesheet.css",
-      "Stylesheet_Login.css",
       "Stylesheet_test_a_passer.css"
     ],
     "/views/gestionnaire/test_a_passer_passer_test.php": [
       "Stylesheet.css",
-      "Stylesheet_Login.css",
       "Stylesheet_test_a_passer.css"
     ],
     "/controllers/gestion_formulaire_compte_utilisateur/creation_compte_utilisateur.php": [

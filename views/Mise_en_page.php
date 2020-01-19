@@ -19,18 +19,22 @@
         <ul>
             <h>Fonctionnalités</h>
             <br><br>
-            <li><a href="/Home">Mon profil</a></li><br>
+            <li><a href="/Home">Mon profil</a></li>
+            <br>
             <li><a href="/Historique">Historique de mes tests</a></li>
             <br>
-                <li><a href="/FAQ">FAQ</a></li>
+            <li><a href="/FAQ">FAQ</a></li>
             <?php if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>
                 <br>
+                <h>Gestion</h><br><br>
                 <li><a href="/Gestionnaire-statistiques">Statistiques</a></li><br>
                 <li><a href="/Gestionnaire-moteur_de_recherche">Moteur de recherche des utilisateurs</a></li><br>
                 <li><a href="/Gestionnaire-gestion_tests_psycho">Gestion des tests psychotechniques</a></li><br>
-                <li><a href="/Gestionnaire-gestion_emplois_quels_tests">Gestion des associations emploi - tests psychotehniques</a></li><br>
+                <li><a href="/Gestionnaire-gestion_emplois_quels_tests">Gestion des associations emploi - tests
+                        psychotehniques</a></li>
                 <button id="bouton_test"
-                        onclick="window.location.href = '/Gestionnaire-faire_passer_test'"> Faire passer un test </button>
+                        onclick="window.location.href = '/Gestionnaire-faire_passer_test'"> Faire passer un test
+                </button>
             <?php } else if ($_SESSION['statut_utilisateur_site'] == "administrateur") { ?>
                 <br>
                 <h>Backoffice</h><br><br>
@@ -44,8 +48,7 @@
     <div id="foot">
         <section3>
             <br>
-            <p>
-                <a href="/Support?retour=/Home">Contacter le support</a></p>
+            <p><a href="/Support?retour=/Home">Contacter le support</a></p>
             <p><a href="/A-propos">À propos</a></p>
             <p><a id="CGU" href="/CGU?retour=/Home">CGU et mentions légales</a></p>
         </section3>

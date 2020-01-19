@@ -22,9 +22,16 @@ body
     position: relative;
 }
 
+h1
+{
+    color: #545871;
+    font-size: 36px;
+    text-align: left;
+}
+
 #section_centrale {
     position: absolute;
-    left: 18%;
+    left: 20%;
     top: 10%;
     width: 75%;
     max-height: 85%;

@@ -21,7 +21,7 @@ include "Mise_en_page.php";  // Pour utiliser Mise_en_page.php, inclure la style
         for ($i = 0; $i < $nombre_entrees_historique; $i++) {
             $entree_historique = $historique[$i];
             $id = "chartContainer_$i";
-            echo "<p>" . $entree_historique["nom_test"] . "</p>\n";
+            echo "<p>" . $entree_historique["nom_test"] . " (" . $entree_historique["date_test"] . ")</p>\n";
             echo "<div class='chartContainer' id=$id></div>";
             // Génération du graphique
             echo "<script>render_chart('$id', '" . $entree_historique["contenu_test"] . "')</script>\n\n";

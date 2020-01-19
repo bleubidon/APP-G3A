@@ -7,7 +7,6 @@ include "../../views/Mise_en_page.php";
 ?>
 
 <div id="section_centrale">
-    <br><br>
     <h1> Tests à passer: </h1>
 
     <?php
@@ -27,20 +26,6 @@ include "../../views/Mise_en_page.php";
         </table>
 
     <?php } ?>
-
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br>
-
-    <p class="footer">CAPTEST</p>
-
 </div>
 
 </body>

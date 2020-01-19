@@ -10,14 +10,6 @@
     max-height: 100%;
 }
 
-h1
-{
-    color: #545871;
-    font-size: 36px;
-    text-align: left;
-    margin-left: 50px;
-}
-
 #demanderIdentifiant {
     position: absolute;
     left: 18%;
@@ -30,7 +22,6 @@ h1
     background-position: bottom 50px right 100px;
     height: 144px;
     width: 800px;
-    margin-left: 60px;
     vertical-align: middle;
     text-margin-top: 20px;
     display: flex;
@@ -47,7 +38,7 @@ h1
     margin-right: 50px;
     vertical-align: middle;
     height: 144px;
-    width: 293px;
+    width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;

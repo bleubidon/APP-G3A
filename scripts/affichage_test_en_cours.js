@@ -22,8 +22,11 @@ window.onload = function () {
     var updateInterval = 1000;
     var dataLength = 20;
     var testDuration = 10000;  // On imagine que le test dure 10 secondes
-    var startTime = Date.now();
     var goon = true;
+
+    var date_debut_test = new Date();
+    var date_test_enreg = date_debut_test.getDate() + "-" + (date_debut_test.getMonth() + 1) + "-" + date_debut_test.getFullYear() + ", " + date_debut_test.getHours() + ":" + date_debut_test.getMinutes() + ":" + date_debut_test.getSeconds();
+    var startTime = Date.now();  // Pour la simulation d'un test
 
     var updateChart = function (count) {
         if (Date.now() - startTime < testDuration) {
@@ -51,7 +54,7 @@ window.onload = function () {
                 xmlhttp.open("POST", "../../models/gestionnaire/insertion_donnees_test.php", true);
                 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xmlhttp.send("identifiant=" + document.getElementById("identifiant").innerHTML + "&nom_test=" + document.getElementById("nom_test").innerHTML + "&donnees_test="
-                    + JSON.stringify(dps));
+                    + JSON.stringify(dps) + "&date_test=" + date_test_enreg);
             }
 
             document.getElementById("test_fini").innerHTML = "Test fini !";
