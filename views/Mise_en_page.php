@@ -23,7 +23,7 @@
             <br>
             <li><a href="/Historique">Historique de mes tests</a></li>
             <br>
-            <li><a href="/FAQ">FAQ</a></li>
+            <li><a href="/FAQ">Consulter la FAQ</a></li>
             <?php if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>
                 <br>
                 <h>Gestion</h><br><br>

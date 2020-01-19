@@ -6,7 +6,7 @@ RewriteEngine on
 # Commun
 RewriteRule ^Home$ /controllers/page_principale_utilisateur.php
 RewriteRule ^A-propos$ /views/a_propos.php
-RewriteRule ^FAQ$ /views/F.A.Q.php
+RewriteRule ^FAQ$ /controllers/F.A.Q.php
 RewriteRule ^Historique$ /controllers/historique.php
 # CGU
 RewriteCond %{REQUEST_URI}  ^/CGU$

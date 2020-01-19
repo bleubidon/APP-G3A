@@ -28,7 +28,7 @@ $parametre_js = $_SESSION['statut_utilisateur_site'] == "administrateur" ? true 
             <th class="color1">Identifiant</th>
             <th class="color2">Statut</th>
             <th class="color1">Nom</th>
-            <th class="color2">Prenom</th>
+            <th class="color2">Prénom</th>
             <th class="color1">Date de naissance</th>
             <th class="color2">Téléphone</th>
             <th class="color1">Adresse email</th>
@@ -76,7 +76,7 @@ $parametre_js = $_SESSION['statut_utilisateur_site'] == "administrateur" ? true 
 
         <tr>
             <td class="color1"><input type="text" placeholder="filtrer" id="filtre_identifiant"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+                                      onkeyup="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
             <td class="color2">
                 <select name="statut" id="filtre_statut" onchange="lister_utilisateurs(<?php echo $parametre_js ?>)">
                     <option value="all">TOUS</option>
@@ -87,29 +87,29 @@ $parametre_js = $_SESSION['statut_utilisateur_site'] == "administrateur" ? true 
                 </select>
             </td>
             <td class="color1"><input type="text" placeholder="filtrer" id="filtre_nom"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+                                      onkeyup="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
             <td class="color2"><input type="text" placeholder="filtrer" id="filtre_prenom"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+                                      onkeyup="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
             <td class="color1"><input type="text" placeholder="filtrer" id="filtre_date_de_naissance"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+                                      onkeyup="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
             <td class="color2"><input type="text" placeholder="filtrer" id="filtre_telephone"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+                                      onkeyup="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
             <td class="color1"><input type="text" placeholder="filtrer" id="filtre_email"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+                                      onkeyup="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
             <td class="color2"><input type="text" placeholder="filtrer" id="filtre_emploi"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+                                      onkeyup="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
             <td class="color1"><input type="text" placeholder="filtrer" id="filtre_genre"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+                                      onkeyup="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
             <td class="color2"><input type="text" placeholder="filtrer" id="filtre_poids"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+                                      onkeyup="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
             <td class="color1"><input type="text" placeholder="filtrer" id="filtre_taille"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+                                      onkeyup="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
             <td class="color2"><input type="text" placeholder="filtrer" id="filtre_groupe_sanguin"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+                                      onkeyup="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
             <td class="color1"><input type="text" placeholder="filtrer" id="filtre_sommeil_moyen"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+                                      onkeyup="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
             <td class="color2"><input type="text" placeholder="filtrer" id="filtre_pathologie"
-                                      onblur="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
+                                      onkeyup="lister_utilisateurs(<?php echo $parametre_js ?>)"></td>
         </tr>
     </table>
 </div>

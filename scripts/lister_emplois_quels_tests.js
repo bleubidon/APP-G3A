@@ -67,5 +67,4 @@ function modifier_emplois_quels_tests(nom_emploi, id_test_psycho, nouveau_statut
     xmlhttp.open("POST", "../../models/gestionnaire/update_emplois_quels_tests.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("nom_emploi=" + nom_emploi + "&id_test_psycho=" + id_test_psycho + "&nouveau_statut=" + nouveau_statut);
-    location.reload();
 }

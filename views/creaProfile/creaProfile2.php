@@ -67,7 +67,7 @@
 
             <p><label for="mail">Sommeil moyen <abbr title="Champ obligatoire; pas d'accents">*</abbr></label><br>
                 <input type="text" name="sommeil" id="duréeSommeil" size="35"
-                       placeholder="000-000-000"
+                       placeholder="0"
                     <?php if (isset($modification_profil)) echo "value=\"$sommeil_moyen\"";
                     else echo "value=\"$sommeil\"";
                     ?>

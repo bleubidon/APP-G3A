@@ -23,17 +23,5 @@ include "../../views/Mise_en_page.php";
     <?php
     if (isset($_GET["identifiant_inconnu"])) echo "<p style='color: red'>Identifiant inconnu</p>";
     ?>
-
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br>
-    <p class="footer">CAPTEST</p>
 </div>
-
 </body>

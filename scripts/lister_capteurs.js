@@ -65,15 +65,6 @@ function lister_capteurs() {
 function modifier_statut_capteur(nom_capteur, nouveau_statut) {
     var xmlhttp = create_ajax_object();
 
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            if (xmlhttp.responseText == "modification_statut_refusee") {
-                alert("Opération refusée: il doit toujours y avoir au moins un administrateur");
-                location.reload();
-            }
-        }
-    };
-
     xmlhttp.open("POST", "../../models/admin/update_statut_capteur.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("nom_capteur=" + nom_capteur + "&nouveau_statut=" + nouveau_statut);

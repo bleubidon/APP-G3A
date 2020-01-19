@@ -20,7 +20,7 @@
                 <p>
                     <label for="nom">Nom, Prénom</label>
                     <br>
-                    <input type="text" name="nom_prenom" id="nom_prenom" placeholder=" Votre prénom , nom" size="80"/>
+                    <input type="text" name="nom_prenom" id="nom_prenom" placeholder=" Votre nom, prénom" size="80"/>
                 </p>
             </div2>
             <br>
@@ -48,7 +48,7 @@
             <div8 id="conteneur2">
 
                 <div9>
-                    <input id="bouton_envoi" type="submit" value="Envoyer l'email">
+                    <input id="bouton_envoi" type="submit" value="Envoyer">
                 </div9>
                 <br>
         </form>
@@ -59,14 +59,6 @@
             ?>
             <button id="bouton_retour" onclick="window.location.href = '<?php echo $retour ?>'">Retour</button>
         </div10>
-
-
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-
-        <p class="footer">CAPTEST</p>
-        </div1>
     </section>
 </div6>
 </body>

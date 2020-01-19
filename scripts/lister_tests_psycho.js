@@ -73,7 +73,6 @@ function modifier_capteurs_associes(nom_test, id_capteur, nouveau_statut) {
     xmlhttp.open("POST", "../../models/gestionnaire/update_capteur_test_psycho.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("nom_test=" + nom_test + "&id_capteur=" + id_capteur + "&nouveau_statut=" + nouveau_statut);
-    location.reload();
 }
 
 function supprimer_test_psycho(nom_test_psycho) {

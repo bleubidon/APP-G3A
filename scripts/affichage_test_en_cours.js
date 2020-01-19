@@ -61,7 +61,6 @@ window.onload = function () {
         }
     };
 
-    updateChart(dataLength);
     setInterval(function () {
         updateChart()
     }, updateInterval);
