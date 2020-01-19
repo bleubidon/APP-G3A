@@ -22,6 +22,15 @@ body
     position: relative;
 }
 
+#section_centrale {
+    position: absolute;
+    left: 18%;
+    top: 10%;
+    width: 75%;
+    max-height: 85%;
+    overflow: auto;
+}
+
 a
 {
     color: #FFFFFF;

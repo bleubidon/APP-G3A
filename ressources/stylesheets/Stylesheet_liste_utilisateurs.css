@@ -1,13 +1,5 @@
-#section_centrale {
-    position: absolute;
-    left: 18%;
-    top: 50px;
-    height: 60%;
-}
-
 table {
     display: block;
-    overflow: auto;
     white-space: nowrap;
 
     table-layout: fixed;

@@ -20,7 +20,7 @@
             <h>Fonctionnalités</h>
             <br><br>
             <li><a href="/Home">Mon profil</a></li><br>
-            <li><a href="/Historique">Historique</a></li>
+            <li><a href="/Historique">Historique de mes tests</a></li>
             <br>
                 <li><a href="/FAQ">FAQ</a></li>
             <?php if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>

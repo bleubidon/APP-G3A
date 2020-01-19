@@ -1,0 +1,11 @@
+#test_fini {
+    font-size: 2em;
+    color: red;
+    text-align: center;
+}
+
+#chartContainer {
+    width: 1000px;
+    height:500px;
+    display: block;
+}

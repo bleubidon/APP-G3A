@@ -20,7 +20,7 @@ include "../../views/Mise_en_page.php";
             foreach ($tests_psycho_associes as &$test_psycho_associe) {
                 echo "<tr>";
                 echo "<td><p class='testPsycho'>" . $test_psycho_associe["nom_test_psycho"] . "</p></td>";
-                echo "<td><a class='passer' href=''> Passer </a></td>";
+                echo "<td><a class='passer' href='Gestionnaire-affichage_test_en_cours?identifiant=" . $idUtilisateur . "&test=" . $test_psycho_associe["nom_test_psycho"] . "'> Passer </a></td>";
                 echo "</tr>";
             }
             ?>
@@ -44,3 +44,4 @@ include "../../views/Mise_en_page.php";
 </div>
 
 </body>
+</html>

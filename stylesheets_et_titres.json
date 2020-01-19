@@ -57,12 +57,20 @@
     "/views/admin/administration_FAQ.php": [
       "Stylesheet.css"
     ],
-    "/views/affichage_test_en_cours.php": [
-      "Stylesheet.css"
+    "/views/gestionnaire/affichage_test_en_cours.php": [
+      "Stylesheet.css",
+      "Stylesheet_test_en_cours.css"
     ],
     "/views/F.A.Q.php": [
       "Stylesheet.css",
       "Stylesheet_FAQ.css"
+    ],
+    "/views/historique.php": [
+      "Stylesheet.css",
+      "Stylesheet_historique.css"
+    ],
+    "/views/affichage_test_ancien.php": [
+      "Stylesheet.css"
     ],
     "/views/admin/gestion_capteurs.php": [
       "Stylesheet.css",
@@ -72,9 +80,6 @@
     "/views/a_propos.php": [
       "Stylesheet.css",
       "Stylesheet_a_propos.css"
-    ],
-    "/views/affichage_test_ancien.php": [
-      "Stylesheet.css"
     ],
     "/views/gestionnaire/gestion_tests_psycho.php": [
       "Stylesheet.css",
@@ -137,6 +142,13 @@
     "/views/gestionnaire/gestion_emplois_quels_tests.php": [
       "create_ajax_object",
       "lister_emplois_quels_tests.js"
+    ],
+    "/views/gestionnaire/affichage_test_en_cours.php": [
+      "create_ajax_object",
+      "affichage_test_en_cours.js"
+    ],
+    "/views/historique.php": [
+      "affichage_tests_passes.js"
     ]
   }
 }

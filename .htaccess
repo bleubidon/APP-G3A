@@ -7,7 +7,7 @@ RewriteEngine on
 RewriteRule ^Home$ /controllers/page_principale_utilisateur.php
 RewriteRule ^A-propos$ /views/a_propos.php
 RewriteRule ^FAQ$ /views/F.A.Q.php
-RewriteRule ^Historique$ /views/historique.php
+RewriteRule ^Historique$ /controllers/historique.php
 # CGU
 RewriteCond %{REQUEST_URI}  ^/CGU$
 RewriteCond %{QUERY_STRING} ^retour=([a-zA-Z\/_\.]+)$
