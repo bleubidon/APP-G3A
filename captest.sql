@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Jan 18, 2020 at 11:43 PM
--- Server version: 10.4.10-MariaDB
--- PHP Version: 7.3.12
+-- Host: localhost:8889
+-- Generation Time: Jan 19, 2020 at 09:17 AM
+-- Server version: 5.7.26
+-- PHP Version: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -28,13 +26,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `capteurs`
 --
 
-DROP TABLE IF EXISTS `capteurs`;
-CREATE TABLE IF NOT EXISTS `capteurs` (
-  `id_capteur` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `capteurs` (
+  `id_capteur` int(11) NOT NULL,
   `nom_capteur` varchar(255) NOT NULL,
-  `statut_capteur` int(11) NOT NULL,
-  PRIMARY KEY (`id_capteur`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+  `statut_capteur` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `capteurs`
@@ -50,11 +46,9 @@ INSERT INTO `capteurs` (`id_capteur`, `nom_capteur`, `statut_capteur`) VALUES
 -- Table structure for table `emplois_quels_tests`
 --
 
-DROP TABLE IF EXISTS `emplois_quels_tests`;
-CREATE TABLE IF NOT EXISTS `emplois_quels_tests` (
+CREATE TABLE `emplois_quels_tests` (
   `nom_emploi` varchar(100) NOT NULL,
-  `id_tests_psycho` varchar(255) NOT NULL,
-  PRIMARY KEY (`nom_emploi`)
+  `id_tests_psycho` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -72,8 +66,7 @@ INSERT INTO `emplois_quels_tests` (`nom_emploi`, `id_tests_psycho`) VALUES
 -- Table structure for table `profil_utilisateur`
 --
 
-DROP TABLE IF EXISTS `profil_utilisateur`;
-CREATE TABLE IF NOT EXISTS `profil_utilisateur` (
+CREATE TABLE `profil_utilisateur` (
   `identifiant` varchar(255) NOT NULL,
   `statut` varchar(255) NOT NULL DEFAULT 'utilisateur',
   `nom` varchar(255) NOT NULL,
@@ -83,8 +76,7 @@ CREATE TABLE IF NOT EXISTS `profil_utilisateur` (
   `email` varchar(255) NOT NULL,
   `photo` varchar(255) DEFAULT NULL,
   `mot_de_passe` varchar(255) NOT NULL,
-  `type_emploi` varchar(255) NOT NULL,
-  UNIQUE KEY `identifiant` (`identifiant`)
+  `type_emploi` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -102,16 +94,14 @@ INSERT INTO `profil_utilisateur` (`identifiant`, `statut`, `nom`, `prenom`, `dat
 -- Table structure for table `sante_utilisateur`
 --
 
-DROP TABLE IF EXISTS `sante_utilisateur`;
-CREATE TABLE IF NOT EXISTS `sante_utilisateur` (
+CREATE TABLE `sante_utilisateur` (
   `identifiant` varchar(255) NOT NULL,
   `genre` varchar(255) NOT NULL,
   `poids` int(11) NOT NULL,
   `taille` int(11) NOT NULL,
   `groupe_sanguin` varchar(255) NOT NULL,
   `sommeil_moyen` int(11) NOT NULL,
-  `pathologie` varchar(255) NOT NULL,
-  UNIQUE KEY `identifiant` (`identifiant`)
+  `pathologie` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -126,16 +116,27 @@ INSERT INTO `sante_utilisateur` (`identifiant`, `genre`, `poids`, `taille`, `gro
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tests_passes`
+--
+
+CREATE TABLE `tests_passes` (
+  `duree` int(11) DEFAULT NULL,
+  `valeurs` text,
+  `patient` int(11) DEFAULT NULL,
+  `id_test` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tests_psycho`
 --
 
-DROP TABLE IF EXISTS `tests_psycho`;
-CREATE TABLE IF NOT EXISTS `tests_psycho` (
-  `id_test_psycho` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `tests_psycho` (
+  `id_test_psycho` int(11) NOT NULL,
   `nom_test_psycho` varchar(2000) NOT NULL,
-  `id_capteurs` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_test_psycho`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+  `id_capteurs` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tests_psycho`
@@ -158,13 +159,10 @@ INSERT INTO `tests_psycho` (`id_test_psycho`, `nom_test_psycho`, `id_capteurs`) 
 -- Table structure for table `tokens_reinitialisation_mot_de_passe`
 --
 
-DROP TABLE IF EXISTS `tokens_reinitialisation_mot_de_passe`;
-CREATE TABLE IF NOT EXISTS `tokens_reinitialisation_mot_de_passe` (
+CREATE TABLE `tokens_reinitialisation_mot_de_passe` (
   `id_utilisateur` varchar(255) NOT NULL,
   `token` varchar(255) NOT NULL,
-  `timestamp_creation` int(11) NOT NULL,
-  UNIQUE KEY `token` (`token`),
-  UNIQUE KEY `id_utilisateur` (`id_utilisateur`)
+  `timestamp_creation` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -173,7 +171,69 @@ CREATE TABLE IF NOT EXISTS `tokens_reinitialisation_mot_de_passe` (
 
 INSERT INTO `tokens_reinitialisation_mot_de_passe` (`id_utilisateur`, `token`, `timestamp_creation`) VALUES
 ('bleubidon', 'hn6pklw1d9', 1578322912);
-COMMIT;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `capteurs`
+--
+ALTER TABLE `capteurs`
+  ADD PRIMARY KEY (`id_capteur`);
+
+--
+-- Indexes for table `emplois_quels_tests`
+--
+ALTER TABLE `emplois_quels_tests`
+  ADD PRIMARY KEY (`nom_emploi`);
+
+--
+-- Indexes for table `profil_utilisateur`
+--
+ALTER TABLE `profil_utilisateur`
+  ADD UNIQUE KEY `identifiant` (`identifiant`);
+
+--
+-- Indexes for table `sante_utilisateur`
+--
+ALTER TABLE `sante_utilisateur`
+  ADD UNIQUE KEY `identifiant` (`identifiant`);
+
+--
+-- Indexes for table `tests_passes`
+--
+ALTER TABLE `tests_passes`
+  ADD PRIMARY KEY (`id_test`);
+
+--
+-- Indexes for table `tests_psycho`
+--
+ALTER TABLE `tests_psycho`
+  ADD PRIMARY KEY (`id_test_psycho`);
+
+--
+-- Indexes for table `tokens_reinitialisation_mot_de_passe`
+--
+ALTER TABLE `tokens_reinitialisation_mot_de_passe`
+  ADD UNIQUE KEY `token` (`token`),
+  ADD UNIQUE KEY `id_utilisateur` (`id_utilisateur`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `capteurs`
+--
+ALTER TABLE `capteurs`
+  MODIFY `id_capteur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `tests_psycho`
+--
+ALTER TABLE `tests_psycho`
+  MODIFY `id_test_psycho` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
