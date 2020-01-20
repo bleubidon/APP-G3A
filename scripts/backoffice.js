@@ -27,7 +27,7 @@ function supprimer_utilisateur(identifiant) {
             if (xmlhttp.responseText == "modification_statut_refusee") {
                 alert("Opération refusée: il doit toujours y avoir au moins un administrateur");
                 location.reload();
-            }
+            } else location.reload();
         }
     };
 

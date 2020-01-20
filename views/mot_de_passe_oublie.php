@@ -6,11 +6,6 @@
     <img id="imgAirplane" src="../ressources/images/imgAirplane1.jpg">
 </section>
 <section id="sec2">
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-
     <div1>
         <form action="" method="post">
             <p>
