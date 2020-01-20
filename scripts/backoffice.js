@@ -34,5 +34,4 @@ function supprimer_utilisateur(identifiant) {
     xmlhttp.open("POST", "../../models/admin/supprimer_utilisateur.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("identifiant=" + identifiant);
-    location.reload();
 }
