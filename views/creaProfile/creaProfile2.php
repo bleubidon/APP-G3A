@@ -1,7 +1,11 @@
 <body>
 <section id="sec1">
-    <br><br><br><br><br><br>
-    <?php
+    <img
+        src="/ressources/images/captimove_logo.png"
+        alt="logo"
+        height="100px"
+        width="100px" style=""
+    />    <?php
     if (isset($modification_profil)) echo "<h1>Modification de vos données de santé</h1>";
     else echo "<h1>Vos données de santé</h1>"; ?>
 
@@ -15,18 +19,17 @@
                     else if (isset($genre) && $genre == "Homme") echo "checked";
                     ?>/>
                 <label for="Homme">Homme</label>
-
                 <input type="radio" name="genre" value="Femme"
                        id="Femme" ; size="35"
                     <?php if (isset($modification_profil) && $genre == "Femme") echo "checked";
                     else if (isset($genre) && $genre == "Femme") echo "checked";
                     ?>/>
-                <label for="Femme">Femme</label>
-                <span id="genre_erreur"><?php echo $genre_err ?></span>
+                <label for="Femme">Femme</label><br>
+                <span id="genre_erreur" style="color: red"><?php echo $genre_err ?></span>
             </p>
         </div>
         <div id="poids_taille">
-            <p><label for="Poids">Poids <abbr title="Champ obligatoire; pas d'accents">*</abbr></label>
+             <p><label for="Poids">Poids <abbr title="Champ obligatoire; pas d'accents">*</abbr></label>
                 <br>
                 <input type="number" name="poids" id="poids" placeholder=" Votre Poids (kg)"
                        size="35"
@@ -35,9 +38,9 @@
                     ?>
                        required="required"
                        aria-required="true"
-                       pattern="^[\d]+$"/>
-                <span id="poids_erreur"><?php echo $poids_err ?></span>
-            </p>
+                       pattern="^[\d]+$"/><br>
+                <span id="poids_erreur" style="color: red"><?php echo $poids_err ?></span>
+            </p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
             <p><label for="mail">Taille (cm) <abbr title="Champ obligatoire; pas d'accents">*</abbr></label><br>
                 <input type="number" name="taille" id="taille" placeholder=" Votre taille"
@@ -47,8 +50,8 @@
                     ?>
                        required="required"
                        aria-required="true"
-                       pattern="^[\d]+$"/>
-                <span id="taille_erreur"><?php echo $taille_err ?></span>
+                       pattern="^[\d]+$"/><br>
+                <span id="taille_erreur" style="color: red"><?php echo $taille_err ?></span>
             </p>
         </div>
         <div id="gsang_sommeil">
@@ -61,9 +64,9 @@
                     ?>
                        required="required"
                        aria-required="true"
-                       pattern="^[-+aboABO]+$"/>
-                <span id="gsang_erreur"><?php echo $gsang_err ?></span>
-            </p>
+                       pattern="^[-+aboABO]+$"/><br>
+                <span id="gsang_erreur" style="color: red"><?php echo $gsang_err ?></span>
+            </p>&nbsp;&nbsp;
 
             <p><label for="mail">Sommeil moyen <abbr title="Champ obligatoire; pas d'accents">*</abbr></label><br>
                 <input type="text" name="sommeil" id="duréeSommeil" size="35"
@@ -73,13 +76,12 @@
                     ?>
                        required="required"
                        aria-required="true"
-                       pattern="^[\d]+$"/>
-                <span id="sommeil_erreur"><?php echo $sommeil_err ?></span>
+                       pattern="^[\d]+$"/><br>
+                <span id="sommeil_erreur" style="color: red"><?php echo $sommeil_err ?></span>
             </p>
         </div>
         <div id="pathologie">
-            <p><label for="pathologie">Antécedent / Pathologie</label>
-                <br>
+            <p><label for="pathologie">Antécedent / Pathologie</label><br>
                 <textarea name="pathologie" id="pathologie" placeholder="Vos antécedents et/ou pathologies" cols="55"
                           rows="5"><?php if (isset($modification_profil)) echo $pathologie ?></textarea>
         </div>

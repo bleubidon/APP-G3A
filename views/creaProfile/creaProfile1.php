@@ -1,6 +1,11 @@
 <body>
 <section id="sec1">
-    <br><br><br><br><br><br>
+    <img
+        src="/ressources/images/captimove_logo.png"
+        alt="logo"
+        height="100px"
+        width="100px" style=""
+    />
     <?php
     if (isset($modification_profil)) echo "<h1>Modification de votre profil</h1>";
     else echo "<h1>Création de votre profil</h1>"; ?>
@@ -9,7 +14,7 @@
           novalidate>
         <!--        L'enctype utilisé ci-dessus est nécessaire pour l'upload de fichier via le formuaire-->
         <div id="name">
-            <p><label for="Prenom">Prénom <abbr title="Champ obligatoire; pas d'accents">*</abbr></label>
+            <p><label for="Prenom" style="font-weight: bold">Prénom <abbr title="Champ obligatoire; pas d'accents">*</abbr></label>
                 <br>
                 <input type="text" name="Prenom" id="Prenom"
                        placeholder="Votre Prénom" size="35"
@@ -18,12 +23,12 @@
                     ?>
                        required="required"
                        aria-required="true"
-                       pattern="^[-\w]+$"/>
-                <span id="Prenom_erreur"><?php echo $Prenom_err ?></span>
+                       pattern="^[-\w]+$"/><br>
+                <span id="Prenom_erreur" style="color: red"><?php echo $Prenom_err ?></span>
             </p>
             &nbsp;
             &nbsp;
-            <p><label for="Nom">Nom <abbr title="Champ obligatoire">*</abbr></label><br>
+            <p><label for="Nom" style="font-weight: bold">Nom <abbr title="Champ obligatoire">*</abbr></label><br>
                 <input type="text" name="Nom" id="Nom"
                        placeholder="Votre Nom" size="35"
                     <?php if (isset($modification_profil)) echo "value=\"$nom\"";
@@ -31,13 +36,13 @@
                     ?>
                        required="required"
                        aria-required="true"
-                       pattern="^[-\w]+$"/>
-                <span id="Nom_erreur"><?php echo $Nom_err ?></span>
+                       pattern="^[-\w]+$"/><br>
+                <span id="Nom_erreur" style="color: red"><?php echo $Nom_err ?></span>
             </p>
         </div>
         <br/>
         <div id="phone">
-            <p><label for="dateNaissance">Date de Naissance <abbr title="Champ obligatoire">*</abbr></label><br>
+            <p><label for="dateNaissance" style="font-weight: bold">Date de Naissance <abbr title="Champ obligatoire">*</abbr></label><br>
                 <input type="date" name="dateNaissance" id="dateNaissance"
                        placeholder="jj/mm/année" style="font-size: 17px"
                     <?php if (isset($modification_profil)) echo "value=\"$date_de_naissance\"";
@@ -45,12 +50,12 @@
                     ?>
                        required="required"
                        aria-required="true"
-                       pattern="^\d{4}-[01]\d-[0-3]\d$"/>
-                <span id="dateNaissance_erreur"><?php echo $dateNaissance_err ?></span>
+                       pattern="^\d{4}-[01]\d-[0-3]\d$"/><br>
+                <span id="dateNaissance_erreur" style="color: red"><?php echo $dateNaissance_err ?></span>
             </p>
             &nbsp;
             &nbsp;
-            <p><label for="numeroTel">Numéro de téléphone <abbr title="Champ obligatoire">*</abbr></label><br>
+            <p><label for="numeroTel" style="font-weight: bold">Numéro de téléphone <abbr title="Champ obligatoire">*</abbr></label><br>
                 <input type="tel" name="numeroTel" id="numeroTel"
                        placeholder="0xxxxxxxxx" size="35"
                     <?php if (isset($modification_profil)) echo "value=\"$telephone\"";
@@ -58,13 +63,13 @@
                     ?>
                        required="required"
                        aria-required="true"
-                       pattern="^0\d{9}$"/>
-                <span id="numeroTel_erreur"><?php echo $numeroTel_err ?></span>
+                       pattern="^0\d{9}$"/><br>
+                <span id="numeroTel_erreur" style="color: red"><?php echo $numeroTel_err ?></span>
             </p>
         </div>
         <br/>
         <div id="mail">
-            <p><label for="email">Email <abbr title="Champ obligatoire">*</abbr></label><br>
+            <p><label for="email" style="font-weight: bold">Email <abbr title="Champ obligatoire">*</abbr></label><br>
                 <input type="email" name="email" id="email"
                        placeholder="Votre adresse mail" size="35"
                     <?php if (isset($modification_profil)) echo "value=\"$adresse_email\"";
@@ -72,13 +77,13 @@
                     ?>
                        required="required"
                        aria-required="true"
-                       pattern="^[-.\w]+@[-.\w]+.[a-zA-Z]+$"/>
-                <span id="email_erreur"><?php echo $email_err ?></span>
+                       pattern="^[-.\w]+@[-.\w]+.[a-zA-Z]+$"/><br>
+                <span id="email_erreur" style="color: red"><?php echo $email_err ?></span>
             </p>
             &nbsp;
             &nbsp;
             <?php if (!isset($modification_profil)) { ?>
-                <p><label for="identifiant">Identifiant <abbr title="Champ obligatoire">*</abbr></label><br>
+                <p><label for="identifiant" style="font-weight: bold">Identifiant <abbr title="Champ obligatoire">*</abbr></label><br>
                     <input type="text" name="identifiant" id="identifiant"
                            placeholder="Identifiant" size="35"
                         <?php if (isset($modification_profil)) echo "value=\"$identifiant\"";
@@ -86,15 +91,15 @@
                         ?>
                            required="required"
                            aria-required="true"
-                           pattern="^[a-zA-Z\d]+$"/>
-                    <span id="identifiant_erreur"><?php echo $identifiant_err ?></span>
+                           pattern="^[a-zA-Z\d]+$"/><br>
+                    <span id="identifiant_erreur" style="color: red"><?php echo $identifiant_err ?></span>
                 </p>
             <?php } ?></div>
         <br>
         <?php if (isset($modification_profil)) { ?>
             <p>Modifiez votre mot de passe :</p>
             <div id="mdp">
-                <p><label for="password">Mot de passe actuel :</label><br>
+                <p><label for="password" style="font-weight: bold">Mot de passe actuel :</label><br>
                     <input type="password" name="password_ancien" id="password_ancien" size="35"/>
                     <span id="password_ancien_erreur"><?php echo $password_ancien_err ?></span>
                 </p>
@@ -102,7 +107,7 @@
         <?php } ?><br>
         <div id="mdp">
             <p>
-                <label for="password"><strong><?php echo isset($modification_profil) ?
+                <label for="password" style="font-weight: bold"><strong><?php echo isset($modification_profil) ?
                             "Nouveau mot de passe :</strong>" :
                             "Mot de passe </strong><abbr title=\"Au moins 8 caractères d'au moins 2 types sur 3: lettres minuscules, lettres majuscules, chiffres\">*</abbr>"
                         ?>
@@ -116,12 +121,12 @@
                        required="required"
                        aria-required="true"
                        pattern="^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*\d))|((?=.*[A-Z])(?=.*\d)))(?=.{8,})"/>
-                <?php } ?>
-                <span id="password_erreur"><?php echo $password_err ?></span>
+                <?php } ?><br>
+                <span id="password_erreur" style="color: red"><?php echo $password_err ?></span>
             </p>
             &nbsp;
             &nbsp;
-            <p><label for="validePassword">Confirmation du mot de passe<?php echo isset($modification_profil) ?
+            <p><label for="validePassword " style="font-weight: bold">Confirmation du mot de passe<?php echo isset($modification_profil) ?
                         " :" :
                         "<abbr title=\"Champ obligatoire\">*</abbr>"
                     ?>
@@ -133,40 +138,40 @@
                     else { ?>
                        required="required"
                        aria-required="true"/>
-                <?php } ?>
-                <span id="validePassword_erreur"><?php echo $validePassword_err ?></span>
+                <?php } ?><br>
+                <span id="validePassword_erreur" style="color: red"><?php echo $validePassword_err ?></span>
             </p>
         </div>
 
         <p><div id="emplois">
-            Type d'emploi <abbr title="Champ obligatoire">*</abbr><br/>
+            Type d'emploi : <br> <abbr title="Champ obligatoire">*</abbr><b>
             <input type="radio" name="emplois" value="Pilote"
                    id="Pilote"
                 <?php if (isset($modification_profil) && $type_emploi == "Pilote") echo "checked";
                 else if (isset($emplois) && $emplois == "Pilote") echo "checked";
                 ?>/>
-            <label for="Pilote">Pilote</label><br/>
+            <label for="Pilote" style="font-weight: bold">Pilote</label><br>
 
             <input type="radio" name="emplois" value="PersonnelAuSol"
                    id="PersonnelAuSol"
                 <?php if (isset($modification_profil) && $type_emploi == "PersonnelAuSol") echo "checked";
                 else if (isset($emplois) && $emplois == "PersonnelAuSol") echo "checked";
                 ?>/>
-            <label for="PersonnelAuSol">Personnel au sol</label><br/>
+            <label for="PersonnelAuSol" style="font-weight: bold">Personnel au sol</label><br>
 
             <input type="radio" name="emplois" value="PersonnelNaviguant"
                    id="PersonnelNaviguant"
                 <?php if (isset($modification_profil) && $type_emploi == "PersonnelNaviguant") echo "checked";
                 else if (isset($emplois) && $emplois == "PersonnelNaviguant") echo "checked";
                 ?>/>
-            <label for="PersonnelNaviguant">Personnel naviguant</label><br/>
+            <label for="PersonnelNaviguant" style="font-weight: bold">Personnel naviguant</label><br>
             <span id="emplois_erreur"><?php echo $emplois_err ?></span>
         </div>
         </p>
         <p><div id="photo">
-            Photo de profil (< 2 Mo) :<br/>
-            <input type="file" name="PhotoProfil" id="PhotoProfilId" onchange="fichierSelectionne()"/>
-            <label id="PhotoProfilLabel">Choisissez un fichier</label>
+            Photo de profil (< 2 Mo) :<br>
+            <input style="width: 100px" type="file" name="PhotoProfil" id="PhotoProfilId" onchange="fichierSelectionne()"/> &nbsp;
+            <label id="PhotoProfilLabel" style="font-weight: bold">Choisissez un fichier</label>
             <?php if (isset($modification_profil) && $nom_photo_profil != null) { ?>
                 <script> placeHolder(<?php echo "'" . explode("_", $nom_photo_profil)[1] . "'" ?>) </script>
             <?php } ?>

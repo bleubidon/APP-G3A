@@ -1,5 +1,12 @@
 <body>
 <section id="sec2">
+    <!--<img
+        src="/ressources/images/captimove_logo.png"
+        alt="logo"
+        height="100px"
+        width="100px"
+    />-->
+    <h1 style="margin-right: 500px">Récapitulatif de vos données de santé</h1>
     <?php
     echo "<p>Prénom : " . $_SESSION['Prenom'] . "</p>\n";
     echo "<p>Nom : " . $_SESSION['Nom'] . "</p>\n";
@@ -18,7 +25,10 @@
     ?>
 
     <form action="?etape=3&toutes_infos_collectees" method="post">
-        <a class="bouton" href="?etape=2">Retour</a>
+        <a class="bouton" href="?etape=2">Retour</a>   <?php
+/*        $retour = isset($_GET['retour']) ? $_GET['retour'] : "/?etape=2";
+        */?><!--
+        <button class="bouton" onclick="window.location.href = '<?php /*echo $retour*/?>'">Retour</button>-->
 
         <?php
         if (isset($_GET['inscription_reussie'])) {
