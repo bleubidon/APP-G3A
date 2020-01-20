@@ -33,7 +33,7 @@ include "../../views/Mise_en_page.php";  // Pour utiliser Mise_en_page.php, incl
             <input id="bouton_supprimer" type="submit" value="Supprimer">
         </p>
     </form>
-    <?php if (isset($_GET["succes"])) echo "<p>Opération effectuée avec succès</p>";
+    <?php if (isset($_GET["succes"])) echo "<p style='color: green'>Opération effectuée avec succès</p>";
     else if (isset($_GET["echec"])) echo "<p style='color:red'>L'opération demandée n'a pas pu aboutir</p>";?>
 </div>
 
