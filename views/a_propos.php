@@ -7,9 +7,9 @@ include "header.php"; ?>
 <div id="section_centrale">
     <section2 id="section2">
         <p id="infoProduit"> INFORMATIONS SUR LE PRODUIT </p>
-        <p align="left"> Fondé en 2020, Captest est un site internet consacré aux tests psychotechnique.
-            Il s'adresse principalement aux pilotes de ligne, au personnel naviguant ainsi qu'au personnel au sol.
-            Ces test psychotechiques ont pour objectif d'évaluer les compétences des utilisateurs en fonction de leur
+        <p align="left"> Fondé en 2020, Captest est un site internet consacré aux tests psychotechniques.
+            Il s'adresse principalement aux pilotes de ligne, aux personnels naviguant ainsi qu'aux personnels au sol.
+            Ces tests psychotechiques ont pour objectif de former et d'évaluer les compétences des utilisateurs en fonction de leur
             métier.</p>
         <br><br><br><br>
 
