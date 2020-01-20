@@ -1,6 +1,6 @@
 <?php
-include "../views/header.php";
 session_start();
+include "../views/header.php";
 if (isset($_POST['identifiant']) && isset($_POST['password'])) {
     $identifiant_propose = $_POST['identifiant'];
     include "../models/verif_utilisateur_pas_banni.php";  // Vérifier que l'utilisateur n'est pas banni

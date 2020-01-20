@@ -26,7 +26,7 @@ if (isset($_POST['Mail'])) {
             <a href='$lien_reinit_mdp'>$lien_reinit_mdp</a>";
 
         $email_reinit_mdp = new Email($adresse_email_destinataire, $sujet, $message);
-        $email_reinit_mdp->envoyerEmail();
+        if ($email_reinit_mdp->envoyerEmail() != "OK") redirection("?mail_ko");
 
         // Notification de succès à l'utilisateur
         redirection("?mail_ok");

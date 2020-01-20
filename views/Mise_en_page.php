@@ -66,5 +66,5 @@
     <button id="settings" title="Modifier votre profil"
             onclick="window.location.href = '/controllers/gestion_formulaire_compte_utilisateur/modification_compte_utilisateur.php'"></button>
     <button id="home" title="Accueil"
-            onclick="window.location.href = '/controllers/page_principale_utilisateur.php'"></button>
+            onclick="window.location.href = '/Home'"></button>
 </header>

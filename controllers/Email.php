@@ -40,12 +40,11 @@ class Email
         $this->mail->IsHTML(true);
 
         $this->mail->Subject = $this->sujet;
-//        $this->mail->Subject = "Subject Text";
         $this->mail->Body = $this->message;
     }
 
     function envoyerEmail()
     {
-        $this->mail->send();
+        if (!$this->mail->send()) return $this->mail->ErrorInfo; else return "OK";
     }
 }

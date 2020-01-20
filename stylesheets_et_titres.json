@@ -110,35 +110,35 @@
   },
   "scripts": {
     "/controllers/gestion_formulaire_compte_utilisateur/creation_compte_utilisateur.php": [
-      "create_ajax_object",
+      "create_ajax_object.js",
       "upload_fichier_nom_dynamique.js"
     ],
     "/controllers/gestion_formulaire_compte_utilisateur/modification_compte_utilisateur.php": [
       "upload_fichier_nom_dynamique.js"
     ],
     "/views/admin/liste_utilisateurs.php": [
-      "create_ajax_object",
+      "create_ajax_object.js",
       "lister_utilisateurs.js",
       "backoffice.js"
     ],
     "/views/gestionnaire/liste_utilisateurs.php": [
-      "create_ajax_object",
+      "create_ajax_object.js",
       "lister_utilisateurs.js"
     ],
     "/views/admin/gestion_capteurs.php": [
-      "create_ajax_object",
+      "create_ajax_object.js",
       "lister_capteurs.js"
     ],
     "/views/gestionnaire/gestion_tests_psycho.php": [
-      "create_ajax_object",
+      "create_ajax_object.js",
       "lister_tests_psycho.js"
     ],
     "/views/gestionnaire/gestion_emplois_quels_tests.php": [
-      "create_ajax_object",
+      "create_ajax_object.js",
       "lister_emplois_quels_tests.js"
     ],
     "/views/gestionnaire/affichage_test_en_cours.php": [
-      "create_ajax_object",
+      "create_ajax_object.js",
       "affichage_test_en_cours.js"
     ],
     "/views/historique.php": [
