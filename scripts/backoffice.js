@@ -21,6 +21,16 @@ function supprimer_utilisateur(identifiant) {
         return;
     }
     var xmlhttp = create_ajax_object();
+
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            if (xmlhttp.responseText == "modification_statut_refusee") {
+                alert("Opération refusée: il doit toujours y avoir au moins un administrateur");
+                location.reload();
+            }
+        }
+    };
+
     xmlhttp.open("POST", "../../models/admin/supprimer_utilisateur.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("identifiant=" + identifiant);
