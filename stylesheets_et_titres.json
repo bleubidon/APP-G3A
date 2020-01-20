@@ -54,7 +54,7 @@
     ],
     "/views/gestionnaire/affichage_test_en_cours.php": [
       "Stylesheet.css",
-      "Stylesheet_test_en_cours.css"
+      "Stylesheet_canvasJS.css"
     ],
     "/views/F.A.Q.php": [
       "Stylesheet.css",
@@ -85,6 +85,10 @@
       "Stylesheet.css",
       "Stylesheet_gestion_par_tableau.css",
       "Stylesheet_tableau_colore.css"
+    ],
+    "/views/gestionnaire/statistiques.php": [
+      "Stylesheet.css",
+      "Stylesheet_canvasJS.css"
     ]
   },
   "titres": {
@@ -123,7 +127,9 @@
     ],
     "/views/gestionnaire/liste_utilisateurs.php": [
       "create_ajax_object.js",
-      "lister_utilisateurs.js"
+      "lister_utilisateurs.js",
+      "gestionnaire_afficher_userdata_overlay.js",
+      "affichage_tests_passes.js"
     ],
     "/views/admin/gestion_capteurs.php": [
       "create_ajax_object.js",
@@ -143,6 +149,9 @@
     ],
     "/views/historique.php": [
       "affichage_tests_passes.js"
+    ],
+    "/views/gestionnaire/statistiques.php": [
+      "affichage_statistiques.js"
     ]
   }
 }

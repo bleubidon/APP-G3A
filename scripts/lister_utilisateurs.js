@@ -30,8 +30,13 @@ function lister_utilisateurs(administrateur = false) {
 
                 ligne_table = document.createElement("tr");
                 ligne_table.className = suite_table_nom_classe;
-                innerHTML_string =
-                    "<td class='color1'>" + liste_utilisateurs[utilisateur]["identifiant"] + "</td>";
+                if (administrateur) {
+                    innerHTML_string =
+                        "<td class='color1'>" + liste_utilisateurs[utilisateur]["identifiant"] + "</td>";
+                } else {
+                    innerHTML_string =
+                        "<td class='color1' style='color: blue; cursor: pointer' onclick='display_userdata_overlay(\"" + liste_utilisateurs[utilisateur]["identifiant"] + "\")'>" + liste_utilisateurs[utilisateur]["identifiant"] + "</td>";
+                }
 
                 if (administrateur) {
                     innerHTML_string +=

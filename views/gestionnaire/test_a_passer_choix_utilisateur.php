@@ -25,3 +25,4 @@ include "../../views/Mise_en_page.php";
     ?>
 </div>
 </body>
+</html>

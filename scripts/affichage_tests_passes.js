@@ -1,5 +1,4 @@
 function render_chart(nomConteneur, contenuTest) {
-    console.log(nomConteneur + "; " + contenuTest);
     // Decode json
     contenuTest = JSON.parse(contenuTest);
 

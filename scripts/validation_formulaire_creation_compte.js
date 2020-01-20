@@ -117,8 +117,6 @@ function validationFormulaire() {
         if (field.getAttribute("type") != "submit" &&
             field.getAttribute("name") != "PhotoProfil" &&
             shouldBeValidated(field)) {  // S'il faut vérifier la validité du champ
-
-            console.log(field.getAttribute("name"));
             testUnChamp(field);
             if (!handleMessageErreur(messageErreur, field)) formOk = false;
         }
