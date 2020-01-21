@@ -40,11 +40,11 @@ function lister_capteurs() {
                     "\"" + liste_capteurs[capteur]["nom_capteur"] + "\", " +
                     "document.getElementById(\"choix_statut_" + liste_capteurs[capteur]["nom_capteur"] + "\").value)" +
                     "'>" +
-                    "<option value='" + liste_capteurs[capteur]["statut_capteur"] + "'>" + liste_capteurs[capteur]["statut_capteur"] + "</option>";
+                    "<option value='" + liste_capteurs[capteur]["statut_capteur"] + "'>" + transform(liste_capteurs[capteur]["statut_capteur"]) + "</option>";
 
                 for (var i = 0; i < statuts_alternatifs.length; i++) {
                     innerHTML_string += "<option ";
-                    innerHTML_string += "value=" + statuts_alternatifs[i] + ">" + statuts_alternatifs[i] + "</option>";
+                    innerHTML_string += "value=" + statuts_alternatifs[i] + ">" + transform(statuts_alternatifs[i]) + "</option>";
                 }
                 innerHTML_string += "</select></td>";
 
@@ -80,4 +80,8 @@ function supprimer_capteur(nom_capteur) {
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("nom_capteur=" + nom_capteur);
     location.reload();
+}
+
+function transform(statut_entier) {
+    return statut_entier == "1" ? "Activé" : "Désactivé";
 }
