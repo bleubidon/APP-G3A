@@ -1,14 +1,9 @@
-<body>
-<section id="sec1">
-    <img
-        src="/ressources/images/captimove_logo.png"
-        alt="logo"
-        height="100px"
-        width="100px" style=""
-    />
-    <?php
+ <?php
     if (isset($modification_profil)) echo "<h1>Modification de votre profil</h1>";
     else echo "<h1>Création de votre profil</h1>"; ?>
+
+ <body>
+    <section id="sec1">
 
     <form action="" method="post" enctype="multipart/form-data" name="form1" onsubmit="return validationFormulaire()"
           novalidate>
@@ -44,7 +39,7 @@
         <div id="phone">
             <p><label for="dateNaissance" style="font-weight: bold">Date de Naissance <abbr title="Champ obligatoire">*</abbr></label><br>
                 <input type="date" name="dateNaissance" id="dateNaissance"
-                       placeholder="jj/mm/année" style="font-size: 17px"
+                       placeholder="jj/mm/aaaa" style="font-size: 17px"
                     <?php if (isset($modification_profil)) echo "value=\"$date_de_naissance\"";
                     else echo "value=\"$dateNaissance\"";
                     ?>
@@ -97,7 +92,7 @@
             <?php } ?></div>
         <br>
         <?php if (isset($modification_profil)) { ?>
-            <p>Modifiez votre mot de passe :</p>
+            <p style="color: red; margin-left: 580px">Modifiez votre mot de passe :</p>
             <div id="mdp">
                 <p><label for="password" style="font-weight: bold">Mot de passe actuel :</label><br>
                     <input type="password" name="password_ancien" id="password_ancien" size="35"/>

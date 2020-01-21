@@ -212,6 +212,18 @@ h1 {
     color: #545871;
 }
 
+#secCreaProfile3
+{
+    font-size: 15px;
+    justify-content: center;
+    color: #545871;
+    margin-left: 500px;
+    margin-top: 200px;
+
+
+}
+
+
 @media screen and (max-width: 1024px) {
     #sec1 {
         font-size: 15px;

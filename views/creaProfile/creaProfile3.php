@@ -1,31 +1,49 @@
 <body>
-<section id="sec2">
-    <!--<img
-        src="/ressources/images/captimove_logo.png"
-        alt="logo"
-        height="100px"
-        width="100px"
-    />-->
-    <h1 style="margin-right: 500px">Récapitulatif de vos données de santé</h1>
-    <?php
-    echo "<p>Prénom : " . $_SESSION['Prenom'] . "</p>\n";
-    echo "<p>Nom : " . $_SESSION['Nom'] . "</p>\n";
-    echo "<p>Identifiant : " . $_SESSION['identifiant'] . "</p>\n";
-    echo "<p>Date de naissance : " . $_SESSION['dateNaissance'] . "</p>\n";
-    echo "<p>Numéro de téléphone : " . $_SESSION['numeroTel'] . "</p>\n";
-    echo "<p>Adresse email : " . $_SESSION['email'] . "</p>\n";
-    echo "<p>Emploi : " . $_SESSION['emplois'] . "</p>\n";
+<h1 style="color: black; text-align: center">Récapitulatif de vos données</h1>
 
-    echo "<p>Genre : " . $_SESSION['genre'] . "</p>\n";
-    echo "<p>Poids : " . $_SESSION['poids'] . "</p>\n";
-    echo "<p>Taille : " . $_SESSION['taille'] . "</p>\n";
-    echo "<p>Groupe sanguin : " . $_SESSION['gsang'] . "</p>\n";
-    echo "<p>Sommeil : " . $_SESSION['sommeil'] . "</p>\n";
-    echo "<p>Pathologie : " . $_SESSION['pathologie'] . "</p>\n";
-    ?>
+<section id="secCreaProfile3">
+    <table>
+        <tr>
+            <?php
+             echo "<td><p>Prénom : " . $_SESSION['Prenom'] . "</td></p>";
+             echo "<td><p>Nom : " . $_SESSION['Nom'] . "</td></p>";
+             ?>
+        </tr>
+        <tr>
+            <?php
+            echo "<td><p>Identifiant : " . $_SESSION['identifiant'] . "</td></p>";
+            echo "<td><p>Date de naissance : " . $_SESSION['dateNaissance'] . "</td></p>\n";
+            ?>
+        </tr>
+        <tr>
+            <?php
+            echo "<td><p>Numéro de téléphone : " . $_SESSION['numeroTel'] . "</td></p>\n";
+            echo "<td><p>Adresse email : " . $_SESSION['email'] . "</td></p>\n";
+            ?>
+        </tr>
+        <tr>
+            <?php
+            echo "<td><p>Emploi : " . $_SESSION['emplois'] . "</td></p>\n";
+            echo "<td><p>Genre : " . $_SESSION['genre'] . "</td></p>\n";
+            ?>
+        </tr>
+        <tr>
+            <?php
+            echo "<td><p>Poids : " . $_SESSION['poids'] . "</td></p>\n";
+            echo "<td><p>Taille : " . $_SESSION['taille'] . "</td></p>\n";
+            ?>
+        </tr>
+        <tr>
+            <?php
+            echo "<td><p>Sommeil : " . $_SESSION['sommeil'] . "</td></p>\n";
+            echo "<td><p>Pathologie : " . $_SESSION['pathologie'] . "</td></p>\n";
+            ?>
+        </tr>
+    </table>
+    <br><br>
 
     <form action="?etape=3&toutes_infos_collectees" method="post">
-        <a class="bouton" href="?etape=2">Retour</a>   <?php
+        <a id="bouton_retour" href="?etape=2" style="padding-top: 10px;padding-bottom: 10px; width: 100px; height: 40px; text-decoration: none">Retour</a>&nbsp;&nbsp;   <?php
 /*        $retour = isset($_GET['retour']) ? $_GET['retour'] : "/?etape=2";
         */?><!--
         <button class="bouton" onclick="window.location.href = '<?php /*echo $retour*/?>'">Retour</button>-->

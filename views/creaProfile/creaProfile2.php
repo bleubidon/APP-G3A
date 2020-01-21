@@ -1,13 +1,10 @@
-<body>
-<section id="sec1">
-    <img
-        src="/ressources/images/captimove_logo.png"
-        alt="logo"
-        height="100px"
-        width="100px" style=""
-    />    <?php
+ <?php
     if (isset($modification_profil)) echo "<h1>Modification de vos données de santé</h1>";
     else echo "<h1>Vos données de santé</h1>"; ?>
+ <br><br><br><br><br><br>
+
+ <body>
+    <section id="sec1">
 
     <form action="" method="post" onsubmit="return validationFormulaire()" novalidate>
         <div id="genre">
@@ -52,7 +49,7 @@
                        aria-required="true"
                        pattern="^[\d]+$"/><br>
                 <span id="taille_erreur" style="color: red"><?php echo $taille_err ?></span>
-            </p>
+            </p><br>
         </div>
         <div id="gsang_sommeil">
             <p><label for="mail">Groupe sanguin <abbr title="Champ obligatoire; pas d'accents">*</abbr></label>
@@ -81,13 +78,13 @@
             </p>
         </div>
         <div id="pathologie">
-            <p><label for="pathologie">Antécedent / Pathologie</label><br>
-                <textarea name="pathologie" id="pathologie" placeholder="Vos antécedents et/ou pathologies" cols="55"
+            <p><label for="pathologie">Antécedent / Pathologie</label>
+                <textarea style="display: flex; margin-left: 0 " name="pathologie" id="pathologie" placeholder="Vos antécedents et/ou pathologies" cols="73"
                           rows="5"><?php if (isset($modification_profil)) echo $pathologie ?></textarea>
         </div>
         <p>
         <div id="boutons">
-            <a id="bouton_retour" href="?etape=1">Retour</a>
+            <a  style="padding-top: 10px; height: 38px; text-decoration: none" id="bouton_retour" href="?etape=1">Retour</a>&nbsp;&nbsp;
             &nbsp;<input id="con" type="submit" value="Continuer"/>
         </div>
         </p>
