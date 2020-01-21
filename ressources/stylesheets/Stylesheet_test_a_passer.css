@@ -1,5 +1,4 @@
-@font-face
-{
+@font-face {
     font-family: "basicsans";
     src: url("../fonts/basicsanssf.ttf");
 }
@@ -16,8 +15,7 @@
     top: 50px;
 }
 
-.testPsycho
-{
+.testPsycho {
     background-color: #DCE9FC;
     background-position: bottom 50px right 100px;
     height: 144px;
@@ -30,8 +28,20 @@
     font-size: 20px;
 }
 
-.passer
-{
+#lienContactAdmin {
+    color: lightseagreen;
+}
+
+#lienContactAdmin:hover {
+    background-color: white;
+}
+
+.grayout {
+    opacity: 0.6; /* Real browsers */
+    filter: alpha(opacity=60); /* MSIE */
+}
+
+.passer {
     background-color: #636780;
     background-position: bottom 50px right 100px;
     color: #FFFFFF;
@@ -46,14 +56,12 @@
     font-size: 20px;
 }
 
-a:hover
-{
+a:hover {
     text-decoration: underline;
     background-color: #474e71;
 }
 
-.footer
-{
+.footer {
     text-align: right;
     font-size: 14px;
     letter-spacing: 1.4px;
@@ -66,25 +74,22 @@ a:hover
     margin-left: 650px;
 }
 
-legend
-{
+legend {
     color: red;
 }
 
-fieldset
-{
+fieldset {
     border-radius: 15px;
     padding: 20px 20px 20px;
-    margin-bottom:10px;
-    border:1px solid #DF3F3F;
+    margin-bottom: 10px;
+    border: 1px solid #DF3F3F;
     margin-right: unset;
     width: 900px;
 }
 
-input[type=submit]
-{
-    width:100px;
-    margin-left:5px;
+input[type=submit] {
+    width: 100px;
+    margin-left: 5px;
     border-radius: 60px;
     color: black;
     background-color: white;
@@ -92,18 +97,15 @@ input[type=submit]
 
 }
 
-input[type=submit]:hover
-{
+input[type=submit]:hover {
     background-color: grey;
 }
 
-#idUtilisateur
-{
+#idUtilisateur {
     border: 1px solid grey;
 }
 
-#labelPrerequis
-{
+#labelPrerequis {
     color: black;
     font-size: 20px;
     font-weight: bold;

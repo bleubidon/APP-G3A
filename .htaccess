@@ -10,11 +10,11 @@ RewriteRule ^FAQ$ /controllers/F.A.Q.php
 RewriteRule ^Historique$ /controllers/historique.php
 # CGU
 RewriteCond %{REQUEST_URI}  ^/CGU$
-RewriteCond %{QUERY_STRING} ^retour=([a-zA-Z\/_\.]+)$
+RewriteCond %{QUERY_STRING} ^retour=([a-zA-Z-\/_\.]+)$
 RewriteRule ^(.*)$ /views/cgu.php?retour=%1
 # Contact support
 RewriteCond %{REQUEST_URI}  ^/Support$
-RewriteCond %{QUERY_STRING} ^retour=([a-zA-Z\/_\.]+)$
+RewriteCond %{QUERY_STRING} ^retour=([a-zA-Z-\/_\.]+)$
 RewriteRule ^(.*)$ /controllers/contact_administrateur.php?retour=%1
 # Pour les admins
 RewriteRule ^Backoffice-(\w+)$ /controllers/admin/$1.php

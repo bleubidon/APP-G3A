@@ -34,7 +34,7 @@ function lister_tests_psycho() {
                     var nameString = liste_tests_psycho[test_psycho]["nom_test_psycho"].replace(/ /g, "_") + "_" + liste_capteurs[capteur]["nom_capteur"].replace(/ /g, "_");
                     innerHTML_string += "<label class='checkbox-label'>";
                     innerHTML_string += "<input type='checkbox' ";
-                    if (liste_capteurs[capteur]["statut_capteur"] == "0") {
+                    if (liste_capteurs[capteur]["statut_capteur"] == "0" && !capteurs.includes(liste_capteurs[capteur]["id_capteur"])) {
                         innerHTML_string += " disabled=\"disabled\" ";
                     }
                     innerHTML_string += "id='" + nameString + "_checkbox'" +
