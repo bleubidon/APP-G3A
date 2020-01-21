@@ -1,7 +1,7 @@
  <?php
     if (isset($modification_profil)) echo "<h1>Modification de vos données de santé</h1>";
     else echo "<h1>Vos données de santé</h1>"; ?>
- <br><br><br><br><br><br>
+ <br><br><br>
 
  <body>
     <section id="sec1">
@@ -83,6 +83,7 @@
                           rows="5"><?php if (isset($modification_profil)) echo $pathologie ?></textarea>
         </div>
         <p>
+        <br><br><br><br><br><br>
         <div id="boutons">
             <a  style="padding-top: 10px; height: 38px; text-decoration: none" id="bouton_retour" href="?etape=1">Retour</a>&nbsp;&nbsp;
             &nbsp;<input id="con" type="submit" value="Continuer"/>

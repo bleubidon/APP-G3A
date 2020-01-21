@@ -62,7 +62,7 @@
                 <span id="numeroTel_erreur" style="color: red"><?php echo $numeroTel_err ?></span>
             </p>
         </div>
-        <br/>
+        <br>
         <div id="mail">
             <p><label for="email" style="font-weight: bold">Email <abbr title="Champ obligatoire">*</abbr></label><br>
                 <input type="email" name="email" id="email"
@@ -90,7 +90,6 @@
                     <span id="identifiant_erreur" style="color: red"><?php echo $identifiant_err ?></span>
                 </p>
             <?php } ?></div>
-        <br>
         <?php if (isset($modification_profil)) { ?>
             <p style="color: red; margin-left: 580px">Modifiez votre mot de passe :</p>
             <div id="mdp">
