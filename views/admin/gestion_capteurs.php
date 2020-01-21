@@ -6,18 +6,18 @@ include "../../views/tableau_colore.php";
 
 <body>
 <div id="section_centrale">
-    <h1>Gestion des capteurs</h1>
+    <h1>Gestion des dispositifs de tests</h1>
     <h2>Vous pouvez:</h2>
     <ul>
-        <li>- Désactiver et (ré-)activer les capteurs</li>
-        <li>- Supprimer les capteurs</li>
-        <li>- Ajouter un capteur</li>
+        <li>- Désactiver et (ré-)activer les dispositifs</li>
+        <li>- Supprimer les dispositifs</li>
+        <li>- Ajouter un dispositif</li>
     </ul>
     <br>
 
     <table id="table_capteurs">
         <tr>
-            <th class="color1">Nom du capteur</th>
+            <th class="color1">Nom du dispositif</th>
             <th class="color2">Statut</th>
         </tr>
         <tr>
@@ -30,6 +30,8 @@ include "../../views/tableau_colore.php";
                     </select>
                 </td>
                 <td><input type="submit" value="Ajouter" class="button_like"/></td>
+                <?php if (isset($_GET["error_nom_deja_pris"])) { ?>
+                    <td style="color:red">Erreur: ce nom de capteur est déjà pris</td><?php } ?>
             </form>
         </tr>
     </table>

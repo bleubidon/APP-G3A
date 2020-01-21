@@ -1,11 +1,8 @@
- <?php
+<body style="overflow: auto">
+<section id="sec1_" class="section_centrale">
+    <?php
     if (isset($modification_profil)) echo "<h1>Modification de vos données de santé</h1>";
     else echo "<h1>Vos données de santé</h1>"; ?>
- <br><br><br>
-
- <body>
-    <section id="sec1">
-
     <form action="" method="post" onsubmit="return validationFormulaire()" novalidate>
         <div id="genre">
             <p>
@@ -26,7 +23,7 @@
             </p>
         </div>
         <div id="poids_taille">
-             <p><label for="Poids">Poids <abbr title="Champ obligatoire; pas d'accents">*</abbr></label>
+            <p><label for="Poids">Poids <abbr title="Champ obligatoire; pas d'accents">*</abbr></label>
                 <br>
                 <input type="number" name="poids" id="poids" placeholder=" Votre Poids (kg)"
                        size="35"
@@ -79,13 +76,14 @@
         </div>
         <div id="pathologie">
             <p><label for="pathologie">Antécedent / Pathologie</label>
-                <textarea style="display: flex; margin-left: 0 " name="pathologie" id="pathologie" placeholder="Vos antécedents et/ou pathologies" cols="73"
+                <textarea style="display: flex; margin-left: 0 " name="pathologie" id="pathologie"
+                          placeholder="Vos antécedents et/ou pathologies" cols="73"
                           rows="5"><?php if (isset($modification_profil)) echo $pathologie ?></textarea>
         </div>
         <p>
-        <br><br><br><br><br><br>
         <div id="boutons">
-            <a  style="padding-top: 10px; height: 38px; text-decoration: none" id="bouton_retour" href="?etape=1">Retour</a>&nbsp;&nbsp;
+            <a style="padding-top: 10px; height: 38px; text-decoration: none" id="bouton_retour"
+               href="?etape=1">Retour</a>&nbsp;&nbsp;
             &nbsp;<input id="con" type="submit" value="Continuer"/>
         </div>
         </p>

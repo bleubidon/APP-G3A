@@ -1,3 +1,20 @@
+h1 {
+    color: #545871;
+    font-size: 36px;
+    /*text-align: center;*/
+}
+
+.section_centrale {
+    position: absolute;
+    left: 35%;
+    top: 5%;
+    overflow: auto;
+}
+
+#recap_donnees td {
+    padding-right: 100px;
+}
+
 @font-face {
     font-family: "basicsans";
     src: url("../fonts/basicsanssf.ttf");
@@ -18,8 +35,7 @@ body {
     overflow: hidden;
 }
 
-#h1
-{
+#h1 {
     font-size: 40px;
 }
 
@@ -40,11 +56,10 @@ input, textarea {
     display: inline-block;
 }
 
-input:hover{
+input:hover {
     background-color: #9597A6;
     color: white;
 }
-
 
 
 #imgPageDeCo, #imgAirplane {
@@ -52,7 +67,7 @@ input:hover{
     height: 100%;
 }
 
-@media all and (max-width: 1024px){
+@media all and (max-width: 1024px) {
     #imgPageDeCo, #imgAirplane {
         display: none;
     }
@@ -95,11 +110,12 @@ input:hover{
     background-color: #545871;
     color: white;
 }
-#con:hover{
+
+#con:hover {
     background-color: #636780;
 }
 
-#cree:hover{
+#cree:hover {
     background-color: #9597A6;
     color: white;
 }
@@ -125,8 +141,7 @@ input:hover{
     font-size: 16px;
 }
 
-#Retour:hover
-{
+#Retour:hover {
     background-color: grey;
 }
 
@@ -164,14 +179,10 @@ div8 {
     text-align: left;
 }
 
-div10 , div11 , div13, div14, div15, div16, div17, div18, div19
-{
+div10, div11, div13, div14, div15, div16, div17, div18, div19 {
     display: flex;
     justify-content: center;
 }
-
-
-
 
 
 #divRet {
@@ -180,25 +191,17 @@ div10 , div11 , div13, div14, div15, div16, div17, div18, div19
     float: bottom;
 }
 
-h1 {
-    text-align: center;
-
-}
-
-
 #container {
     vertical-align: center;
     display: inline-block;
 }
 
 
-
-#sec1 {
+#sec1, #sec1_ {
     font-size: 15px;
     display: inline;
     justify-content: center;
 }
-
 
 
 #sec2 {
@@ -212,15 +215,12 @@ h1 {
     color: #545871;
 }
 
-#secCreaProfile3
-{
-    font-size: 15px;
-    justify-content: center;
-    color: #545871;
-    margin-left: 500px;
-    margin-top: 200px;
-
-
+#secCreaProfile3 {
+    /*font-size: 15px;*/
+    /*justify-content: center;*/
+    /*color: #545871;*/
+    /*margin-left: 500px;*/
+    /*margin-top: 200px;*/
 }
 
 
@@ -236,85 +236,20 @@ h1 {
     }
 }
 
-#name {
+#name, #phone, #mail, #mdp, #pathologie, #poids_taille, #gsang_sommeil {
     display: inline-flex;
-    margin-left: 40%;
+    /*margin-left: 40%;*/
     justify-content: center;
     flex-direction: row;
 }
 
-#phone {
+#emplois, #photo, #genre {
     display: inline-flex;
-    margin-left: 40%;
-    justify-content: center;
-    flex-direction: row;
-}
-
-#mail {
-    display: inline-flex;
-    margin-left: 40%;
-    justify-content: center;
-    flex-direction: row;
-}
-
-#mdp {
-    display: inline-flex;
-    margin-left: 40%;
-    justify-content: center;
-    flex-direction: row;
-}
-
-#emplois {
-    display: inline-flex;
-    margin-left: 40%;
-    justify-content: center;
-    flex-direction: row;
-    color: #545871 ;
-}
-
-#photo {
-    display: inline-flex;
-    margin-left: 40%;
-    justify-content: center;
-    flex-direction: row;
-    color:  #545871;
-}
-
-
-
-
-#pathologie{
-    display: inline-flex;
-    margin-left: 40%;
-    justify-content: center;
-    flex-direction: row;
-}
-
-#genre{
-    display: inline-flex;
-    margin-left: 40%;
+    /*margin-left: 40%;*/
     justify-content: center;
     flex-direction: row;
     color: #545871;
 }
-
-#poids_taille{
-    display: inline-flex;
-    margin-left: 40%;
-    justify-content: center;
-    flex-direction: row;
-}
-
-#gsang_sommeil{
-    display: inline-flex;
-    margin-left: 40%;
-    justify-content: center;
-    flex-direction: row;
-}
-
-
-
-
 
 .footer {
     text-align: left;
@@ -340,41 +275,44 @@ h1 {
     opacity: 1;
 }
 
-input[type=file]{
+input[type=file] {
 
     border: none;
-    width:90px;
-    color:transparent;
+    width: 90px;
+    color: transparent;
 }
 
-#sectionAdminFaq, #sectionClientFAQ
-{ display: flex; justify-content: center; flex-direction: column}
+#sectionAdminFaq, #sectionClientFAQ {
+    display: flex;
+    justify-content: center;
+    flex-direction: column
+}
 
-a.bouton{
+a.bouton {
     -webkit-appearance: button;
     -moz-appearance: button;
-    text-decoration:none;
-    color:grey;
+    text-decoration: none;
+    color: grey;
     width: 70px;
     text-align: center;
     font-size: 15px;
-    text-decoration:none;
+    text-decoration: none;
 }
-a:hover{
-    color:white;
+
+a:hover {
+    color: white;
     background-color: grey;
 }
 
-#boutons{
+#boutons {
     display: inline-flex;
-    margin-left: 40%;
+    /*margin-left: 40%;*/
     justify-content: center;
     flex-direction: row;
 }
 
 
-#bouton_retour
-{
+#bouton_retour {
     border: 1px solid darkgray;
     background-color: White;
     border-radius: 100px;
@@ -385,20 +323,17 @@ a:hover{
     text-align: center;
 }
 
-#bouton_continuer
-{
+#bouton_continuer {
     border: 1px solid #545871;
     background-color: #545871;
     color: white;
 }
 
-#bouton_retour:hover, #bouton_ajouter:hover, #bouton_supprimer:hover
-{
+#bouton_retour:hover, #bouton_ajouter:hover, #bouton_supprimer:hover {
     background-color: grey;
 }
 
-#bouton_ajouter, #bouton_supprimer
-{
+#bouton_ajouter, #bouton_supprimer {
     border-radius: 100px;
     text-align: center;
     width: 135px;
@@ -411,8 +346,7 @@ a:hover{
     float: left;
 }
 
-#bouton_test
-{
+#bouton_test {
     top: 451px;
     left: 82px;
     width: 199px;
@@ -424,8 +358,7 @@ a:hover{
     font-size: 16px;
 }
 
-#bouton_test:hover
-{
+#bouton_test:hover {
     background-color: grey;
 }
 
@@ -433,6 +366,7 @@ input[aria-invalid="false"] {
     border: 1px solid green;
     box-shadow: 0 0 4px 0 green;
 }
+
 input[aria-invalid="true"] {
     border: 1px solid red;
     box-shadow: 0 0 4px 0 red;

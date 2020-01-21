@@ -8,6 +8,6 @@ if ($acces_authorise) {
         $statut_capteur = $_POST["statut_capteur"];
 
         include "../../models/admin/insertion_capteur.php";
-        if (!$nom_disponible) echo "<p style='color:red'>Erreur: ce nom de capteur est déjà pris</p>";
+        if (!$nom_disponible) redirection("?error_nom_deja_pris"); else redirection("?");
     }
 }

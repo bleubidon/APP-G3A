@@ -1,13 +1,13 @@
-<body>
-<h1 style="color: black; text-align: center">Récapitulatif de vos données</h1>
+<body style="overflow: auto">
 
-<section id="secCreaProfile3">
-    <table>
+<section id="secCreaProfile3" class="section_centrale">
+    <h1>Récapitulatif de vos données</h1>
+    <table id="recap_donnees">
         <tr>
             <?php
-             echo "<td><p>Prénom : " . $_SESSION['Prenom'] . "</td></p>";
-             echo "<td><p>Nom : " . $_SESSION['Nom'] . "</td></p>";
-             ?>
+            echo "<td><p>Prénom : " . $_SESSION['Prenom'] . "</td></p>";
+            echo "<td><p>Nom : " . $_SESSION['Nom'] . "</td></p>";
+            ?>
         </tr>
         <tr>
             <?php
@@ -43,10 +43,12 @@
     <br><br>
 
     <form action="?etape=3&toutes_infos_collectees" method="post">
-        <a id="bouton_retour" href="?etape=2" style="padding-top: 10px;padding-bottom: 10px; width: 100px; height: 40px; text-decoration: none">Retour</a>&nbsp;&nbsp;   <?php
-/*        $retour = isset($_GET['retour']) ? $_GET['retour'] : "/?etape=2";
-        */?><!--
-        <button class="bouton" onclick="window.location.href = '<?php /*echo $retour*/?>'">Retour</button>-->
+        <a id="bouton_retour" href="?etape=2"
+           style="padding-top: 10px;padding-bottom: 10px; width: 100px; height: 40px; text-decoration: none">Retour</a>&nbsp;&nbsp;
+        <?php
+        /*        $retour = isset($_GET['retour']) ? $_GET['retour'] : "/?etape=2";
+                */ ?><!--
+        <button class="bouton" onclick="window.location.href = '<?php /*echo $retour*/ ?>'">Retour</button>-->
 
         <?php
         if (isset($_GET['inscription_reussie'])) {

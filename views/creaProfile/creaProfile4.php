@@ -1,11 +1,12 @@
-<body>
-<section id="">
+<body style="overflow: auto">
+<section class="section_centrale">
     <?php
     if (isset($modification_profil)) { ?>
-        <h2 style="color:blue; text-align: center">Les changements apportés à votre profil ont été pris en compte.</h2>
-        <a style="justify-content: center" href="../../controllers/page_principale_utilisateur.php">Retour à ma page principale</a>
+        <h1>Les changements apportés à votre profil ont été pris en compte.</h1>
+        <a style="justify-content: center" href="../../controllers/page_principale_utilisateur.php">Retour à ma page
+            principale</a>
     <?php } else { ?>
-        <h2 style="color:blue">Inscription réussie !</h2>
+        <h1>Inscription réussie !</h1>
         <a href="../..">Identifiez-vous</a>
     <?php } ?>
 </section>

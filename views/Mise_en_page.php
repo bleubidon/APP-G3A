@@ -39,7 +39,7 @@
                 <br>
                 <h>Backoffice</h><br><br>
                 <li><a href="/Backoffice-liste_utilisateurs">Gestion des utilisateurs</a></li><br>
-                <li><a href="/Backoffice-gestion_capteurs">Gestion des capteurs</a></li><br>
+                <li><a href="/Backoffice-gestion_capteurs">Gestion des dispositifs de tests</a></li><br>
                 <li><a href="/Backoffice-administration_FAQ">Administration de la FAQ</a></li><br>
             <?php } ?>
         </ul>
