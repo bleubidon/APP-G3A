@@ -151,7 +151,9 @@
       "affichage_tests_passes.js"
     ],
     "/views/gestionnaire/statistiques.php": [
-      "affichage_statistiques.js"
+      "create_ajax_object.js",
+      "affichage_statistiques.js",
+      "array_stat_functions.js"
     ]
   }
 }

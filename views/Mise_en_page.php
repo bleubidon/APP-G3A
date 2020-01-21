@@ -27,7 +27,7 @@
             <?php if ($_SESSION['statut_utilisateur_site'] == "gestionnaire") { ?>
                 <br>
                 <h>Gestion</h><br><br>
-                <li><a href="/Gestionnaire-statistiques">Statistiques</a></li><br>
+                <li><a href="/Gestionnaire-affichage_statistiques">Statistiques</a></li><br>
                 <li><a href="/Gestionnaire-moteur_de_recherche">Moteur de recherche des utilisateurs</a></li><br>
                 <li><a href="/Gestionnaire-gestion_tests_psycho">Gestion des tests psychotechniques</a></li><br>
                 <li><a href="/Gestionnaire-gestion_emplois_quels_tests">Gestion des associations emploi - tests

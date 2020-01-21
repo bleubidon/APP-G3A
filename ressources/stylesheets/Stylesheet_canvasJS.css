@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-#chartContainer {
+#chartContainer, #chartContainer1, #chartContainer2 {
     width: 1000px;
     height: 400px;
     display: block;

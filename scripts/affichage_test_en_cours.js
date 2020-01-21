@@ -53,7 +53,7 @@ window.onload = function () {
                 var xmlhttp = create_ajax_object();
                 xmlhttp.open("POST", "../../models/gestionnaire/insertion_donnees_test.php", true);
                 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xmlhttp.send("identifiant=" + document.getElementById("identifiant").innerHTML + "&nom_test=" + document.getElementById("nom_test").innerHTML + "&donnees_test="
+                xmlhttp.send("identifiant=" + document.getElementById("identifiant").innerHTML + "&nom_test=" + document.getElementById("nom_test").innerHTML.charAt(0).toUpperCase() + document.getElementById("nom_test").innerHTML.slice(1) + "&donnees_test="
                     + JSON.stringify(dps) + "&date_test=" + date_test_enreg);
             }
 
