@@ -5,6 +5,7 @@ h1 {
 }
 
 .section_centrale {
+    background-color: blue;
     position: absolute;
     left: 35%;
     top: 5%;

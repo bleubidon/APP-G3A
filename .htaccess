@@ -16,6 +16,10 @@ RewriteRule ^(.*)$ /views/cgu.php?retour=%1
 RewriteCond %{REQUEST_URI}  ^/Support$
 RewriteCond %{QUERY_STRING} ^retour=([a-zA-Z-\/_\.]+)$
 RewriteRule ^(.*)$ /controllers/contact_administrateur.php?retour=%1
+
+RewriteCond %{REQUEST_URI}  ^/Support$
+RewriteCond %{QUERY_STRING} ^email_envoye$
+RewriteRule ^(.*)$ /controllers/contact_administrateur.php?email_envoye
 # Pour les admins
 RewriteRule ^Backoffice-(\w+)$ /controllers/admin/$1.php
 

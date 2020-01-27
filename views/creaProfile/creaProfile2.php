@@ -46,7 +46,7 @@
                        aria-required="true"
                        pattern="^[\d]+$"/><br>
                 <span id="taille_erreur" style="color: red"><?php echo $taille_err ?></span>
-            </p><br>
+            </p><br><br>
         </div>
         <div id="gsang_sommeil">
             <p><label for="mail">Groupe sanguin <abbr title="Champ obligatoire; pas d'accents">*</abbr></label>
