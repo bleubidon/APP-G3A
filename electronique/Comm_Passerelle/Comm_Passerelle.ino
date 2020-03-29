@@ -89,14 +89,15 @@ void loop()
   // Envoi de la trame
   Serial << "Sending: ";
   sendTrame();
-  
+
   // Lecture de la trame de reponse
   recepTrame();
   if (timeout)
     Serial << "[TIMEOUT]";
   else
     parseTrameReponse();
-  Serial << endl << endl;
+  Serial << endl
+         << endl;
   delay(LOOP_TEMPO);
 }
 
@@ -199,7 +200,7 @@ String calculChecksum(char Buffer[], int number_of_bytes)
 {
   int checksum = 0;
   for (int i = 0; i < number_of_bytes; i++)
-    checksum += bufEnvoi[i];
+    checksum += Buffer[i];
   checksum %= 256;
   return completionAGauche(checksum, 2, HEX);
 }
