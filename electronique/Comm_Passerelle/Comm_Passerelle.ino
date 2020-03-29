@@ -1,138 +1,190 @@
 //------------------------------------------------------------------------
-// Comm passerelle
+// Comm passerelle - G3A - version du 27/03/20
 //------------------------------------------------------------------------
 
-#define TAILLE_TRAME 19
-#define CAPTEUR_TEMPERATURE '3'
+template <class T>
+inline Print &operator<<(Print &obj, T arg)
+{
+  obj.print((String)arg);
+  return obj;
+}
 
-char Buf_Envoi[TAILLE_TRAME];
-char Buf_Recep[TAILLE_TRAME];
-int valeur_Temp;
-char incomingByte;
+#define SIZE_BUF_SEND 19
+#define SIZE_BUF_RECEP 15
+#define endl "\n"
+// #define ENABLE_LOG
+
+char bufEnvoi[SIZE_BUF_SEND + 1]; // Le dernier octet est reserve pour '\0'
+char bufRecep[SIZE_BUF_RECEP + 1];
+unsigned int valeurCapteur;
+String valeurCapteurString;
+String checksumBufEnvoi;
+bool timeout;
+unsigned long debutAttenteReponse;
 
 // Parametres pour la construction de la trame
-String id_obj = "G3A4";
-char type_capteur = CAPTEUR_TEMPERATURE;
-String num_capteur = "01";
+String idObj = "G3A4";
+char typeCapteur = '3';      // Type du capteur (arbitraire)
+String numeroCapteur = "01"; // Numero du capteur (arbitraire)
+#define SERIAL1_TIMEOUT 1000 // Timeout en ms pour la communication avec le module bluetooth
+#define LOOP_TEMPO 1000      // Delai en ms entre chaque sequence d'actions
 
-void Send_Trame();
-void Recep_Trame();
+// Ci-dessous les prototypes des fonctions (sauf setup et loop qui sont déjà répertoriées par la plupart des outils de compilation) afin d'assurer la compatibilité avec la plupart des outils de compilation
+void sendTrame();
+void recepTrame();
+void parseTrameReponse();
+String completionAGauche(int valeur, int taille_mot, int base);
+String calculChecksum(char Buffer[], int number_of_bytes);
 
 void setup()
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
 {
-  // initialize both serial ports:
-  Serial.begin(9600);  // portie serie  terminal Energia
-  Serial1.begin(9600); // portie serie  BlueTooth APP
-  Serial1.setTimeout(1000);
+  Serial.begin(9600);  // port serie du terminal Energia
+  Serial1.begin(9600); // port serie du module blueTooth
+  Serial1.setTimeout(SERIAL1_TIMEOUT);
 
-  Buf_Envoi[0] = '1'; // type trame = trame courante
-  // initiliser tous les autres champs fixes de la trame
-  Buf_Envoi[1] = id_obj[0];
-  Buf_Envoi[2] = id_obj[1];
-  Buf_Envoi[3] = id_obj[2];
-  Buf_Envoi[4] = id_obj[3];
-  Buf_Envoi[5] = '1'; // Requete en ecriture
-  Buf_Envoi[6] = type_capteur;
-  Buf_Envoi[7] = num_capteur[0];
-  Buf_Envoi[8] = num_capteur[1];
+  // Initilisation des champs fixes de la trame d'envoi
+  bufEnvoi[0] = '1';      // type trame = trame courante
+  bufEnvoi[1] = idObj[0]; // identifiant d'objet
+  bufEnvoi[2] = idObj[1];
+  bufEnvoi[3] = idObj[2];
+  bufEnvoi[4] = idObj[3];
+  bufEnvoi[5] = '1'; // Requete en ecriture
+  bufEnvoi[6] = typeCapteur;
+  bufEnvoi[7] = numeroCapteur[0]; // numero du capteur
+  bufEnvoi[8] = numeroCapteur[1];
+  // Timestamp (non utilise dans le protocole de communication)
+  bufEnvoi[13] = '0';
+  bufEnvoi[14] = '0';
+  bufEnvoi[15] = '0';
+  bufEnvoi[16] = '0';
+  bufEnvoi[19] = '\0';
+
+  // Initilisation des champs fixes de la trame de reponse
+  bufRecep[15] = '\0';
 }
 
 void loop()
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
 {
-  // lire le capteur de temperature
-  valeur_Temp = 42;
-  String valeur_Temp_String = completion_a_gauche(valeur_Temp, 4, HEX);
-  
-  // ajouter dans la trame "Buf_Envoi"
-  // Payload
-  Buf_Envoi[9] = valeur_Temp_String[0];
-  Buf_Envoi[10] = valeur_Temp_String[1];
-  Buf_Envoi[11] = valeur_Temp_String[2];
-  Buf_Envoi[12] = valeur_Temp_String[3];
-
-  // Timestamp
-  unsigned int seconds_total = round((float)millis() / 1000);
-  unsigned int minutes = seconds_total / 60;
-  unsigned int seconds_remainder = seconds_total % 60;
-  String timestamp = completion_a_gauche(minutes, 2, DEC);
-  timestamp += completion_a_gauche(seconds_remainder, 2, DEC);
-
-  Buf_Envoi[13] = timestamp[0];
-  Buf_Envoi[14] = timestamp[1];
-  Buf_Envoi[15] = timestamp[2];
-  Buf_Envoi[16] = timestamp[3];
-
-  // Checksum
-  int checksum = 0;
-  for (int i = 0; i < sizeof(Buf_Envoi); i++)
+  // Reinitialisation du buffer accueillant la trame de reponse
+  for (int i = 0; i <= SIZE_BUF_RECEP; i++)
   {
-    checksum += Buf_Envoi[i];
+    bufRecep[i] = NULL;
   }
-  checksum %= 256;
-  String checksum_string = completion_a_gauche(checksum, 2, HEX);
 
-  Buf_Envoi[17] = checksum_string[0];
-  Buf_Envoi[18] = checksum_string[1];
+  // Lecture et formatage de la valeur issue du capteur
+  valeurCapteur = 42; // Valeur arbitraire
+  valeurCapteurString = completionAGauche(valeurCapteur, 4, HEX);
 
-  // Envoyer la trame
-  Serial.print("Sending: ");
-  Send_Trame();
-  // Lire la trame de réponse
-  Recep_Trame();
-  // afficher la trame reçue sur le terminal de Energia
-  // Temporisation de 1 à 5 secondes
-  Serial.println();
-  delay(1000);
+  // Insertion du payload dans la trame d'envoi
+  bufEnvoi[9] = valeurCapteurString[0];
+  bufEnvoi[10] = valeurCapteurString[1];
+  bufEnvoi[11] = valeurCapteurString[2];
+  bufEnvoi[12] = valeurCapteurString[3];
+
+  // Calcul et insertion du checksum
+  checksumBufEnvoi = calculChecksum(bufEnvoi, SIZE_BUF_SEND - 2); // Le checksum est calculé sur les 17 premiers octets de la trame
+  bufEnvoi[17] = checksumBufEnvoi[0];
+  bufEnvoi[18] = checksumBufEnvoi[1];
+
+  // Envoi de la trame
+  Serial << "Sending: ";
+  sendTrame();
+  
+  // Lecture de la trame de reponse
+  recepTrame();
+  if (timeout)
+    Serial << "[TIMEOUT]";
+  else
+    parseTrameReponse();
+  Serial << endl << endl;
+  delay(LOOP_TEMPO);
 }
 
-void Send_Trame()
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
+void sendTrame()
 {
   // lire les octets de Buf_Envoi un par un et envoyer sur les deux lignes serie
-  for (int i = 0; i < sizeof(Buf_Envoi); i++)
+  for (int i = 0; i < SIZE_BUF_SEND; i++)
   {
-    Serial.print(Buf_Envoi[i]);
-    Serial1.print(Buf_Envoi[i]);
+    Serial << bufEnvoi[i];
+    Serial1 << bufEnvoi[i];
   }
 }
 
-void Recep_Trame()
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
+void recepTrame()
 {
-  // repeter autant de fois que necessaire
-  // tester si un octet est dans le buffer de reception de Serial1 (BlueTooth)
-  // si oui, lire l'octet et le mettre dans Buf_Recep
-  int nombreOctetsDispos = Serial1.available();
-  if (nombreOctetsDispos)
+  timeout = false;
+  Serial << endl
+         << "Receiving: ";
+  debutAttenteReponse = millis();
+  int nombreOctetsLus = 0;
+  while (nombreOctetsLus < SIZE_BUF_RECEP && millis() - debutAttenteReponse <= SERIAL1_TIMEOUT)
   {
-    Serial.print("\nReceiving: ");
-    for (int i = 0; i < nombreOctetsDispos; i++)
+    if (Serial1.available())
     {
-      incomingByte = Serial1.read();
-      Buf_Recep[i] = incomingByte;
+      bufRecep[nombreOctetsLus] = Serial1.read();
+      Serial << bufRecep[nombreOctetsLus];
+      nombreOctetsLus++;
+    }
+  }
+  if (millis() - debutAttenteReponse > SERIAL1_TIMEOUT)
+    timeout = true;
+}
+
+void parseTrameReponse()
+{
+  String ok_message = " [OK]";
+  String ko_message = " [Trame incorrecte]";
+
+  // Les 9 premiers octets de la reponse doivent toujours etre identiques a ceux de la requete
+  for (int i = 0; i <= 8; i++)
+  {
+    if (bufEnvoi[0] != bufRecep[0])
+    {
+      Serial << ko_message;
+      return;
+    }
+  }
+
+  // Verifier que le checksum de la reponse est correct
+  String checksum_Buf_Recep_theorical = calculChecksum(bufRecep, SIZE_BUF_RECEP - 2);
+#ifdef ENABLE_LOG
+  Serial << " checksum_th: " << checksum_Buf_Recep_theorical << " ";
+#endif
+  if (checksum_Buf_Recep_theorical[0] != bufRecep[13] || checksum_Buf_Recep_theorical[1] != bufRecep[14])
+  {
+    Serial << ko_message;
+    return;
+  }
+
+  switch (bufRecep[5])
+  {
+  case '1':
+  {
+    // S'il s'agit d'une reponse a une requete en ecriture, on verifie que les autres octets sont conformes a ce qu'on attendait
+    for (int i = 9; i <= 12; i++)
+    {
+      if (bufEnvoi[0] != bufRecep[0])
+      {
+        Serial << ko_message;
+        return;
+      }
     }
 
-    for (int i = 0; i < sizeof(Buf_Envoi); i++)
-    {
-      Serial.print(Buf_Recep[i]);
-    }
-    Serial.println();
+    Serial << ok_message;
+    break;
+  }
+
+  case '2':
+    // S'il s'agit d'une reponse a une requete en lecture, on affiche le payload
+    Serial << " Payload: ";
+    for (int i = 9; i <= 12; i++)
+      Serial << bufRecep[i];
+    break;
   }
 }
 
 // Fonctions utilitaires
-char decimal_to_ascii(int decimal_value)
-{
-  char ascii_value = decimal_value;
-  return ascii_value;
-}
-String completion_a_gauche(int valeur, int taille_mot, int base)
+String completionAGauche(int valeur, int taille_mot, int base)
 {
   String valeur_String = String(valeur, base);
   int nbr_ite = taille_mot - valeur_String.length();
@@ -141,4 +193,13 @@ String completion_a_gauche(int valeur, int taille_mot, int base)
     valeur_String = '0' + valeur_String;
   }
   return valeur_String;
+}
+
+String calculChecksum(char Buffer[], int number_of_bytes)
+{
+  int checksum = 0;
+  for (int i = 0; i < number_of_bytes; i++)
+    checksum += bufEnvoi[i];
+  checksum %= 256;
+  return completionAGauche(checksum, 2, HEX);
 }
