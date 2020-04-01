@@ -13,6 +13,7 @@ inline Print &operator<<(Print &obj, T arg)
 #define SIZE_BUF_RECEP 15
 #define endl "\n"
 // #define ENABLE_LOG
+#define SIMUL_REP_LECTURE
 
 char bufEnvoi[SIZE_BUF_SEND + 1]; // Le dernier octet est reserve pour '\0'
 char bufRecep[SIZE_BUF_RECEP + 1];
@@ -49,6 +50,9 @@ void setup()
   bufEnvoi[3] = idObj[2];
   bufEnvoi[4] = idObj[3];
   bufEnvoi[5] = '1'; // Requete en ecriture
+#ifdef SIMUL_REP_LECTURE
+  bufEnvoi[5] = '2'; // Requete en lecture
+#endif
   bufEnvoi[6] = typeCapteur;
   bufEnvoi[7] = numeroCapteur[0]; // numero du capteur
   bufEnvoi[8] = numeroCapteur[1];
@@ -117,6 +121,7 @@ void recepTrame()
   Serial << endl
          << "Receiving: ";
   debutAttenteReponse = millis();
+  #ifndef SIMUL_REP_LECTURE
   int nombreOctetsLus = 0;
   while (nombreOctetsLus < SIZE_BUF_RECEP && millis() - debutAttenteReponse <= SERIAL1_TIMEOUT)
   {
@@ -127,6 +132,10 @@ void recepTrame()
       nombreOctetsLus++;
     }
   }
+  #else
+  strcpy(bufRecep, "1G3A423014242b2");
+  Serial << bufRecep;
+  #endif
   if (millis() - debutAttenteReponse > SERIAL1_TIMEOUT)
     timeout = true;
 }
@@ -139,7 +148,7 @@ void parseTrameReponse()
   // Les 9 premiers octets de la reponse doivent toujours etre identiques a ceux de la requete
   for (int i = 0; i <= 8; i++)
   {
-    if (bufEnvoi[0] != bufRecep[0])
+    if (bufEnvoi[i] != bufRecep[i])
     {
       Serial << ko_message;
       return;
